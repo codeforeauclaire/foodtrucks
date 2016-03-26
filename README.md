@@ -2,7 +2,8 @@
 
 ## Front-end UI
 
-1. Full page map with food trucks
+1. Full page map displaying food truck icons
+    1. Click on to bubble up quick info (Name, schedule, ...)
 1. Control overlay for days of the week (checkbox for each)
     1. Loading defaults to current day checked only
 
@@ -22,7 +23,7 @@ Quickly thrown together perhaps with auto-form packages. This will only display 
 1. Description
 1. Phone
 1. Links (array of urls)
-1. Image
+1. Icon
     1. File upload, hack storage in database it's self so we don't have to deal with file system
 
 **Schedules**
