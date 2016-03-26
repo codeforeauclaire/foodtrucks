@@ -9,8 +9,8 @@
 ## Technology
 
 1. Google maps JavaScript API
-1. Common database backend
-1. Supports on desktop web, mobile web, android, and iOS
+1. Support on desktop web, mobile web, android, and iOS
+1. Easy & popular (amongst devs that take this up) database and server side backend
 
 ## Admin UI / database structure
 
