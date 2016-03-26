@@ -41,4 +41,4 @@ Quickly thrown together perhaps with auto-form packages. This will only display 
 
 # References
 
-[Original Google Doc](https://docs.google.com/document/d/1RBFx_S-Z7D7GeBGQFHzdSiD4s_yqPjvIQlwUWH80OEQ/edit#)
+* [Code for Eau Clare - Eau Hack Night - #4 - Let's Map our Food Trucks!](https://docs.google.com/document/d/1RBFx_S-Z7D7GeBGQFHzdSiD4s_yqPjvIQlwUWH80OEQ/edit#)
