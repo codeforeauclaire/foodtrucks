@@ -1,6 +1,4 @@
-Food trucks
-
-# Rough specification framework proposal
+# Food Trucks: Wireframe proposal
 
 ## Front-end UI
 
