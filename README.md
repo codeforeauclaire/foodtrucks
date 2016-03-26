@@ -40,6 +40,8 @@ Quickly thrown together perhaps with auto-form packages. This will only display 
     * Saturday
 1. lat
 1. lng
+1. timeOpen
+1. timeClose
 
 # References
 
