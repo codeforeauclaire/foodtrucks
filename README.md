@@ -22,6 +22,8 @@
 1. Support on desktop web & mobile web
     1. Optional: Android & iOS apps
 1. Easy & popular (amongst devs that take this up) database and server side backend
+    1. Started by Lowell in Drupal
+    2. Unsure if runing w/Lowell's solution or re-thinking @ [Decide on technology stack](https://trello.com/c/My6qsUp9/14-decide-on-technology-stack)
 
 ## Admin UI / database structure
 
