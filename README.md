@@ -1,12 +1,20 @@
 # Food Trucks: Wireframe proposal
 
-## Front-end UI
+## Consumer UI
 
 1. Full page map displaying food truck icons
     1. Click on to bubble up quick info (Name, schedule, ...)
 1. Control overlay for current day
 
 [Awaiting sketch from Aaron Harder](https://trello.com/c/fCrOYzL8/4-share-draw-io-graphic-mock-up)
+
+## Vendor UI
+
+1. Edit truck info
+1. Add schedule
+1. Activate now & here / de-activate
+
+(Could use a sketch)
 
 ## Technology
 
