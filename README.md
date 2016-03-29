@@ -4,8 +4,9 @@
 
 1. Full page map displaying food truck icons
     1. Click on to bubble up quick info (Name, schedule, ...)
-1. Control overlay for days of the week (checkbox for each)
-    1. Loading defaults to current day checked only
+1. Control overlay for current day
+
+[Awaiting sketch from Aaron Harder](https://trello.com/c/fCrOYzL8/4-share-draw-io-graphic-mock-up)
 
 ## Technology
 
@@ -30,18 +31,11 @@ Quickly thrown together perhaps with auto-form packages. This will only display 
 **Schedules**
 
 1. TruckId
-1. DaysOfWeek
-    * Sunday
-    * Monday
-    * Tuesday
-    * Wednesday
-    * Thursday
-    * Friday
-    * Saturday
-1. lat
-1. lng
+1. Date
 1. timeOpen
 1. timeClose
+1. lat
+1. lng
 
 # References
 
