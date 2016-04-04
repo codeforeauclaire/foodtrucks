@@ -1,0 +1,25 @@
+uuid: 8395b1fe-d482-4028-b800-0c6cd90f79e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.food_trucks.field_contact_phone_number
+    - field.field.node.food_trucks.field_food_truck_description
+    - field.field.node.food_trucks.field_food_truck_logo
+    - field.field.node.food_trucks.field_links
+    - node.type.food_trucks
+  module:
+    - user
+id: node.food_trucks.teaser
+targetEntityType: node
+bundle: food_trucks
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden:
+  field_contact_phone_number: true
+  field_food_truck_description: true
+  field_food_truck_logo: true
+  field_links: true

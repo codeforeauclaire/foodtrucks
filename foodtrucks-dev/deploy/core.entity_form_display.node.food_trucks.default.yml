@@ -1,0 +1,86 @@
+uuid: 91c9ecef-1074-4df4-9100-ae13f6ba0f36
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.food_trucks.field_contact_phone_number
+    - field.field.node.food_trucks.field_food_truck_description
+    - field.field.node.food_trucks.field_food_truck_logo
+    - field.field.node.food_trucks.field_links
+    - image.style.thumbnail
+    - node.type.food_trucks
+  module:
+    - image
+    - link
+    - path
+id: node.food_trucks.default
+targetEntityType: node
+bundle: food_trucks
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+  field_contact_phone_number:
+    weight: 33
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_food_truck_description:
+    weight: 32
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+  field_food_truck_logo:
+    weight: 35
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_links:
+    weight: 34
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+  path:
+    type: path
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

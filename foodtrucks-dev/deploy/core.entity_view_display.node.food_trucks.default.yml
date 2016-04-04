@@ -1,0 +1,57 @@
+uuid: 0537459f-84be-44e1-bc08-8b7e44cfbde0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.food_trucks.field_contact_phone_number
+    - field.field.node.food_trucks.field_food_truck_description
+    - field.field.node.food_trucks.field_food_truck_logo
+    - field.field.node.food_trucks.field_links
+    - image.style.medium
+    - node.type.food_trucks
+  module:
+    - image
+    - link
+    - user
+id: node.food_trucks.default
+targetEntityType: node
+bundle: food_trucks
+mode: default
+content:
+  field_contact_phone_number:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_food_truck_description:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  field_food_truck_logo:
+    weight: 105
+    label: above
+    settings:
+      image_style: medium
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_links:
+    weight: 104
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,18 @@
+uuid: b3429480-7b5c-4a4a-bf00-a1184100cec4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.food_trucks
+id: node.food_trucks.title
+field_name: title
+entity_type: node
+bundle: food_trucks
+label: 'Food Truck Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

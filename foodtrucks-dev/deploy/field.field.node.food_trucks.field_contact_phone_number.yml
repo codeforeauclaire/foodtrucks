@@ -1,0 +1,19 @@
+uuid: be25a35b-8817-4e83-8000-a341d7667c45
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_phone_number
+    - node.type.food_trucks
+id: node.food_trucks.field_contact_phone_number
+field_name: field_contact_phone_number
+entity_type: node
+bundle: food_trucks
+label: 'Contact Phone Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,15 @@
+smtp_on: true
+smtp_host: smtp.sendgrid.com
+smtp_hostbackup: ''
+smtp_port: '587'
+smtp_protocol: standard
+smtp_username: version3
+smtp_password: '8xQb83Mn7&AW'
+smtp_from: foodtrucks@digitalfarrier.com
+smtp_fromname: 'Food Trucks Website'
+smtp_allowhtml: '1'
+smtp_test_address: ''
+smtp_debugging: false
+prev_mail_system: php_mail
+_core:
+  default_config_hash: U7C23Wy4M4Eq8X8ExjU4n3yq7PtfU1S-jebw2hikU5g

@@ -1,0 +1,17 @@
+uuid: 3746a515-3f65-49d1-bb00-ff99f78b7fb6
+langcode: en
+status: true
+dependencies: {  }
+id: food_truck_administrator
+label: 'Food Truck Administrator'
+weight: 3
+is_admin: null
+permissions:
+  - 'create food_trucks content'
+  - 'delete any food_trucks content'
+  - 'delete own food_trucks content'
+  - 'delete food_trucks revisions'
+  - 'edit any food_trucks content'
+  - 'edit own food_trucks content'
+  - 'revert food_trucks revisions'
+  - 'view food_trucks revisions'
