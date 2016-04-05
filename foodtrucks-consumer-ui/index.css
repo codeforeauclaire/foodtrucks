@@ -2,6 +2,8 @@ body {
 	padding: 0;
 	margin: 0;
 }
-html, body, #map {
+html, body {
 	height: 100%;
 }
+
+#map { min-height: 500px; height: 100%; margin: -15px;}
