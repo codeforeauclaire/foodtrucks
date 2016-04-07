@@ -1,0 +1,74 @@
+uuid: 0e55e5a4-f614-41f0-8a06-6e1e1f8b8a61
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.event.field_current_location
+    - field.field.node.event.field_end_time
+    - field.field.node.event.field_food_truck
+    - field.field.node.event.field_scheduled_location
+    - field.field.node.event.field_start_time
+    - node.type.event
+  module:
+    - datetime
+    - geolocation
+    - user
+id: node.event.default
+targetEntityType: node
+bundle: event
+mode: default
+content:
+  field_current_location:
+    weight: 2
+    label: above
+    settings:
+      type: ROADMAP
+      zoom: 10
+      height: 400px
+      width: 100%
+      title: ''
+      info_text: ''
+      info_auto_display: true
+    third_party_settings: {  }
+    type: geolocation_map
+  field_end_time:
+    weight: 4
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+  field_food_truck:
+    weight: 1
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_scheduled_location:
+    weight: 5
+    label: above
+    settings:
+      type: ROADMAP
+      zoom: 10
+      height: 400px
+      width: 100%
+      title: ''
+      info_text: ''
+      info_auto_display: true
+    third_party_settings: {  }
+    type: geolocation_map
+  field_start_time:
+    weight: 3
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+  links:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

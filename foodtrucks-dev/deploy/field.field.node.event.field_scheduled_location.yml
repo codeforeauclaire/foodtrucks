@@ -1,0 +1,28 @@
+uuid: 6a80bfad-67a0-4718-970a-1ff849f1399d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_scheduled_location
+    - node.type.event
+  module:
+    - geolocation
+id: node.event.field_scheduled_location
+field_name: field_scheduled_location
+entity_type: node
+bundle: event
+label: 'Scheduled Location'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    lat: '44.811349'
+    lng: '-91.49849410000002'
+    lat_sin: null
+    lat_cos: null
+    lng_rad: null
+    data: null
+default_value_callback: ''
+settings: {  }
+field_type: geolocation

@@ -1,0 +1,3 @@
+status: 1
+pattern: '[current-date:html_datetime]'
+php: 0

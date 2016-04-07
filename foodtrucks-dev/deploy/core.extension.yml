@@ -18,6 +18,8 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  geolocation: 0
+  hal: 0
   help: 0
   history: 0
   image: 0
@@ -29,18 +31,23 @@ module:
   path: 0
   quickedit: 0
   rdf: 0
+  rest: 0
   search: 0
+  serialization: 0
   shortcut: 0
   smtp: 0
   system: 0
   taxonomy: 0
+  telephone: 0
   text: 0
+  token: 0
   toolbar: 0
   tour: 0
   update: 0
   user: 0
   views_ui: 0
   menu_link_content: 1
+  auto_nodetitle: 5
   views: 10
   standard: 1000
 theme:

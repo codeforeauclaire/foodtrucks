@@ -1,0 +1,51 @@
+uuid: 70c7be4f-b488-4382-945e-9447fba12e74
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.event.field_current_location
+    - field.field.node.event.field_end_time
+    - field.field.node.event.field_food_truck
+    - field.field.node.event.field_scheduled_location
+    - field.field.node.event.field_start_time
+    - node.type.event
+  module:
+    - datetime
+    - geolocation
+id: node.event.default
+targetEntityType: node
+bundle: event
+mode: default
+content:
+  field_current_location:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: geolocation_html5
+  field_end_time:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+  field_food_truck:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+  field_scheduled_location:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: geolocation_googlegeocoder
+  field_start_time:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+hidden:
+  created: true
+  path: true
+  promote: true
+  sticky: true
+  title: true
+  uid: true
