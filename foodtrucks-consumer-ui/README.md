@@ -5,7 +5,7 @@
 1. Run app
  1. `(cd ~/foodtrucks/api && ./bin/serve)`
  1. Load http://{vms-ip} in your browser
- 1. Edit a file to see changes in your browser instantly
+ 1. Edit a file >> restart ./bin/serve >> see changes in your browser
 
 ## Development Notes
 
