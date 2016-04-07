@@ -4,7 +4,7 @@
  1. `curl -L -o- https://rawgit.com/codeforeauclaire/foodtrucks/master/foodtrucks-consumer-ui/bin/vmsquickinstall.sh | bash`
 1. Run app
  1. `(cd ~/foodtrucks/foodtrucks-consumer-ui && ./bin/serve)`
- 1. Load http://{vms-ip} in your browser
+ 1. Load http://{vms-ip}:3000 in your browser
  1. Edit a file >> restart ./bin/serve >> see changes in your browser
 
 ## Development Notes
