@@ -13,6 +13,6 @@
  * http://leafletjs.com/examples/mobile.html
  * Data: Static json data that will run
 * UI Components via JQuery Mobile
-
-* Hosting - Just local stuff.  Use apache, use python, use whatever.  Here are some quick methods
+* Hosting - Just client side. Use apache, use python, use whatever. Here are some quick methods
  * https://askubuntu.com/questions/377389/how-to-easily-start-a-webserver-in-any-folder
+* [Original draw.io mockup from mar 28th 2016 C4EC hack night](https://drive.google.com/file/d/0B1hUzWEXfF7oWHVPRGZhLVE3UDA/view)
