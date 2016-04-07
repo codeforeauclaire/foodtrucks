@@ -1,0 +1,22 @@
+uuid: 9b2cf77e-b09b-4a48-a32d-8f07342fbc3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.food_trucks
+id: node.food_trucks.promote
+field_name: promote
+entity_type: node
+bundle: food_trucks
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

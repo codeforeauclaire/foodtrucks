@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b40654f3f490cc6b4b47811abe8619a5",
-    "content-hash": "85e6c7dbf5def4f414817abd17335010",
+    "hash": "6f45b20689dd45318c0e7e70d1b7d32f",
+    "content-hash": "ceed946fb69cc5e96bb93724fae2004a",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -641,6 +641,59 @@
             "time": "2015-12-25 13:10:16"
         },
         {
+            "name": "doctrine/couchdb",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/couchdb-client.git",
+                "reference": "c80f25002d83712209517793d3f5402edaefe68a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/couchdb-client/zipball/c80f25002d83712209517793d3f5402edaefe68a",
+                "reference": "c80f25002d83712209517793d3f5402edaefe68a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\CouchDB": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Lukas Kahwe Smith",
+                    "email": "smith@pooteeweet.org"
+                }
+            ],
+            "description": "CouchDB Client",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "couchdb",
+                "persistence"
+            ],
+            "time": "2016-02-28 22:17:26"
+        },
+        {
             "name": "doctrine/inflector",
             "version": "v1.1.0",
             "source": {
@@ -1158,6 +1211,47 @@
             "time": "2016-04-05 23:34:17"
         },
         {
+            "name": "drupal/deploy",
+            "version": "8.1.0-alpha5",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/deploy",
+                "reference": "27d9ba0fa909925038c87246a4bc6bf7c2dd4889"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/deploy-8.x-1.0-alpha5.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/key_value": "8.*",
+                "drupal/multiversion": "8.*",
+                "drupal/relaxed": "8.*",
+                "relaxedws/replicator": "dev-master"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Tim Millwood",
+                    "email": "tim@millwoodonline.co.uk"
+                }
+            ],
+            "description": " Allows content to be deployed between servers. Either to be used as a content staging solution or to deploy content across a cluster of different sites.",
+            "homepage": "https://www.drupal.org/project/deploy",
+            "time": "2015-12-18 16:38:47"
+        },
+        {
             "name": "drupal/ds",
             "version": "8.2.3",
             "source": {
@@ -1251,6 +1345,32 @@
             "time": "2016-01-27 12:15:59"
         },
         {
+            "name": "drupal/key_value",
+            "version": "8.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/key_value.git",
+                "reference": "e5cf1d9918c63869f1a265bb82c40b25370a5dea"
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/serialization": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Extends the core key-value API with a backend for lists and sorted sets that you can do range queries on.",
+            "homepage": "https://www.drupal.org/project/key_value",
+            "time": "2015-12-05 00:22:40"
+        },
+        {
             "name": "drupal/layout_plugin",
             "version": "8.1.0-alpha22",
             "source": {
@@ -1303,6 +1423,74 @@
                 "php"
             ],
             "time": "2016-01-11 16:56:15"
+        },
+        {
+            "name": "drupal/multiversion",
+            "version": "8.1.0-alpha6",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/multiversion.git",
+                "reference": "d5681bfc43c274ba3439d4c8e661205b0ed693dc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/multiversion-8.x-1.0-alpha6.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/key_value": "8.*",
+                "drupal/serialization": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Extends the revision support for content entities.",
+            "homepage": "https://www.drupal.org/project/multiversion",
+            "time": "2016-03-18 17:31:43"
+        },
+        {
+            "name": "drupal/relaxed",
+            "version": "8.1.0-alpha5",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/relaxed.git",
+                "reference": "04bafae78bd949ab8925492d3742fafeee6c1e2b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/relaxed-8.x-1.0-alpha5.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/basic_auth": "8.*",
+                "drupal/core": "8.*",
+                "drupal/multiversion": "8.*",
+                "drupal/rest": "8.*",
+                "drupal/serialization": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Provides a RESTful API that exposes all content entities over UUID endpoints. Utility endpoints are also provided subscribing to changes and handling content replication.",
+            "homepage": "https://www.drupal.org/project/relaxed",
+            "time": "2016-01-21 14:56:35"
         },
         {
             "name": "drupal/smtp",
@@ -2670,6 +2858,48 @@
                 "shell"
             ],
             "time": "2016-03-09 05:03:14"
+        },
+        {
+            "name": "relaxedws/replicator",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/relaxedws/couchdb-replicator.git",
+                "reference": "7552b3b262ac5f77b5c95a6f29a0b17431c22e73"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/relaxedws/couchdb-replicator/zipball/7552b3b262ac5f77b5c95a6f29a0b17431c22e73",
+                "reference": "7552b3b262ac5f77b5c95a6f29a0b17431c22e73",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/couchdb": "dev-master"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.6.*"
+            },
+            "bin": [
+                "replicator"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Relaxed\\Replicator\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "abhishek kumar",
+                    "email": "abhi170893@gmail.com"
+                }
+            ],
+            "description": "couchdb-replicator",
+            "time": "2016-03-29 15:46:59"
         },
         {
             "name": "stack/builder",

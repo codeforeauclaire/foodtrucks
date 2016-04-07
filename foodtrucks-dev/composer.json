@@ -32,7 +32,8 @@
         "drupal/smtp": "8.x",
         "drupal/ds": "8.x",
         "drupal/geolocation": "8.x",
-        "drupal/auto_nodetitle": "dev-8.x-1.x"
+        "drupal/auto_nodetitle": "dev-8.x-1.x",
+        "drupal/deploy": "8.x"
     },
     "require-dev": {
         "behat/mink": "~1.6",
