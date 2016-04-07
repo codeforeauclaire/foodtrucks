@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Config: Calculated
+## Script path http://stackoverflow.com/a/246128
+SOURCE="${BASH_SOURCE[0]}"
+while [ -h "$SOURCE" ]; do
+	DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+	SOURCE="$(readlink "$SOURCE")"
+	[[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE"
+done
+SCRIPT_PATH="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+
+# Check for python
+command -v python >/dev/null 2>&1 || { echo >&2 "I require python but it's not installed.  Aborting."; exit 1; }
+
+# Run a simple server - http://stackoverflow.com/a/4351609
+# * May need tweaks for later python versions - http://stackoverflow.com/a/17351115
+echo "Hit Ctrl+C to stop serving"
+(cd $SCRIPT_PATH/../ && python -m SimpleHTTPServer 3000)
