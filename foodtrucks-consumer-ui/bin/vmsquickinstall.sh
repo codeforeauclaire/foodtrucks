@@ -3,7 +3,7 @@
 { # this ensures the entire script is downloaded and run #
 
 # Update all software & install new
-sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install -y python
+sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install -y git python
 
 # Clone repository
 git clone https://github.com/codeforeauclaire/foodtrucks.git /root/foodtrucks
