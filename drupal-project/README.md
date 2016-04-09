@@ -1,14 +1,31 @@
+## Usage
+
+First you need to [install composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx).
+
+> Note: The instructions below refer to the [global composer installation](https://getcomposer.org/doc/00-intro.md#globally).
+You might need to replace `composer` with `php composer.phar` (or similar) 
+for your setup.
+
 #### Initial Setup Steps
-* Clone this project and run `composer install` from its root folder to install drupal core and dependencies
+* Clone this repository and delete its `drupal-project` directory
+* Create a new project directory with the `composer create-project` command
+* Restore this repository's files with `git reset`
+* Install this reposirtory's custom project dependencies with `composer install`, this command will take a while to finish
 
 ```
 git clone git@github.com:codeforeauclaire/foodtrucks.git
-cd foodtrucks/foodtrucks-dev
+cd foodtrucks
+rm -rf drupal-project
+composer create-project drupal-composer/drupal-project:8.x-dev drupal-project --stability dev --no-interaction
+git reset --hard HEAD
+cd drupal-project
 composer install
 ```
+
+* Configure your server, set the site root to the `drupal-project/web/` directory
 * Configure a database and db user in your server. The database name, user credentials, the path
 to the deploy folder, and a `$settings` hash need to be entered into the site `settings.php` file  
-(here is an example `settings.php` snippet to append to the `web/sites/default/settings.php` file)
+(here is an example `settings.php` snippet to append to the `drupal-project/web/sites/default/settings.php` file)
 
 ```
 $databases['default']['default'] = array (
@@ -29,7 +46,7 @@ then replace the `DB_NAME`, `DB_USERNAME`, and `DB_PASSWORD` placeholders
 #### Populate the database with a fresh install (either `install.php` or `drush si`)
 * from the web directory use drush to install the site  
 ```
-from web directory
+cd drupal-project/web
 drush si --account-pass=admin -y
 ```
 (if you don't have drush 8.x installed I believe you can use the one provided in the vendor/drush directory:   `../vendor/drush/drush/drush`)
@@ -45,7 +62,7 @@ http://yoursite.name/core/install.php
 * repeat for the shortcut if needed
 
 ```
-from web directory
+cd drupal-project/web
 cat ../deploy/system.site.yml
 drush cedit system.site
 
@@ -56,7 +73,7 @@ drush cedit shortcut.set.default
 * finally, import config using drush
 
 ```
-from web directory
+cd drupal-project/web
 drush cim  
 ```
 
@@ -67,8 +84,7 @@ drush cim
 
 ```
 cd to your project root, above the drupal root.
-from web directory
-cd ../..
+cd ../.. from web directory
 git add .
 git commit -m "YOUR COMMIT MESSAGE"
 git push
