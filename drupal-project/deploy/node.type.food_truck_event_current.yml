@@ -1,4 +1,4 @@
-uuid: 7bfa819b-a881-4aaf-ab19-2582394fe7ca
+uuid: 2d813026-9979-4083-b086-1099e25ca61c
 langcode: en
 status: true
 dependencies:
@@ -9,8 +9,8 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:'
-name: 'Food Truck'
-type: food_trucks
+name: 'Food Truck Event Current'
+type: food_truck_event_current
 description: ''
 help: ''
 new_revision: null

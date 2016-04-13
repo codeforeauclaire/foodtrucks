@@ -1,16 +1,16 @@
-uuid: 1111406e-a08c-4c72-bf09-09198bdac2f9
+uuid: 587cf6f8-310f-47b6-b459-82aa02786810
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_food_truck
-field_name: field_food_truck
+    - telephone
+id: node.field_telephone_number
+field_name: field_telephone_number
 entity_type: node
-type: entity_reference
-settings:
-  target_type: node
-module: core
+type: telephone
+settings: {  }
+module: telephone
 locked: false
 cardinality: 1
 translatable: true

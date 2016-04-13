@@ -1,4 +1,4 @@
-uuid: 6b36a2f9-c76f-4ce5-9d00-f5ddb3ca36e2
+uuid: 61df3be6-f96b-48e5-a504-a24cfa912827
 langcode: en
 status: true
 dependencies:
@@ -9,10 +9,10 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:'
-name: Event
-type: event
+name: 'Food Truck Event Scheduled'
+type: food_truck_event_scheduled
 description: ''
 help: ''
-new_revision: true
+new_revision: null
 preview_mode: 1
 display_submitted: true

@@ -1,0 +1,24 @@
+uuid: 399cec04-df5c-4070-8078-b66f2df31dd1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_start_time
+    - node.type.food_truck_event_scheduled
+  module:
+    - datetime
+id: node.food_truck_event_scheduled.field_start_time
+field_name: field_start_time
+entity_type: node
+bundle: food_truck_event_scheduled
+label: 'Start Time'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    default_date_type: relative
+    default_date: '+1 days'
+default_value_callback: ''
+settings: {  }
+field_type: datetime

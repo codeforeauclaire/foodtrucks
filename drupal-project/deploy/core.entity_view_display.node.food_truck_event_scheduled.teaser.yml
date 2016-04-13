@@ -1,0 +1,23 @@
+uuid: af8680b4-ef8c-4fe5-bd4c-b34a8180fec4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.food_truck_event_scheduled.field_end_time
+    - field.field.node.food_truck_event_scheduled.field_scheduled_location
+    - field.field.node.food_truck_event_scheduled.field_start_time
+    - node.type.food_truck_event_scheduled
+  module:
+    - user
+id: node.food_truck_event_scheduled.teaser
+targetEntityType: node
+bundle: food_truck_event_scheduled
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden:
+  field_end_time: true
+  field_scheduled_location: true
+  field_start_time: true

@@ -1,24 +1,24 @@
-uuid: 6a80bfad-67a0-4718-970a-1ff849f1399d
+uuid: 2451cd66-501e-4d88-a74d-bc2d2b7bcf4e
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_scheduled_location
-    - node.type.event
+    - node.type.food_truck_event_scheduled
   module:
     - geolocation
-id: node.event.field_scheduled_location
+id: node.food_truck_event_scheduled.field_scheduled_location
 field_name: field_scheduled_location
 entity_type: node
-bundle: event
+bundle: food_truck_event_scheduled
 label: 'Scheduled Location'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     lat: '44.811349'
-    lng: '-91.49849410000002'
+    lng: '-91.4984941'
     lat_sin: null
     lat_cos: null
     lng_rad: null

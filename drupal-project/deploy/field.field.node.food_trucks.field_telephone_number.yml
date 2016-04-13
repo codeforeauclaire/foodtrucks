@@ -1,0 +1,21 @@
+uuid: cc765f2b-fb26-4657-9c7d-6b6d4ee72d14
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_telephone_number
+    - node.type.food_trucks
+  module:
+    - telephone
+id: node.food_trucks.field_telephone_number
+field_name: field_telephone_number
+entity_type: node
+bundle: food_trucks
+label: 'Telephone Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

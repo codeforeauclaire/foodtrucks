@@ -1,11 +1,11 @@
-uuid: 4212dd50-b7d3-43d0-8100-c63b0a2c270b
+uuid: dc24487d-7201-4fcd-994e-555d6a3e1d52
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_contact_phone_number
-field_name: field_contact_phone_number
+id: node.field_food_truck_name
+field_name: field_food_truck_name
 entity_type: node
 type: string
 settings:

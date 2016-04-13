@@ -1,0 +1,83 @@
+uuid: 873cdd70-ae0c-4492-8161-d1252c554913
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.food_truck_event_scheduled.field_end_time
+    - field.field.node.food_truck_event_scheduled.field_food_trucks
+    - field.field.node.food_truck_event_scheduled.field_scheduled_location
+    - field.field.node.food_truck_event_scheduled.field_start_time
+    - node.type.food_truck_event_scheduled
+  module:
+    - datetime
+    - geolocation
+    - path
+id: node.food_truck_event_scheduled.default
+targetEntityType: node
+bundle: food_truck_event_scheduled
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+  field_end_time:
+    weight: 8
+    settings:
+      date_order: MDY
+      time_type: '12'
+      increment: 30
+    third_party_settings: {  }
+    type: datetime_datelist
+  field_food_trucks:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+  field_scheduled_location:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: geolocation_googlegeocoder
+  field_start_time:
+    weight: 7
+    settings:
+      date_order: MDY
+      time_type: '12'
+      increment: 30
+    third_party_settings: {  }
+    type: datetime_datelist
+  path:
+    type: path
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

@@ -1,13 +1,13 @@
-uuid: dc555416-dbfe-4f1c-835f-95a97a5eeb2a
+uuid: 4cd6c1b6-605c-43ae-81d8-e65828a1632b
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.event
-id: node.event.promote
+    - node.type.food_truck_event_current
+id: node.food_truck_event_current.promote
 field_name: promote
 entity_type: node
-bundle: event
+bundle: food_truck_event_current
 label: 'Promoted to front page'
 description: ''
 required: false

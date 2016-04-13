@@ -1,0 +1,22 @@
+uuid: 66fc9d49-7197-4456-831d-3e9e2b9f3a1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.food_truck_event_scheduled
+id: node.food_truck_event_scheduled.promote
+field_name: promote
+entity_type: node
+bundle: food_truck_event_scheduled
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

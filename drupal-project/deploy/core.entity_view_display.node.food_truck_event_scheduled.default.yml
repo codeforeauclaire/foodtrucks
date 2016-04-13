@@ -1,54 +1,40 @@
-uuid: 0e55e5a4-f614-41f0-8a06-6e1e1f8b8a61
+uuid: 11c04f61-a01f-49c3-833e-2e779b489523
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.event.field_current_location
-    - field.field.node.event.field_end_time
-    - field.field.node.event.field_food_truck
-    - field.field.node.event.field_scheduled_location
-    - field.field.node.event.field_start_time
-    - node.type.event
+    - field.field.node.food_truck_event_scheduled.field_end_time
+    - field.field.node.food_truck_event_scheduled.field_food_trucks
+    - field.field.node.food_truck_event_scheduled.field_scheduled_location
+    - field.field.node.food_truck_event_scheduled.field_start_time
+    - node.type.food_truck_event_scheduled
   module:
     - datetime
     - geolocation
     - user
-id: node.event.default
+id: node.food_truck_event_scheduled.default
 targetEntityType: node
-bundle: event
+bundle: food_truck_event_scheduled
 mode: default
 content:
-  field_current_location:
-    weight: 2
-    label: above
-    settings:
-      type: ROADMAP
-      zoom: 10
-      height: 400px
-      width: 100%
-      title: ''
-      info_text: ''
-      info_auto_display: true
-    third_party_settings: {  }
-    type: geolocation_map
   field_end_time:
-    weight: 4
+    weight: 102
     label: above
     settings:
       format_type: medium
       timezone_override: ''
     third_party_settings: {  }
     type: datetime_default
-  field_food_truck:
-    weight: 1
-    label: hidden
+  field_food_trucks:
+    weight: 104
+    label: above
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
   field_scheduled_location:
-    weight: 5
-    label: above
+    weight: 103
+    label: hidden
     settings:
       type: ROADMAP
       zoom: 10
@@ -60,7 +46,7 @@ content:
     third_party_settings: {  }
     type: geolocation_map
   field_start_time:
-    weight: 3
+    weight: 101
     label: above
     settings:
       format_type: medium
@@ -68,7 +54,7 @@ content:
     third_party_settings: {  }
     type: datetime_default
   links:
-    weight: 0
+    weight: 100
     settings: {  }
     third_party_settings: {  }
 hidden: {  }

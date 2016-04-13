@@ -1,15 +1,15 @@
-uuid: be25a35b-8817-4e83-8000-a341d7667c45
+uuid: db20ab9a-46f9-467b-8be7-d7e706af365e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_contact_phone_number
+    - field.storage.node.field_food_truck_name
     - node.type.food_trucks
-id: node.food_trucks.field_contact_phone_number
-field_name: field_contact_phone_number
+id: node.food_trucks.field_food_truck_name
+field_name: field_food_truck_name
 entity_type: node
 bundle: food_trucks
-label: 'Contact Phone Number'
+label: 'Food Truck Name'
 description: ''
 required: false
 translatable: false

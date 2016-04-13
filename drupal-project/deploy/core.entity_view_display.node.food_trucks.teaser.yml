@@ -4,10 +4,10 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.food_trucks.field_contact_phone_number
     - field.field.node.food_trucks.field_food_truck_description
     - field.field.node.food_trucks.field_food_truck_logo
     - field.field.node.food_trucks.field_links
+    - field.field.node.food_trucks.field_telephone_number
     - node.type.food_trucks
   module:
     - user
@@ -19,7 +19,7 @@ content:
   links:
     weight: 100
 hidden:
-  field_contact_phone_number: true
   field_food_truck_description: true
   field_food_truck_logo: true
   field_links: true
+  field_telephone_number: true
