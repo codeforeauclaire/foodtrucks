@@ -3,7 +3,9 @@
   "features": [
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "name": "Gordo's"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -14,7 +16,9 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "name": "Big Weenie"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -25,7 +29,9 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "name": "Ice Cream"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -36,7 +42,9 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "name": "Pizza"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
