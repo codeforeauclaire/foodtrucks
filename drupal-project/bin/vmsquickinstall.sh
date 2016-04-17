@@ -47,6 +47,7 @@ php -r "unlink('composer-setup.php');"
 git clone https://github.com/codeforeauclaire/foodtrucks.git /root/foodtrucks
 
 # Configure website
-cp /root/foodtrucks/bin/vmsquickinstall.settings.php /root/foodtrucks/drupal-project/web/sites/default/settings.php
+mkdir -p /root/foodtrucks/drupal-project/web/sites/default/
+cp /root/foodtrucks/drupal-project/bin/vmsquickinstall.settings.php /root/foodtrucks/drupal-project/web/sites/default/settings.php
 
 } # this ensures the entire script is downloaded and run #
