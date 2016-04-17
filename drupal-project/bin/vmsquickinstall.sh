@@ -43,10 +43,16 @@ php -r "if (hash('SHA384', file_get_contents('composer-setup.php')) === '7228c00
 php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 php -r "unlink('composer-setup.php');"
 
+# Install drush (Instructiosn from http://docs.drush.org/en/master/install/)
+wget http://files.drush.org/drush.phar
+chmod +x drush.phar
+sudo mv drush.phar /usr/local/bin/drush
+# drush init # Wanted to prompt, -y didn't seem to work
+
 # Clone repository
 git clone https://github.com/codeforeauclaire/foodtrucks.git /root/foodtrucks
 
-# Configure website
+# Configure website (From drupal-project's README.md)
 mkdir -p /root/foodtrucks/drupal-project/web/sites/default/
 cp /root/foodtrucks/drupal-project/bin/vmsquickinstall.settings.php /root/foodtrucks/drupal-project/web/sites/default/settings.php
 
