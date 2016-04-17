@@ -34,8 +34,8 @@ sudo apt-get install -y python-software-properties
 sudo apt-get update
 sudo apt-get install -y php5
 
-# Install PHPMySQL support
-sudo apt-get install -y php5-mysql
+# Install PHP extensions
+sudo apt-get install -y php5-mysql php5-curl
 
 # Install composer
 php -r "readfile('https://getcomposer.org/installer');" > composer-setup.php
