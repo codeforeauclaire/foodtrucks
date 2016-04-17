@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6f45b20689dd45318c0e7e70d1b7d32f",
-    "content-hash": "ceed946fb69cc5e96bb93724fae2004a",
+    "hash": "b00248bdc31100df13a0336a502c572f",
+    "content-hash": "390ef3624413af120001338df3df9595",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -910,7 +910,7 @@
             "version": "dev-8.x-1.x",
             "source": {
                 "type": "git",
-                "url": "git@github.com:Lowell20/auto_nodetitle.git",
+                "url": "https://github.com/Lowell20/auto_nodetitle.git",
                 "reference": "515175569464c759ac302962f0df96f8512d09dd"
             },
             "type": "drupal-module",
@@ -1313,6 +1313,34 @@
             "time": "2016-01-16 17:51:32"
         },
         {
+            "name": "drupal/entity_storage_migrate",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/entity_storage_migrate.git",
+                "reference": "cb4b5bfb09b98b518be51fa2f1d5bf5d377f5bf0"
+            },
+            "require": {
+                "drupal/core": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "This module makes it possible to install modules that provide new entity storage handlers on sites that already have entity data on the site.",
+            "homepage": "http://drupal.org/project/entity_storage_migrate",
+            "keywords": [
+                "Drupal"
+            ],
+            "time": "2016-03-29 15:36:34"
+        },
+        {
             "name": "drupal/geolocation",
             "version": "8.1.5",
             "source": {
@@ -1426,20 +1454,21 @@
         },
         {
             "name": "drupal/multiversion",
-            "version": "8.1.0-alpha6",
+            "version": "8.1.0-alpha7",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/multiversion.git",
-                "reference": "d5681bfc43c274ba3439d4c8e661205b0ed693dc"
+                "reference": "5f0ac19fad865bbde5aad716ee41c9141e3171d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/multiversion-8.x-1.0-alpha6.zip",
+                "url": "https://ftp.drupal.org/files/projects/multiversion-8.x-1.0-alpha7.zip",
                 "reference": null,
                 "shasum": null
             },
             "require": {
                 "drupal/core": "8.*",
+                "drupal/entity_storage_migrate": "8.*",
                 "drupal/key_value": "8.*",
                 "drupal/serialization": "8.*"
             },
@@ -1455,19 +1484,19 @@
             ],
             "description": "Extends the revision support for content entities.",
             "homepage": "https://www.drupal.org/project/multiversion",
-            "time": "2016-03-18 17:31:43"
+            "time": "2016-04-15 11:20:16"
         },
         {
             "name": "drupal/relaxed",
-            "version": "8.1.0-alpha5",
+            "version": "8.1.0-alpha6",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/relaxed.git",
-                "reference": "04bafae78bd949ab8925492d3742fafeee6c1e2b"
+                "reference": "eb167cb2ed7af488682d1e06dcbd00924a49ef85"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/relaxed-8.x-1.0-alpha5.zip",
+                "url": "https://ftp.drupal.org/files/projects/relaxed-8.x-1.0-alpha6.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -1475,8 +1504,9 @@
                 "drupal/basic_auth": "8.*",
                 "drupal/core": "8.*",
                 "drupal/multiversion": "8.*",
+                "drupal/replication": "8.*",
                 "drupal/rest": "8.*",
-                "drupal/serialization": "8.*"
+                "relaxedws/replicator": "dev-master"
             },
             "type": "drupal-module",
             "extra": {
@@ -1490,7 +1520,39 @@
             ],
             "description": "Provides a RESTful API that exposes all content entities over UUID endpoints. Utility endpoints are also provided subscribing to changes and handling content replication.",
             "homepage": "https://www.drupal.org/project/relaxed",
-            "time": "2016-01-21 14:56:35"
+            "time": "2016-04-15 14:56:46"
+        },
+        {
+            "name": "drupal/replication",
+            "version": "8.1.0-alpha1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/replication.git",
+                "reference": "d7cf2f9967334c5562aebf047c33677ff583ac34"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/replication-8.x-1.0-alpha1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/multiversion": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Provides services and entities types so assist with and log content replication.",
+            "homepage": "http://drupal.org/project/replication",
+            "time": "2016-04-15 13:23:13"
         },
         {
             "name": "drupal/smtp",
