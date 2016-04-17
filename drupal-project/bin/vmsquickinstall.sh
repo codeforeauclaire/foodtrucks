@@ -61,14 +61,12 @@ chmod +x drush.phar
 sudo mv drush.phar /usr/local/bin/drush
 # drush init # Wanted to prompt, -y didn't seem to work
 
-# Install composer dependencies
-(cd /root/foodtrucks/drupal-project && composer install)
-
 # Clone repository
 git clone https://github.com/codeforeauclaire/foodtrucks.git /root/foodtrucks
 
-# Configure website (From drupal-project's README.md)
+# Configure website (From /drupal-project/README.md)
 mkdir -p /root/foodtrucks/drupal-project/web/sites/default/
 cp /root/foodtrucks/drupal-project/bin/vmsquickinstall.settings.php /root/foodtrucks/drupal-project/web/sites/default/settings.php
+(cd /root/foodtrucks/drupal-project && composer install) # Install composer dependencies
 
 } # this ensures the entire script is downloaded and run #
