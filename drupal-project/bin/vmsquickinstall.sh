@@ -49,6 +49,9 @@ chmod +x drush.phar
 sudo mv drush.phar /usr/local/bin/drush
 # drush init # Wanted to prompt, -y didn't seem to work
 
+# Install composer dependencies
+(cd /root/foodtrucks/drupal-project && composer install)
+
 # Clone repository
 git clone https://github.com/codeforeauclaire/foodtrucks.git /root/foodtrucks
 
