@@ -12,7 +12,7 @@
     "repositories": [
 	{
 	    "type": "git",
-	    "url": "git@github.com:Lowell20/auto_nodetitle.git"
+	    "url": "https://github.com/Lowell20/auto_nodetitle.git"
 	},
         {
             "type": "composer",
