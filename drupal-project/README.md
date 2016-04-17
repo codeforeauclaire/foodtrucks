@@ -1,3 +1,9 @@
+## Prerequisites
+
+*  php 5.6 (minimum)
+*  A MySQL server (MariaDB recommended)
+*  Webserver (nginx or apache recommended)
+
 ## Usage
 
 First you need to [install composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx).
