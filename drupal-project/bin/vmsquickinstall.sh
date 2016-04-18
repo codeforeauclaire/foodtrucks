@@ -65,8 +65,12 @@ sudo mv drush.phar /usr/local/bin/drush
 git clone https://github.com/codeforeauclaire/foodtrucks.git /root/foodtrucks
 
 # Configure website (From /drupal-project/README.md)
+(cd /root/foodtrucks && rm -rf drupal-project)
+(cd /root/foodtrucks && composer create-project drupal-composer/drupal-project:8.x-dev drupal-project --stability dev --no-interaction)
+(cd /root/foodtrucks && git reset --hard HEAD)
+(cd /root/foodtrucks/drupal-project && composer install)
 mkdir -p /root/foodtrucks/drupal-project/web/sites/default/
 cp /root/foodtrucks/drupal-project/bin/vmsquickinstall.settings.php /root/foodtrucks/drupal-project/web/sites/default/settings.php
-(cd /root/foodtrucks/drupal-project && composer install) # Install composer dependencies
+(cd /root/foodtrucks/drupal-project/web && drush si --account-pass=admin -y)
 
 } # this ensures the entire script is downloaded and run #
