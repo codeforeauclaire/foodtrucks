@@ -47,7 +47,7 @@ sudo apt-get update
 sudo apt-get install -y php5
 
 # Install PHP extensions
-sudo apt-get install -y php5-mysql php5-curl
+sudo apt-get install -y php5-mysql php5-curl php5-gd
 
 # Install composer
 php -r "readfile('https://getcomposer.org/installer');" > composer-setup.php
