@@ -16,3 +16,27 @@ html, body {
 #datepicker input[type='text'] {
 	text-align: center;
 }
+#datepicker .right-arrow {
+	width: 20px;
+	position: absolute;
+	top: 11px;
+	right: 10px;
+	z-index: 11;
+}
+#datepicker .left-arrow {
+	width: 20px;
+	position: absolute;
+	top: 11px;
+	left: 10px;
+	z-index: 11;
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+}
+
+.truck-list {
+	margin-top: 0;
+}
+.truck-list .ui-collapsible-content {
+	min-height: 200px;
+}
