@@ -13,4 +13,3 @@ $databases['default']['default'] = array (
 $config_directories['sync'] = '../deploy';
 $settings['hash_salt'] = hash('sha256', serialize($databases));
 
-?>
