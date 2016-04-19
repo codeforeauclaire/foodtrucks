@@ -76,10 +76,14 @@ cp /root/foodtrucks/drupal-project/bin/vmsquickinstall.settings.php /root/foodtr
 (cd /root/foodtrucks/drupal-project/web && drush cedit shortcut.set.default --file="/root/foodtrucks/drupal-project/deploy/shortcut.set.default.yml" -y)
 
 # WIP
+echo "Make this work in progress work"
 (cd /root/foodtrucks && git checkout debug)
 (cd /root/foodtrucks/drupal-project/web && drush cim -y)
-echo "CREATE A nginx.conf & make this work (commented out code below)"
-#ln -s /root/foodtrucks/drupal-project/bin/nginx.conf default
-#sudo service nginx restart
+(cd /etc/nginx/sites-enabled/ && rm default && ln -s /root/foodtrucks/drupal-project/bin/nginx.conf default)
+
+# Change nginx user to root (major hack, TODO: Make it not need this)
+# * Like noted @ https://serverfault.com/questions/433265/how-do-i-change-the-nginx-user
+sed -i '1c\user root;' /etc/nginx/nginx.conf
+sudo service nginx restart
 
 } # this ensures the entire script is downloaded and run #
