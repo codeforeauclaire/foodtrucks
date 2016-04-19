@@ -1,6 +1,6 @@
 ## Prerequisites
 
-*  php 5.6 (minimum)
+*  php 5.6 (minimum, with extensions: php5-mysql, php5-gd, php5-curl)
 *  A MySQL server (MariaDB recommended)
 *  Webserver (nginx or apache recommended)
 
