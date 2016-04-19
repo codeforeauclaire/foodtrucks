@@ -76,6 +76,8 @@ cp /root/foodtrucks/drupal-project/bin/vmsquickinstall.settings.php /root/foodtr
 (cd /root/foodtrucks/drupal-project/web && drush cedit shortcut.set.default --file="/root/foodtrucks/drupal-project/deploy/shortcut.set.default.yml" -y)
 
 # WIP
+(cd /root/foodtrucks && git checkout debug)
+(cd /root/foodtrucks/drupal-project/web && drush cim -y)
 echo "CREATE A nginx.conf & make this work (commented out code below)"
 #ln -s /root/foodtrucks/drupal-project/bin/nginx.conf default
 #sudo service nginx restart
