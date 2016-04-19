@@ -16,6 +16,7 @@
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 	<script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.3.0"></script>
+	<script src="js/index.js"></script>
 	<script src="js/map.js"></script>
 	<script src="js/external/jquery-ui/datepicker.js"></script>
 	<script src="js/jquery.mobile.datepicker.js"></script>
@@ -26,17 +27,17 @@
 <div data-role="page">
 
 	<div data-role="header">
-		<h1>Single page</h1>
+		<h1>Eau Claire Food Trucks</h1>
 	</div><!-- /header -->
 
 	<div data-role="content">
-	<div id="datepicker"><input type="text" data-role="date" value="Today" readonly></div>
-    <div id="map"></div>
+		<div id="datepicker"><a href="#"><img src="images/arrow.png" class="left-arrow" /></a><input type="text" data-role="date" value="Today" readonly><a href="#"><img src="images/arrow.png" class="right-arrow" /></a></div>
+		<div id="map"></div>
 	</div><!-- /content -->
 
 
-	<div data-role="footer">
-		<h4>Footer content</h4>
+	<div data-role="collapsible" data-collapsed="false" class="truck-list">
+		<h4>Food Trucks</h4>
 	</div><!-- /footer -->
 
 </div><!-- /page -->
