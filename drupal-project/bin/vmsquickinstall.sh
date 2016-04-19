@@ -72,5 +72,7 @@ git clone https://github.com/codeforeauclaire/foodtrucks.git /root/foodtrucks
 mkdir -p /root/foodtrucks/drupal-project/web/sites/default/
 cp /root/foodtrucks/drupal-project/bin/vmsquickinstall.settings.php /root/foodtrucks/drupal-project/web/sites/default/settings.php
 (cd /root/foodtrucks/drupal-project/web && drush si --account-pass=admin -y)
+(cd /root/foodtrucks/drupal-project/web && drush cedit system.site --file="/root/foodtrucks/drupal-project/deploy/system.site.yml" -y)
+(cd /root/foodtrucks/drupal-project/web && drush cedit shortcut.set.default --file="/root/foodtrucks/drupal-project/deploy/shortcut.set.default.yml" -y)
 
 } # this ensures the entire script is downloaded and run #

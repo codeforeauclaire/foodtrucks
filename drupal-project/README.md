@@ -50,6 +50,13 @@ $settings['hash_salt'] = hash('sha256', serialize($databases));
 then replace the `DB_NAME`, `DB_USERNAME`, and `DB_PASSWORD` placeholders  
 
 #### Populate the database with a fresh install (either `install.php` or `drush si`)
+TODO: Update here to use stuff from quickinstall script
+```
+(cd /root/foodtrucks/drupal-project/web && drush cedit system.site --file="/root/foodtrucks/drupal-project/deploy/system.site.yml" -y)
+(cd /root/foodtrucks/drupal-project/web && drush cedit shortcut.set.default --file="/root/foodtrucks/drupal-project/deploy/shortcut.set.default.yml" -y)
+```
+
+
 * from the web directory use drush to install the site  
 ```
 cd drupal-project/web
