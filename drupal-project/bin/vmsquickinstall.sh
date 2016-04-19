@@ -23,7 +23,7 @@ sudo apt-get update && sudo apt-get upgrade -y
 
 # Install the simple stuff
 # * Some versions from DO article @ https://goo.gl/jCiEhS
-sudo apt-get install -y git apache2
+sudo apt-get install -y git nginx
 
 # Install Maria DB
 # * Instructions from https://goo.gl/d1vOx6 (Ubuntu >> 14.04 >> 10.1 >> DigitalOcean - New York)
@@ -74,5 +74,10 @@ cp /root/foodtrucks/drupal-project/bin/vmsquickinstall.settings.php /root/foodtr
 (cd /root/foodtrucks/drupal-project/web && drush si --account-pass=admin -y)
 (cd /root/foodtrucks/drupal-project/web && drush cedit system.site --file="/root/foodtrucks/drupal-project/deploy/system.site.yml" -y)
 (cd /root/foodtrucks/drupal-project/web && drush cedit shortcut.set.default --file="/root/foodtrucks/drupal-project/deploy/shortcut.set.default.yml" -y)
+
+# WIP
+echo "CREATE A nginx.conf & make this work (commented out code below)"
+#ln -s /root/foodtrucks/drupal-project/bin/nginx.conf default
+#sudo service nginx restart
 
 } # this ensures the entire script is downloaded and run #
