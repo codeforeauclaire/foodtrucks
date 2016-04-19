@@ -2,7 +2,7 @@
 
 *  php 5.6 (minimum, with extensions: php5-mysql, php5-gd, php5-curl, php5-fpm)
 *  A MySQL server (MariaDB recommended)
-*  Webserver (nginx or apache recommended)
+*  Webserver (nginx recommended, apache will probably work too)
 
 ## Usage
 
