@@ -22,7 +22,9 @@ $(document).on('pageshow', function() {
     success: function(data) {
       $(data.features).each(function(key, data) {
         trucks.addData(data);
+        $('#truck-list').append('<li><a href="#">' + data.properties.name + '</a></li>');
       });
+      $('#truck-list').listview('refresh');
     }
   }).error(function() {});
 
