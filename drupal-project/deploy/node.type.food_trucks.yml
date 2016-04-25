@@ -13,6 +13,6 @@ name: 'Food Truck'
 type: food_trucks
 description: ''
 help: ''
-new_revision: null
+new_revision: false
 preview_mode: 1
 display_submitted: true

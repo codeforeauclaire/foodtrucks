@@ -1,0 +1,13 @@
+uuid: cadbe0b6-78d1-493b-9fdf-7e2f5c0be926
+langcode: en
+status: true
+dependencies:
+  module:
+    - auto_nodetitle
+_core:
+  default_config_hash: fgmGUlN-yhfcZbkeyillqCeKkrBg-v4V_3W1xYhZ0JE
+id: auto_nodetitle_update_action
+label: 'Update automatic nodetitles'
+type: node
+plugin: auto_nodetitle_update_action
+configuration: {  }
