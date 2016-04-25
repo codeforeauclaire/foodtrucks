@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3ac8b751d050302159a2d23279e7a8c5",
-    "content-hash": "bb2f721a9c36b29c4ded7fe703578b8e",
+    "hash": "933e7971100dae3cf8b07a5db33c0761",
+    "content-hash": "2bd8991e63751c2f7a570617e95de866",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -68,17 +68,6 @@
                 "zip"
             ],
             "time": "2016-02-15 22:46:40"
-        },
-        {
-            "name": "avagate/transform_json",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://gitlab.com/avagate/transform_json.git",
-                "reference": "c23d4855580f6f7f74a6b023ba55fd1d96b1f3a3"
-            },
-            "type": "drupal-module",
-            "time": "2016-04-25 16:10:20"
         },
         {
             "name": "codegyre/robo",
@@ -970,6 +959,17 @@
             "description": "Built to use Bootstrap, a sleek, intuitive, and powerful front-end framework for faster and easier web development.",
             "homepage": "https://www.drupal.org/project/bootstrap",
             "time": "2016-03-01 22:10:15"
+        },
+        {
+            "name": "drupal/codeforeauclaire_json",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Lowell20/codeforeauclaire_json.git",
+                "reference": "ff09f938431924fd8e9d648edfb98aa9f84e680f"
+            },
+            "type": "drupal-module",
+            "time": "2016-04-25 22:25:42"
         },
         {
             "name": "drupal/console",
@@ -6293,7 +6293,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/auto_nodetitle": 20,
-        "avagate/transform_json": 20,
+        "drupal/codeforeauclaire_json": 20,
         "jcalderonzumba/gastonjs": 20
     },
     "prefer-stable": true,

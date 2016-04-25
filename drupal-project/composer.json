@@ -12,7 +12,7 @@
     "repositories": [
         {
             "type": "git",
-            "url": "https://gitlab.com/avagate/transform_json.git"
+            "url": "https://github.com/Lowell20/codeforeauclaire_json.git"
         },
 	{
 	    "type": "git",
@@ -38,7 +38,7 @@
         "drupal/geolocation": "8.x",
         "drupal/auto_nodetitle": "dev-8.x-1.x",
         "drupal/deploy": "8.x",
-        "avagate/transform_json": "dev-master"
+        "drupal/codeforeauclaire_json": "dev-master"
     },
     "require-dev": {
         "behat/mink": "~1.6",
