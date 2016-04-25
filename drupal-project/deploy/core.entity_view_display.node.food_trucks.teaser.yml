@@ -21,5 +21,6 @@ content:
 hidden:
   field_food_truck_description: true
   field_food_truck_logo: true
+  field_food_truck_name: true
   field_links: true
   field_telephone_number: true

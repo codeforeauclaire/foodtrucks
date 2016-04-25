@@ -14,4 +14,8 @@ mode: teaser
 content:
   links:
     weight: 100
-hidden: {  }
+hidden:
+  field_current_location: true
+  field_end_time: true
+  field_food_trucks: true
+  field_start_time: true

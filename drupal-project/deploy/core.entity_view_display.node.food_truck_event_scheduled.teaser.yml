@@ -19,5 +19,6 @@ content:
     weight: 100
 hidden:
   field_end_time: true
+  field_food_trucks: true
   field_scheduled_location: true
   field_start_time: true

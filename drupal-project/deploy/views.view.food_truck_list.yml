@@ -8,6 +8,7 @@ dependencies:
     - field.storage.node.field_food_truck_name
     - field.storage.node.field_links
     - field.storage.node.field_telephone_number
+    - image.style.thumbnail
     - node.type.food_trucks
     - system.menu.main
   module:
