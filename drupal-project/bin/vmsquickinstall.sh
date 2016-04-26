@@ -84,6 +84,7 @@ sudo service nginx restart
 
 # Give nginx & php5-fpm access to all files
 # TODO: Remove this hack & do it right.  Shouldn't be placing files in /root
+# TODO: * It's breaking sshing into the server
 chown www-data /root -R
 
 } # this ensures the entire script is downloaded and run #
