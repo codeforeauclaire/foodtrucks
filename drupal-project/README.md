@@ -1,4 +1,4 @@
-## (WIP) VMS development enviornment quick setup instructions
+## VMS development enviornment quick setup instructions
 
 1. Fork this repository
 1. Create a new Digital Ocean Ubuntu 14.04.4 machine (1gb+ recommended) >> SSH in >> Run (or read) vms quick install
