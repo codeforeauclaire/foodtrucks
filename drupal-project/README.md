@@ -4,7 +4,8 @@
 1. Create a new Digital Ocean Ubuntu 14.04.4 machine (1gb+ recommended) >> SSH in >> Run (or read) vms quick install
  1. `export GHUSER='AnthonyAstige'` (Replace AnthonyAstige with your username)
  1. `curl -L -o- https://rawgit.com/$GHUSER/foodtrucks/master/drupal-project/bin/vmsquickinstall.sh | bash`
-1. Make edits
+1. See app running
+ 1. Visit http://{vms-ip} in your browser
  1. Edit a file >> refresh page >> see changes in your browser
 
 ## Prerequisites
