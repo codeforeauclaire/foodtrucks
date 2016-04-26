@@ -62,7 +62,7 @@ sudo mv drush.phar /usr/local/bin/drush
 # drush init # Wanted to prompt, -y didn't seem to work
 
 # Clone repository
-git clone https://github.com/codeforeauclaire/foodtrucks.git /root/foodtrucks
+git clone https://github.com/$GHUSER/foodtrucks.git /root/foodtrucks
 
 # Configure website (From /drupal-project/README.md)
 (cd /root/foodtrucks && rm -rf drupal-project)
