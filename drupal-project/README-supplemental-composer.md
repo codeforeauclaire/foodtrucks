@@ -1,3 +1,7 @@
+# Suppliment for baseline Food Trucks README.md
+
+Everything below this line is from a composer generated README.md to help manage Drupal 8.X installations. It may be helpful if you run into trouble setting up, but hopefully all you need is our baseline README.md.
+
 # Composer template for Drupal projects
 
 [![Build Status](https://travis-ci.org/drupal-composer/drupal-project.svg?branch=8.x)](https://travis-ci.org/drupal-composer/drupal-project)
