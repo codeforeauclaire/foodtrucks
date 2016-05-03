@@ -40,7 +40,7 @@ mysql -uroot -pPASS -e "SET PASSWORD = PASSWORD('');"
 
 # Install PHP 5.6
 # * https://www.dev-metal.com/install-setup-php-5-6-ubuntu-14-04-lts/
-sudo add-apt-repository ppa:ondrej/php5-5.6
+sudo add-apt-repository ppa:ondrej/php5-5.6 -y
 sudo apt-get update
 sudo apt-get install -y python-software-properties
 sudo apt-get update
