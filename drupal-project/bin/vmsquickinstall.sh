@@ -50,10 +50,14 @@ sudo apt-get install -y php5
 sudo apt-get install -y php5-mysql php5-curl php5-gd php5-fpm
 
 # Install composer - https://getcomposer.org/download/
+# * TODO: Figure out a real way to do this as page says not to distribute the installation code, this is a hack
 php -r "readfile('https://getcomposer.org/installer');" > composer-setup.php
 php -r "if (hash_file('SHA384', 'composer-setup.php') === 'a52be7b8724e47499b039d53415953cc3d5b459b9d9c0308301f867921c19efc623b81dfef8fc2be194a5cf56945d223') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
 php composer-setup.php
 php -r "unlink('composer-setup.php');"
+
+# Install composer con't (globally)
+mv composer.phar /usr/local/bin/compose
 
 # Install drush (Instructiosn from http://docs.drush.org/en/master/install/)
 wget http://files.drush.org/drush.phar
@@ -66,7 +70,7 @@ git clone https://github.com/$GHUSER/foodtrucks.git /root/foodtrucks
 
 # Configure website (From /drupal-project/README.md)
 (cd /root/foodtrucks && rm -rf drupal-project)
-(cd /root/foodtrucks && composer create-project drupal-composer/drupal-project:8.x-dev drupal-project --stability dev --no-interaction)
+(cd /root/foodtrucks && compose create-project drupal-composer/drupal-project:8.x-dev drupal-project --stability dev --no-interaction)
 (cd /root/foodtrucks && git reset --hard HEAD)
 (cd /root/foodtrucks/drupal-project && composer install)
 mkdir -p /root/foodtrucks/drupal-project/web/sites/default/
