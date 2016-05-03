@@ -62,7 +62,7 @@ sudo mv drush.phar /usr/local/bin/drush
 # drush init # Wanted to prompt, -y didn't seem to work
 
 # Clone repository
-git clone https://github.com/codeforeauclaire/foodtrucks.git /root/foodtrucks
+git clone https://github.com/$GHUSER/foodtrucks.git /root/foodtrucks
 
 # Configure website (From /drupal-project/README.md)
 (cd /root/foodtrucks && rm -rf drupal-project)
@@ -77,13 +77,13 @@ cp /root/foodtrucks/drupal-project/bin/vmsquickinstall.settings.php /root/foodtr
 
 # WIP
 echo "Make this work in progress work"
-(cd /root/foodtrucks && git checkout debug)
 (cd /root/foodtrucks/drupal-project/web && drush cim -y)
 (cd /etc/nginx/sites-enabled/ && rm default && ln -s /root/foodtrucks/drupal-project/bin/nginx.conf default)
 sudo service nginx restart
 
 # Give nginx & php5-fpm access to all files
 # TODO: Remove this hack & do it right.  Shouldn't be placing files in /root
+# TODO: * It's breaking sshing into the server
 chown www-data /root -R
 
 } # this ensures the entire script is downloaded and run #
