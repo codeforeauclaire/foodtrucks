@@ -57,7 +57,7 @@ php composer-setup.php
 php -r "unlink('composer-setup.php');"
 
 # Install composer con't (globally)
-mv composer.phar /usr/local/bin/compose
+mv composer.phar /usr/local/bin/composer
 
 # Install drush (Instructiosn from http://docs.drush.org/en/master/install/)
 wget http://files.drush.org/drush.phar
