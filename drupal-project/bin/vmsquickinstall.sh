@@ -70,7 +70,7 @@ git clone https://github.com/$GHUSER/foodtrucks.git /root/foodtrucks
 
 # Configure website (From /drupal-project/README.md)
 (cd /root/foodtrucks && rm -rf drupal-project)
-(cd /root/foodtrucks && compose create-project drupal-composer/drupal-project:8.x-dev drupal-project --stability dev --no-interaction)
+(cd /root/foodtrucks && composer create-project drupal-composer/drupal-project:8.x-dev drupal-project --stability dev --no-interaction)
 (cd /root/foodtrucks && git reset --hard HEAD)
 (cd /root/foodtrucks/drupal-project && composer install)
 mkdir -p /root/foodtrucks/drupal-project/web/sites/default/
