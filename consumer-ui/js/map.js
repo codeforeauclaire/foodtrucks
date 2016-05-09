@@ -9,7 +9,7 @@ $(document).on('pageshow', function() {
   var trucks = new L.geoJson(null, {
     onEachFeature: function(feature, layer) {
       layer.bindPopup(
-        '<a href="">'+feature.properties.name+'</a><p>short description</p>', {
+        '<a href="">'+feature.properties.name+'</a><p>Hours:</p><p>Address:</p>', {
         clickable: true
       })
     }
