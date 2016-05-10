@@ -6,7 +6,9 @@
  1. `curl -L -o- https://rawgit.com/$GHUSER/foodtrucks/master/drupal-project/bin/vmsquickinstall.sh | bash`
 1. See app running
  1. Visit http://{vms-ip} in your browser
- 1. Edit a file >> refresh page >> see changes in your browser
+1. Options to move forward
+ 1. Play with UI: Use `(cd /foodtrucks/drupal-project/web && drush uli 1)` for login link to login as admin
+ 1. Be a dev: Edit a file >> refresh page >> see changes in your browser
 
 ## Prerequisites
 
