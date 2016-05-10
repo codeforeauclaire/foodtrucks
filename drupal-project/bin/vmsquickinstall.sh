@@ -81,7 +81,8 @@ cp /root/foodtrucks/drupal-project/bin/vmsquickinstall.settings.php /root/foodtr
 
 # WIP
 echo "Make this work in progress work"
-(cd /root/foodtrucks/drupal-project/web && drush cim -y)
+(cd /root/foodtrucks/drupal-project/web drush sqlc < ../db.sql) # Give us some data to play with
+(cd /root/foodtrucks/drupal-project/web && drush cim -y)		# Configure the site
 (cd /etc/nginx/sites-enabled/ && rm default && ln -s /root/foodtrucks/drupal-project/bin/nginx.conf default)
 sudo service nginx restart
 
