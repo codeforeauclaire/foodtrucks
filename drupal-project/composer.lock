@@ -966,10 +966,10 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Lowell20/codeforeauclaire_json.git",
-                "reference": "011f0a1205daabd84d7fc8b2ca360a79f88dcda4"
+                "reference": "203dfa038d1c8ddf10a1afc48c7e6bcc1e71ceae"
             },
             "type": "drupal-module",
-            "time": "2016-05-10 00:50:19"
+            "time": "2016-05-10 01:51:37"
         },
         {
             "name": "drupal/console",
