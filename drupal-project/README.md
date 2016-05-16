@@ -1,3 +1,7 @@
+# Food Trucks :: Drupal Project
+
+Provides food truck administration and an API for the consumer user interface.
+
 ## VMS Easy setup development environment
 
 Use these instructions to setup a temporary* development environment of this project.

@@ -1,3 +1,7 @@
+# Food Trucks :: Consumer UI
+
+Displays where food trucks so consumers can get some food.
+
 ## VMS Easy setup development environment
 
 Use these instructions to setup a temporary* development environment of this project.
