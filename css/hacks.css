@@ -1,0 +1,2 @@
+/* https://stackoverflow.com/questions/4580727/override-jquery-ui-datepicker-div-visible-strangely-on-first-page-load */
+#ui-datepicker-div {display: none;}
