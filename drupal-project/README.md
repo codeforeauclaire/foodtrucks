@@ -1,4 +1,6 @@
-## VMS development enviornment quick setup instructions
+## VMS Easy setup development environment
+
+Use these instructions to setup a temporary* development environment of this project.
 
 1. Fork this repository
 1. Create a new [Virtual Machine](http://vms.codeforeauclaire.org/) >> SSH in >> Run (or read) vms quick install
@@ -9,6 +11,8 @@
 1. Options to move forward
  1. Play with UI: Use `(cd /foodtrucks/drupal-project/web && drush uli 1)` for login link to login as admin
  1. Be a dev: Edit a file >> refresh page >> see changes in your browser
+
+*For a permanent development environment we recommend you read the referenced script above to install locally.
 
 ## Prerequisites
 
