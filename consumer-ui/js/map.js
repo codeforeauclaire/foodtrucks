@@ -6,26 +6,60 @@ $(document).on('pageshow', function() {
   });
   map.addLayer(layer)
 
-  var trucks = new L.geoJson(null, {
+  trucks = new L.geoJson(null, {
     onEachFeature: function(feature, layer) {
       layer.bindPopup(
-        '<a href="">'+feature.properties.name+'</a><p>Hours:</p><p>Address:</p>', {
-        clickable: true
-      })
+        '<a href="' + feature.properties.links + '">' + feature.properties.name + '</a><p>Hours: ' + feature.properties.start_time + ' - ' + feature.properties.end_time + '</p>', {
+          clickable: true
+        })
     }
   });
   trucks.addTo(map);
 
   $.ajax({
     dataType: "json",
-    url: "js/data.json",
+    url: "http://foodtrucks1.version-three.com/default-endpoint",
     success: function(data) {
-      $(data.features).each(function(key, data) {
-        trucks.addData(data);
-        $('#truck-list').append('<li><a href="#">' + data.properties.name + '</a></li>');
-      });
+      addToMap(data[0]);
       $('#truck-list').listview('refresh');
+      $('#schedule-list').listview('refresh');
     }
-  }).error(function() {});
-
+  }).error(function(err) {
+    console.log(err)
+  });
 });
+
+function addToMap(data) {
+  $.each(data, function(key, value) {
+    if (value.name) {
+      $('#truck-list').append('<li><a href="' + value.links + '">' + value.name + '</a></li>');
+    }
+    if (value.lat) {
+      trucks.addData({
+        "type": "Feature",
+        "properties": {
+          "name": value.name,
+          "start_time": value.start_time,
+          "end_time": value.end_time,
+          "links": value.links,
+          "id": key
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            value.lng,
+            value.lat
+          ]
+        }
+      });
+      $('#schedule-list').append('<li><a href="#" class="list-link" data-id="'  + key + '">'  + value.name + '</a></li>');
+    }
+  });
+  $('a.list-link').click(function(e) {
+    var id = $(this).data('id');
+    $.each(trucks.getLayers(), function (i, layer) {
+      if (layer.feature.properties.id == id) layer.openPopup();
+    });
+    e.preventDefault()
+  })
+}
