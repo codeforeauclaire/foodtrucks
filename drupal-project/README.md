@@ -1,12 +1,26 @@
-## VMS development enviornment quick setup instructions
+# Food Trucks :: Drupal Project
+
+Provides food truck administration and an API for the consumer user interface.
+
+## VMS Easy setup development environment
+
+Use these instructions to setup a temporary* development environment of this project.
 
 1. Fork this repository
-1. Create a new Digital Ocean Ubuntu 14.04.4 machine (1gb+ recommended) >> SSH in >> Run (or read) vms quick install
+1. Create a new [Virtual Machine](http://vms.codeforeauclaire.org/) (1gb+ recommended) >> SSH in >> Run vms quick install:
  1. `export GHUSER='AnthonyAstige'` (Replace AnthonyAstige with your username)
  1. `curl -L -o- https://rawgit.com/$GHUSER/foodtrucks/master/drupal-project/bin/vmsquickinstall.sh | bash`
 1. See app running
  1. Visit http://{vms-ip} in your browser
- 1. Edit a file >> refresh page >> see changes in your browser
+1. Options to move forward
+ 1. Play with UI: Use `(cd /foodtrucks/drupal-project/web && drush uli 1)` for login link to login as admin
+ 1. Be a dev: Edit a file >> refresh page >> see changes in your browser
+
+*For a permanent development environment we recommend you read the referenced script above to install locally.
+
+## TODO
+
+* [General Specs](../SPECS.md)
 
 ## Prerequisites
 
