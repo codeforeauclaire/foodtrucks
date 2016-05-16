@@ -6,8 +6,10 @@ Displays where food trucks so consumers can get some food.
 
 Use these instructions to setup a temporary* development environment of this project.
 
+1. Fork this repository
 1. Create a new [Virtual Machine](http://vms.codeforeauclaire.org/) >> SSH in >> Run (or read) vms quick install
- 1. `curl -L -o- https://rawgit.com/codeforeauclaire/foodtrucks/master/consumer-ui/bin/vmsquickinstall.sh | bash`
+ 1. `export GHUSER='AnthonyAstige'` (Replace AnthonyAstige with your username)
+ 1. `curl -L -o- https://rawgit.com/$GHUSER/foodtrucks/master/consumer-ui/bin/vmsquickinstall.sh | bash`
 1. Run app
  1. `(cd ~/foodtrucks/consumer-ui && ./bin/serve)`
  1. Load http://{vms-ip}:3000 in your browser
