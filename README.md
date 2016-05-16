@@ -24,3 +24,4 @@ Use these instructions to setup a temporary* development environment of this pro
 * Hosting - Just client side. Use apache, use python, use whatever. Here are some quick methods
  * https://askubuntu.com/questions/377389/how-to-easily-start-a-webserver-in-any-folder
 * [Original draw.io mockup from mar 28th 2016 C4EC hack night](https://drive.google.com/file/d/0B1hUzWEXfF7oWHVPRGZhLVE3UDA/view)
+* [General Specs](../SPECS.md)
