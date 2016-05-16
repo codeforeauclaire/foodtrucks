@@ -18,6 +18,10 @@ Use these instructions to setup a temporary* development environment of this pro
 
 *For a permanent development environment we recommend you read the referenced script above to install locally.
 
+## TODO
+
+* [General Specs](../SPECS.md)
+
 ## Prerequisites
 
 *  php 5.6 (minimum, with extensions: php5-mysql, php5-gd, php5-curl, php5-fpm)
