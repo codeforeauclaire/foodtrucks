@@ -3,7 +3,7 @@
 Use these instructions to setup a temporary* development environment of this project.
 
 1. Fork this repository
-1. Create a new [Virtual Machine](http://vms.codeforeauclaire.org/) >> SSH in >> Run (or read) vms quick install
+1. Create a new [Virtual Machine](http://vms.codeforeauclaire.org/) (1gb+ recommended) >> SSH in >> Run (or read) vms quick install
  1. `export GHUSER='AnthonyAstige'` (Replace AnthonyAstige with your username)
  1. `curl -L -o- https://rawgit.com/$GHUSER/foodtrucks/master/drupal-project/bin/vmsquickinstall.sh | bash`
 1. See app running
