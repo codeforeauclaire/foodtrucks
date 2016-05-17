@@ -21,8 +21,6 @@ $(document).on('pageshow', function() {
     url: "http://foodtrucks1.version-three.com/default-endpoint",
     success: function(data) {
       addToMap(data[0]);
-      $('#truck-list').listview('refresh');
-      $('#schedule-list').listview('refresh');
     }
   }).error(function(err) {
     console.log(err)
@@ -31,9 +29,6 @@ $(document).on('pageshow', function() {
 
 function addToMap(data) {
   $.each(data, function(key, value) {
-    if (value.name) {
-      $('#truck-list').append('<li><a href="' + value.links + '">' + value.name + '</a></li>');
-    }
     if (value.lat) {
       trucks.addData({
         "type": "Feature",
@@ -52,14 +47,6 @@ function addToMap(data) {
           ]
         }
       });
-      $('#schedule-list').append('<li><a href="#" class="list-link" data-id="'  + key + '">'  + value.name + '</a></li>');
     }
   });
-  $('a.list-link').click(function(e) {
-    var id = $(this).data('id');
-    $.each(trucks.getLayers(), function (i, layer) {
-      if (layer.feature.properties.id == id) layer.openPopup();
-    });
-    e.preventDefault()
-  })
 }
