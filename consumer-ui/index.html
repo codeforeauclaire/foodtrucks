@@ -8,6 +8,8 @@
 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 	<link rel="stylesheet" href="/dependencies/leaflet/leaflet.css" />
+	<link rel="stylesheet" href="/dependencies/leaflet/MarkerCluster.css" />
+	<link rel="stylesheet" href="/dependencies/leaflet/MarkerCluster.Default.css" />
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<link rel="stylesheet" href="css/jquery.mobile.datepicker.css" />
 	<link rel="stylesheet" href="css/jquery.mobile.datepicker.theme.css" />
@@ -16,9 +18,9 @@
 	<script src="http://code.jquery.com/jquery-1.12.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script src="/dependencies/leaflet/leaflet.js"></script>
+	<script src="/dependencies/leaflet/leaflet.markercluster.js"></script>
 	<script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.3.0"></script>
 	<script src="js/index.js"></script>
-	<script src="js/map.js"></script>
 	<script src="js/external/jquery-ui/datepicker.js"></script>
 	<script src="js/jquery.mobile.datepicker.js"></script>
 </head>
@@ -30,7 +32,7 @@
 		<h1>Eau Claire Food Trucks</h1>
 	</div><!-- /header -->
 
-	<div id="datepicker"><a href="#"><img src="images/arrow.png" class="left-arrow" /></a><input type="text" data-role="date" value="Today" readonly><a href="#"><img src="images/arrow.png" class="right-arrow" /></a></div>
+	<div id="datepicker"><a href="#"><img src="images/arrow.png" class="left-arrow" /></a><input type="text" data-role="date" value="Today" id="dateFilter" readonly><a href="#"><img src="images/arrow.png" class="right-arrow" /></a></div>
 </body>
 </html>
 
