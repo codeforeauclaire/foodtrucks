@@ -6,11 +6,30 @@ html, body {
 	height: 100%;
 }
 
-#map { min-height: 500px; height: 100%; margin: -15px;}
+#header {
+	z-index: 15;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 35px;
+}
+#header h1 {
+	margin: auto;
+}
+
+#map {
+	position: fixed;
+	z-index: 5;
+	top: 35px;
+	bottom: 0;
+	width: 100%;
+}
 
 #datepicker {
 	position: absolute;
 	z-index: 10;
+	top: 50px;
 	right: 10px;
 }
 #datepicker input[type='text'] {
@@ -32,11 +51,4 @@ html, body {
     -ms-transform: rotate(180deg); /* IE 9 */
     -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
     transform: rotate(180deg);
-}
-
-.truck-list {
-	margin-top: 0;
-}
-.truck-list .ui-collapsible-content {
-	min-height: 200px;
 }
