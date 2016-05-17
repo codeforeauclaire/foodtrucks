@@ -9,9 +9,12 @@ $(document).on('pageshow', function() {
   trucks = new L.geoJson(null, {
     onEachFeature: function(feature, layer) {
       layer.bindPopup(
-        '<a href="' + feature.properties.links + '">' + feature.properties.name + '</a><p>Hours: ' + feature.properties.start_time + ' - ' + feature.properties.end_time + '</p>', {
+	    '<a href="' + feature.properties.links + '">' + feature.properties.name + '</a>'+
+        '<p>Hours: ' + feature.properties.start_time + ' - ' + feature.properties.end_time + '</p>',
+        {
           clickable: true
-        })
+        }
+      )
     }
   });
   trucks.addTo(map);
