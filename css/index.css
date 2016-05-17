@@ -6,11 +6,27 @@ html, body {
 	height: 100%;
 }
 
-#map { min-height: 500px; height: 100%; margin: -15px;}
+#header {
+	z-index: 15;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 35px;
+}
+
+#map {
+	position: fixed;
+	z-index: 5;
+	top: 35px;
+	bottom: 0;
+	width: 100%;
+}
 
 #datepicker {
 	position: absolute;
 	z-index: 10;
+	top: 50px;
 	right: 10px;
 }
 #datepicker input[type='text'] {
