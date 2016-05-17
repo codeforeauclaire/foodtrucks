@@ -14,6 +14,9 @@ html, body {
 	right: 0;
 	height: 35px;
 }
+#header h1 {
+	margin: auto;
+}
 
 #map {
 	position: fixed;
