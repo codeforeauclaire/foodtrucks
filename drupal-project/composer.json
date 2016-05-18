@@ -39,7 +39,8 @@
         "drupal/auto_nodetitle": "dev-8.x-1.x",
         "drupal/deploy": "8.x",
         "drupal/codeforeauclaire_json": "dev-master",
-        "drupal/paragraphs": "8.x"
+        "drupal/paragraphs": "8.x",
+        "drupal/graphql": "8.x-2.x-dev"
     },
     "require-dev": {
         "behat/mink": "~1.6",

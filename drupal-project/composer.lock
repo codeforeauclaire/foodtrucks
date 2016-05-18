@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5b066e5e70ca88b7105627ec47dcde94",
-    "content-hash": "27686068afcbc162b301d47288f8f064",
+    "hash": "23b6a65628f4efac44e9897755f4a7d4",
+    "content-hash": "4c417b8d9b7580cbc1ce02fdedf692fe",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1415,6 +1415,33 @@
             "time": "2016-01-27 12:15:59"
         },
         {
+            "name": "drupal/graphql",
+            "version": "dev-8.x-2.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/graphql.git",
+                "reference": "4111b766b6b29e351cc3bded8b199ff0f63226d0"
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/rest": "8.*",
+                "fubhy/graphql-php": "~1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-2.x": "8.2.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Generates GraphQL schemas for content entity types.",
+            "homepage": "http://drupal.org/project/graphql",
+            "time": "2016-05-08 10:33:51"
+        },
+        {
             "name": "drupal/key_value",
             "version": "8.1.0",
             "source": {
@@ -1916,6 +1943,58 @@
                 "validator"
             ],
             "time": "2016-05-15 10:06:34"
+        },
+        {
+            "name": "fubhy/graphql-php",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fubhy/graphql-php.git",
+                "reference": "c1de2233c731ca29e5c5db4c43f3b9db36478c83"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fubhy/graphql-php/zipball/c1de2233c731ca29e5c5db4c43f3b9db36478c83",
+                "reference": "c1de2233c731ca29e5c5db4c43f3b9db36478c83",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.7",
+                "scrutinizer/ocular": "~1.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Fubhy\\GraphQL\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Siemssen",
+                    "email": "fubhy@fubhy.com"
+                }
+            ],
+            "description": "A GraphQL parser for PHP.",
+            "homepage": "https://github.com/fubhy/graphql-php",
+            "keywords": [
+                "Relay",
+                "facebook",
+                "graphql",
+                "parser"
+            ],
+            "time": "2016-04-28 00:39:57"
         },
         {
             "name": "gabordemooij/redbean",
@@ -6379,6 +6458,7 @@
     "stability-flags": {
         "drupal/auto_nodetitle": 20,
         "drupal/codeforeauclaire_json": 20,
+        "drupal/graphql": 20,
         "jcalderonzumba/gastonjs": 20
     },
     "prefer-stable": true,
