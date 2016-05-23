@@ -9,7 +9,10 @@ $(document).on('pageshow', function() {
   });
 
   var markerCluster = L.markerClusterGroup();
+  map.addLayer(markerCluster);
   var markers = new Array();
+
+  var dateFormat = window.location.hash.toLowerCase() === '#all' ? "M/D/YY h:mm a" : "h:mm a"
 
  $.getJSON({
     dataType: "json",
@@ -19,20 +22,26 @@ $(document).on('pageshow', function() {
     $.each(data, function(key, value) {
       if (value.lat) {
         var marker = new L.Marker(new L.LatLng(value.lat, value.lng))
-          .bindPopup('<a href="' + value.links + '">' + value.name + '</a>'+
-              '<p>Hours: ' + value.start_time + ' - ' + value.end_time + '</p>');
-        markerCluster.addLayer(marker);
+          .bindPopup('<a href="' + value.links + '">' + value.name + '</a><br/>'
+            + '<img src="' +value.logo+'" alt="logo"/>'
+            + '<p><strong>Hours:</strong> ' + moment(value.start_time).format(dateFormat) + ' - ' + moment(value.end_time).format(dateFormat) + '</p>');
+
         marker.start_time = value.start_time
         marker.end_time = value.end_time
         markers.push(marker)
       }
     });
+    if(window.location.hash.toLowerCase() === '#all'){
+      $( "#dateFilter" ).val("All")
+      markerCluster.addLayers(markers);
+    }else {
+      $( "#dateFilter" ).trigger( "change" );
+    }
+
   })
   .fail(function(err) {
     console.log( err );
   })
-
-  map.addLayer(markerCluster);
 
   $('#datepicker a').click(function (e) {
     e.preventDefault();
@@ -44,20 +53,16 @@ $(document).on('pageshow', function() {
       dateField.datepicker('setDate', new Date(date.setDate(date.getDate() + 1)));
     }
     $( "#dateFilter" ).trigger( "change" );
+
   });
 
   $('#dateFilter').change(function (e) {
-    var filterByDate = $(this).datepicker('getDate');
-    var filterByStart = new Date(filterByDate)
-    var filterByEnd = new Date(filterByDate)
-    filterByEnd.setDate (filterByEnd.getDate()+1);
-
+    var filterDate = $(this).datepicker('getDate').setHours(0,0,0,0);
     markerCluster.clearLayers();
     for (var i=0;i<markers.length;i++){
-      //console.log(filterByStart, new Date(markers[i].start_time), new Date(markers[i].end_time), filterByEnd)
-      // bug in date format, timezone, or logic
-      if(new Date(markers[i].start_time ) >= filterByStart
-        && new Date (markers[i].end_time) < filterByEnd  ){
+      var open  = new Date (markers[i].start_time.split('T')[0]).setHours(0,0,0,0)
+      var close = new Date (markers[i].end_time.split('T')[0]).setHours(0,0,0,0)
+      if(open <= filterDate && close >= filterDate ){
           markerCluster.addLayer(markers[i]);
       }
     }
