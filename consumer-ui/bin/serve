@@ -16,4 +16,6 @@ command -v python >/dev/null 2>&1 || { echo >&2 "I require python but it's not i
 # Run a simple server - http://stackoverflow.com/a/4351609
 # * May need tweaks for later python versions - http://stackoverflow.com/a/17351115
 echo "Hit Ctrl+C to stop serving"
+echo " * Reload with '#all' at the end of your URL to show events from all dates"
+echo
 (cd $SCRIPT_PATH/../ && python -m SimpleHTTPServer 3000)
