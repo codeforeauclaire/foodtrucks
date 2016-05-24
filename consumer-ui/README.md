@@ -19,6 +19,7 @@ Use these instructions to setup a temporary* development environment of this pro
 
 ## Development Notes
 
+* Don't work directly on the gh-pages branch, the script /consumer-ui/bin/deploy-to-gh-pages sends code there (and be careful if you use that script)
 * Mapping via Leaflet http://leafletjs.com/
  * http://leafletjs.com/examples/mobile.html
  * Data: Static json data that will run
