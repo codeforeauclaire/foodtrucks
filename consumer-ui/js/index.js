@@ -1,5 +1,5 @@
 var API = "http://vendors.foodtrucks.codeforeauclaire.org/api/events";
-API = "js/test/event.json"; //uncomment to use local test data
+//API = "js/test/event.json"; //uncomment to use local test data
 
 $(document).on('pageshow', function() {
   var map = new L.Map('map', {
