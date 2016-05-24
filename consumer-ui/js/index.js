@@ -1,4 +1,4 @@
-var API = "http://foodtrucks1.version-three.com/default-endpoint";
+var API = "http://vendors.foodtrucks.codeforeauclaire.org/api/events";
 API = "js/test/event.json"; //uncomment to use local test data
 
 $(document).on('pageshow', function() {
@@ -68,17 +68,36 @@ $(document).on('pageshow', function() {
 
   // temporary client side date filter. To be replaced with ajax call to server action.
   $('#dateFilter').change(function (e) {
-    var filterDate = $(this).datepicker('getDate').setHours(0,0,0,0);
+    var filterDate = $(this).datepicker('getDate');
+    //convert to UTC to match api dates
+    filterDate = new Date(filterDate.getUTCFullYear(), filterDate.getUTCMonth(), filterDate.getUTCDate(),
+      filterDate.getUTCHours(), filterDate.getUTCMinutes(), filterDate.getUTCSeconds());
+
     markerCluster.clearLayers();
     for (var i=0;i<markers.length;i++){
-      var open  = new Date (markers[i].start_time.split('T')[0]).setHours(0,0,0,0)
-      var close = new Date (markers[i].end_time.split('T')[0]).setHours(0,0,0,0)
-      if(open <= filterDate && close >= filterDate ){
+      var open  = new Date (markers[i].start_time)
+      var close = new Date (markers[i].end_time)
+      if(isBefore(open, filterDate) && isAfter(close, filterDate) ){
           markerCluster.addLayer(markers[i]);
       }
     }
   });
 });
+
+//compare dates without time, return true if date1 is on or before date2
+function isBefore(date1, date2){
+  if (date1.getFullYear() < date2.getFullYear()) return true
+  else if (date1.getFullYear() <= date2.getFullYear() && date1.getMonth() < date2.getMonth()) return true
+  else if (date1.getFullYear() <= date2.getFullYear() && date1.getMonth() <= date2.getMonth() && date1.getDate() <= date2.getDate()) return true
+  else return false
+}
+//compare dates without time, return true if date1 is on or after date2
+function isAfter(date1, date2){
+  if (date1.getFullYear() > date2.getFullYear()) return true
+  else if (date1.getFullYear() >= date2.getFullYear() && date1.getMonth() > date2.getMonth()) return true
+  else if (date1.getFullYear() >= date2.getFullYear() && date1.getMonth() >= date2.getMonth() && date1.getDate() >= date2.getDate()) return true
+  else return false
+}
 
 function getPopupHtml(value, dateFormat, expired){
   var content = '<a href="' + value.links + '">' + value.name + '</a><br/>';
