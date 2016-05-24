@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.food_truck_event_scheduled.field_end_time
-    - field.field.node.food_truck_event_scheduled.field_food_trucks
     - field.field.node.food_truck_event_scheduled.field_scheduled_location
     - field.field.node.food_truck_event_scheduled.field_start_time
     - node.type.food_truck_event_scheduled
@@ -25,13 +24,6 @@ content:
       timezone_override: ''
     third_party_settings: {  }
     type: datetime_default
-  field_food_trucks:
-    weight: 104
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
   field_scheduled_location:
     weight: 103
     label: hidden
