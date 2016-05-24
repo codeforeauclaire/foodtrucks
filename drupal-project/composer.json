@@ -12,7 +12,7 @@
     "repositories": [
         {
             "type": "git",
-            "url": "https://github.com/Lowell20/codeforeauclaire_json.git"
+            "url": "https://github.com/Lowell20/foodtrucksjson.git"
         },
 	{
 	    "type": "git",
@@ -38,7 +38,7 @@
         "drupal/geolocation": "8.x",
         "drupal/auto_nodetitle": "dev-8.x-1.x",
         "drupal/deploy": "8.x",
-        "drupal/codeforeauclaire_json": "dev-master",
+        "drupal/foodtrucksjson": "dev-master",
         "drupal/paragraphs": "8.x",
         "drupal/graphql": "8.x-2.x-dev"
     },
