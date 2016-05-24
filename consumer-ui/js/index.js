@@ -12,7 +12,7 @@ $(document).on('pageshow', function() {
   map.addLayer(markerCluster);
   var markers = new Array();
 
-  var dateFormat = window.location.hash.toLowerCase() === '#all' ? "M/D/YY h:mm a" : "h:mm a"
+  var dateFormat = "M/D/YY h:mm a"
 
   var pastEventIcon = new L.Icon({
     iconUrl: 'deps/leaflet/images/marker-icon-gray-2x.png',
@@ -105,8 +105,8 @@ function getPopupHtml(value, dateFormat, expired){
   content += '<p>' +value.description+'</p>';
   if (expired) content += '<p><strong> SERVICE HOURS HAVE PASSED!</strong></p>';
   content += '<p>Hours: '
-          + moment(value.start_time).format(dateFormat)
-          + ' - ' + moment(value.end_time).format(dateFormat) + '</p>';
+          + moment.utc(value.start_time).local().format(dateFormat)
+          + ' - ' + moment.utc(value.end_time).local().format(dateFormat) + '</p>';
   return content;
 }
 
