@@ -14,9 +14,15 @@ CONSUMER_UI_PATH=$(dirname "$SCRIPT_PATH")
 BASE_CLONE_PATH=$(dirname $CONSUMER_UI_PATH)
 RANDOM_TMP_PATH="/tmp/pLbtjWvQjE6S0zqFZQOuxrzsIQ0ozMk1AIRtMVIHaQr"
 
-echo "Making current /consumer-ui/ the root folder of gh-pages branch (minus bin folder)"
-echo
-echo
+read -r -p "Do you know what you're doing with this script? [y/n] " prompt
+if [[ $prompt == "y" || $prompt == "Y" || $prompt == "yes" || $prompt == "Yes" ]]; then
+	echo "Making current /consumer-ui/ the root folder of gh-pages branch (minus bin folder)"
+	echo
+	echo
+else
+	echo "Aborting"
+	exit
+fi
 
 # TODO: Add in sanity check that nothing to commit, perhaps stash it before?
 
