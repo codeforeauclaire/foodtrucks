@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "dda19e1ed3f79698ec0d36cc3ffca55f",
-    "content-hash": "24b15d720e825133ce27cb25d7c6d6a8",
+    "hash": "8c7ead332c90ef0f76200eaa126466b5",
+    "content-hash": "ab9d1b4d709a11f4f2749e1f710a038a",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -818,7 +818,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/admin_toolbar-8.x-1.15.zip",
-                "reference": "f8380381183bc76babaec9dfe392511011d54904",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -1169,7 +1169,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/entity_reference_revisions-8.x-1.0-rc6.zip",
-                "reference": "c9056323e728586436688d6aa1310a0b60c241d1",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -1194,11 +1194,22 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Lowell20/foodtrucksjson.git",
+                "url": "https://gitlab.com/codeforeauclaire/foodtrucksjson.git",
                 "reference": "c6e511b62ce77a2906214cfabf09e2fac8f0abcd"
             },
             "type": "drupal-module",
             "time": "2016-05-25 00:54:31"
+        },
+        {
+            "name": "drupal/foodtruckstheme",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://gitlab.com/codeforeauclaire/foodtruckstheme.git",
+                "reference": "a60497b28c3af2a77ea8a9295b8ccce7e3a6e8f4"
+            },
+            "type": "drupal-theme",
+            "time": "2016-05-25 21:05:55"
         },
         {
             "name": "drupal/geolocation",
@@ -1211,7 +1222,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/geolocation-8.x-1.5.zip",
-                "reference": "6d279d17c722bf612e21bfdbe0545a972c105845",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -1270,7 +1281,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/paragraphs-8.x-1.0-rc4.zip",
-                "reference": "740874bacb56a6a90683e7818c06ba77a638125c",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -1347,7 +1358,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/token-8.x-1.0-alpha2.zip",
-                "reference": "918d0d5e8e8ee7f446d3e068cb6aa2d7c61ee625",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -6051,6 +6062,7 @@
     "stability-flags": {
         "drupal/auto_nodetitle": 20,
         "drupal/foodtrucksjson": 20,
+        "drupal/foodtruckstheme": 20,
         "drupal/graphql": 20,
         "jcalderonzumba/gastonjs": 20
     },
