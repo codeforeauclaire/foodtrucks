@@ -37,7 +37,8 @@
         "drupal/foodtrucksjson": "dev-master",
         "drupal/paragraphs": "8.1.x",
         "drupal/graphql": "8.x-2.x-dev",
-        "drupal/patternlab": "8.1.x"
+        "drupal/patternlab": "8.1.x",
+        "drupal/components": "8.1.x"
     },
     "require-dev": {
         "behat/mink": "~1.6",
