@@ -1164,10 +1164,10 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Lowell20/foodtrucksjson.git",
-                "reference": "1fa00252db91f26992d79c69d1912a892dce693f"
+                "reference": "c6e511b62ce77a2906214cfabf09e2fac8f0abcd"
             },
             "type": "drupal-module",
-            "time": "2016-05-24 05:12:35"
+            "time": "2016-05-25 00:54:31"
         },
         {
             "name": "drupal/geolocation",
