@@ -1,0 +1,22 @@
+uuid: 562d2aa6-b5b4-490d-8148-d89d4a2edcfc
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - foodtruckstheme
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: foodtruckstheme_messages
+theme: foodtruckstheme
+region: header
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

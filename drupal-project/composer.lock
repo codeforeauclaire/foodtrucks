@@ -1206,10 +1206,10 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/codeforeauclaire/foodtruckstheme.git",
-                "reference": "a60497b28c3af2a77ea8a9295b8ccce7e3a6e8f4"
+                "reference": "6773ce72b3dd07b0db8b9652948c4970a9a21cf1"
             },
             "type": "drupal-theme",
-            "time": "2016-05-25 21:05:55"
+            "time": "2016-05-25 22:25:59"
         },
         {
             "name": "drupal/geolocation",

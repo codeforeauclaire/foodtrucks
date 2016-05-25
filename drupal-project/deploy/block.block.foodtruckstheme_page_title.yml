@@ -1,0 +1,20 @@
+uuid: 16840c61-0ff1-4a77-ae90-2f45ee1c5af4
+langcode: en
+status: true
+dependencies:
+  theme:
+    - foodtruckstheme
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: foodtruckstheme_page_title
+theme: foodtruckstheme
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }
