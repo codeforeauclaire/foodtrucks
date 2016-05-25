@@ -31,7 +31,7 @@ cd $BASE_CLONE_PATH
 
 # Backup
 rm -rf $RANDOM_TMP_PATH
-mkdir $RANDOM_TMP_PATH
+mkdir -p $RANDOM_TMP_PATH
 cp $CONSUMER_UI_PATH/* $RANDOM_TMP_PATH -r
 
 # Get on github-pages branch
