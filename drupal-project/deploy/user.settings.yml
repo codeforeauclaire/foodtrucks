@@ -1,5 +1,5 @@
 anonymous: Anonymous
-verify_mail: false
+verify_mail: true
 notify:
   cancel_confirm: true
   password_reset: true
@@ -10,7 +10,7 @@ notify:
   register_no_approval_required: true
   register_pending_approval: true
 register: visitors
-cancel_method: user_cancel_block
+cancel_method: user_cancel_reassign
 password_reset_timeout: 86400
 password_strength: true
 langcode: en
