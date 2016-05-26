@@ -44,7 +44,8 @@
         "drupal/graphql": "8.x-2.x-dev",
         "drupal/patternlab": "8.1.x",
         "drupal/components": "8.1.x",
-        "drupal/simple_fb_connect": "dev-8.x-3.x"
+        "drupal/simple_fb_connect": "dev-8.x-3.x",
+        "drupal/smtp": "8.1.x"
     },
     "require-dev": {
         "behat/mink": "~1.6",
