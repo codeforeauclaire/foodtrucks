@@ -1,5 +1,5 @@
-app_id: '1769259633293477'
-app_secret: secret
+app_id: '$config[''simple_fb_connect.settings''][''app_id''] = '''';'
+app_secret: '$config[''simple_fb_connect.settings''][''app_secret''] = '''';'
 post_login_path: user
 redirect_user_form: 0
 disable_admin_login: 1
