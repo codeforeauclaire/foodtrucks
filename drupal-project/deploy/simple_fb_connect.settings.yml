@@ -1,0 +1,11 @@
+app_id: '1769259633293477'
+app_secret: secret
+post_login_path: user
+redirect_user_form: 0
+disable_admin_login: 1
+disabled_roles:
+  replicator: 0
+  administrator: 0
+  food_truck_administrator: 0
+_core:
+  default_config_hash: IyBBRoNwfQZ_KdfbBXQkQUKkZFpKxcLjXLAl2VB_tQk

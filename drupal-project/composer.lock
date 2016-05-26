@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8c7ead332c90ef0f76200eaa126466b5",
-    "content-hash": "ab9d1b4d709a11f4f2749e1f710a038a",
+    "hash": "d3bd7c7f7086847aadec5d62a488507e",
+    "content-hash": "afbae2aa3a301976562eaa125aa524c0",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1348,6 +1348,32 @@
             "time": "2016-05-12 16:49:31"
         },
         {
+            "name": "drupal/simple_fb_connect",
+            "version": "dev-8.x-3.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/simple_fb_connect",
+                "reference": "ac833c507edc1d4ccfaa140fbecf9e7af3388dc9"
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "facebook/php-sdk-v4": "~5.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-3.x": "8.3.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Allows users to authenticate with their Facebook accounts.",
+            "homepage": "https://www.drupal.org/project/simple_fb_connect",
+            "time": "2016-05-26 12:31:34"
+        },
+        {
             "name": "drupal/token",
             "version": "8.1.0-alpha2",
             "source": {
@@ -1589,6 +1615,63 @@
                 "validator"
             ],
             "time": "2016-05-15 10:06:34"
+        },
+        {
+            "name": "facebook/php-sdk-v4",
+            "version": "5.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/facebook/facebook-php-sdk-v4.git",
+                "reference": "c60fba1fe1de62db1e0776d32fc2fb778189459c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/facebook/facebook-php-sdk-v4/zipball/c60fba1fe1de62db1e0776d32fc2fb778189459c",
+                "reference": "c60fba1fe1de62db1e0776d32fc2fb778189459c",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.4|^7.0"
+            },
+            "require-dev": {
+                "guzzlehttp/guzzle": "~5.0",
+                "mockery/mockery": "~0.8",
+                "phpunit/phpunit": "~4.0"
+            },
+            "suggest": {
+                "guzzlehttp/guzzle": "Allows for implementation of the Guzzle HTTP client"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Facebook\\": "src/Facebook/"
+                },
+                "files": [
+                    "src/Facebook/polyfills.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Facebook Platform"
+            ],
+            "authors": [
+                {
+                    "name": "Facebook",
+                    "homepage": "https://github.com/facebook/facebook-php-sdk-v4/contributors"
+                }
+            ],
+            "description": "Facebook SDK for PHP",
+            "homepage": "https://github.com/facebook/facebook-php-sdk-v4",
+            "keywords": [
+                "facebook",
+                "sdk"
+            ],
+            "time": "2016-05-18 22:04:36"
         },
         {
             "name": "fubhy/graphql-php",
@@ -6064,6 +6147,7 @@
         "drupal/foodtrucksjson": 20,
         "drupal/foodtruckstheme": 20,
         "drupal/graphql": 20,
+        "drupal/simple_fb_connect": 20,
         "jcalderonzumba/gastonjs": 20
     },
     "prefer-stable": true,
