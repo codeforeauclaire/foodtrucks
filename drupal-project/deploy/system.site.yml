@@ -1,6 +1,6 @@
 uuid: ada754dc-6ad8-4971-a75d-9323898822ed
 name: 'Food Trucks in Eau Claire'
-mail: admin@example.com
+mail: foodtruck.vendors@digitalfarrier.com
 slogan: ''
 page:
   403: ''
@@ -12,4 +12,4 @@ langcode: en
 default_langcode: en
 _core:
   default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
-mail_notification: ''
+mail_notification: foodtruck.vendors@digitalfarrier.com
