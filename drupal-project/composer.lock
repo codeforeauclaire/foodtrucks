@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "44c1e73f3a01d2903177a8ab6330f403",
-    "content-hash": "81dfe8728df4820992c2dc2964d98046",
+    "hash": "5126cefd5afb7c90aa34d343e6280628",
+    "content-hash": "36c22b6bb586dc179ea77e0472993908",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -852,30 +852,6 @@
             "time": "2016-05-23 11:35:45"
         },
         {
-            "name": "drupal/auto_nodetitle",
-            "version": "dev-8.x-1.x",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Lowell20/auto_nodetitle.git",
-                "reference": "515175569464c759ac302962f0df96f8512d09dd"
-            },
-            "type": "drupal-module",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "",
-                    "homepage": "https://www.drupal.org"
-                }
-            ],
-            "homepage": "http://drupal.org/project/auto_nodetitle",
-            "support": {
-                "issues": "https://www.drupal.org/project/issues/auto_nodetitle"
-            },
-            "time": "2016-04-07 16:50:09"
-        },
-        {
             "name": "drupal/components",
             "version": "8.1.0",
             "source": {
@@ -1206,10 +1182,10 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/codeforeauclaire/foodtruckstheme.git",
-                "reference": "6773ce72b3dd07b0db8b9652948c4970a9a21cf1"
+                "reference": "7bf9aedbaf5835b40da689dab4308be426dedf94"
             },
             "type": "drupal-theme",
-            "time": "2016-05-25 22:25:59"
+            "time": "2016-05-29 17:51:17"
         },
         {
             "name": "drupal/geolocation",
@@ -6174,7 +6150,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drupal/auto_nodetitle": 20,
         "drupal/foodtrucksjson": 20,
         "drupal/foodtruckstheme": 20,
         "drupal/graphql": 20,

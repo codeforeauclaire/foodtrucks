@@ -37,7 +37,6 @@
         "drupal/admin_toolbar": "8.1.x",
         "drupal/token": "8.1.x",
         "drupal/geolocation": "8.1.x",
-        "drupal/auto_nodetitle": "dev-8.x-1.x",
         "drupal/foodtrucksjson": "dev-master",
         "drupal/foodtruckstheme": "dev-master",
         "drupal/paragraphs": "8.1.x",
