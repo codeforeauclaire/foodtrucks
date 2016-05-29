@@ -1,4 +1,4 @@
-var API = "http://dev.vendors.foodtrucks.codeforeauclaire.org/api/events";
+var API = "http://vendors.foodtrucks.codeforeauclaire.org/api/events";
 //API = "js/test/event.json"; //uncomment to use local test data
 
 $(document).on('pageshow', function() {
