@@ -11,7 +11,7 @@ id: node.food_trucks.field_food_truck_logo
 field_name: field_food_truck_logo
 entity_type: node
 bundle: food_trucks
-label: 'Food Truck Logo'
+label: Logo
 description: ''
 required: false
 translatable: false

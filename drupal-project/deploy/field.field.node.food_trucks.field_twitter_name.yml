@@ -1,0 +1,19 @@
+uuid: 8d7c5b35-5fab-4113-a957-5366d0b8096a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_twitter_name
+    - node.type.food_trucks
+id: node.food_trucks.field_twitter_name
+field_name: field_twitter_name
+entity_type: node
+bundle: food_trucks
+label: 'Twitter Name'
+description: 'Begin with @ symbol such as <i>@example</i>'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

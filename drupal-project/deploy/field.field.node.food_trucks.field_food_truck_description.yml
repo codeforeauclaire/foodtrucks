@@ -9,7 +9,7 @@ id: node.food_trucks.field_food_truck_description
 field_name: field_food_truck_description
 entity_type: node
 bundle: food_trucks
-label: 'Food Truck Description'
+label: Description
 description: ''
 required: false
 translatable: false

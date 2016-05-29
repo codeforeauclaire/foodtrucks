@@ -4,10 +4,12 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.food_trucks.field_facebook_url
     - field.field.node.food_trucks.field_food_truck_description
     - field.field.node.food_trucks.field_food_truck_logo
-    - field.field.node.food_trucks.field_links
     - field.field.node.food_trucks.field_telephone_number
+    - field.field.node.food_trucks.field_twitter_name
+    - field.field.node.food_trucks.field_website_url
     - node.type.food_trucks
   module:
     - user
@@ -19,8 +21,9 @@ content:
   links:
     weight: 100
 hidden:
+  field_facebook_url: true
   field_food_truck_description: true
   field_food_truck_logo: true
-  field_food_truck_name: true
-  field_links: true
   field_telephone_number: true
+  field_twitter_name: true
+  field_website_url: true

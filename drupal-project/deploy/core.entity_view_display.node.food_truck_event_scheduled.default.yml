@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.food_truck_event_scheduled.field_end_time
+    - field.field.node.food_truck_event_scheduled.field_event_description
     - field.field.node.food_truck_event_scheduled.field_food_truck
     - field.field.node.food_truck_event_scheduled.field_scheduled_location
     - field.field.node.food_truck_event_scheduled.field_start_time
@@ -18,43 +19,49 @@ bundle: food_truck_event_scheduled
 mode: default
 content:
   field_end_time:
-    weight: 102
-    label: above
+    weight: 3
+    label: inline
     settings:
-      format_type: medium
-      timezone_override: ''
+      timezone_override: America/Chicago
+      date_format: 'Y-m-d g:ia'
     third_party_settings: {  }
-    type: datetime_default
+    type: datetime_custom
+  field_event_description:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
   field_food_truck:
-    weight: 104
-    label: above
+    weight: 1
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
   field_scheduled_location:
-    weight: 103
+    weight: 5
     label: hidden
     settings:
       type: ROADMAP
-      zoom: 10
+      zoom: '10'
       height: 400px
-      width: 100%
-      title: ''
+      width: 80%
       info_text: ''
-      info_auto_display: true
+      info_auto_display: '1'
+      title: ''
     third_party_settings: {  }
     type: geolocation_map
   field_start_time:
-    weight: 101
-    label: above
+    weight: 2
+    label: inline
     settings:
-      format_type: medium
-      timezone_override: ''
+      timezone_override: America/Chicago
+      date_format: 'Y-m-d g:ia'
     third_party_settings: {  }
-    type: datetime_default
+    type: datetime_custom
   links:
-    weight: 100
+    weight: 0
     settings: {  }
     third_party_settings: {  }
 hidden: {  }

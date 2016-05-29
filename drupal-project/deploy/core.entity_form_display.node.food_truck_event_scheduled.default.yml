@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.food_truck_event_scheduled.field_end_time
+    - field.field.node.food_truck_event_scheduled.field_event_description
     - field.field.node.food_truck_event_scheduled.field_food_truck
     - field.field.node.food_truck_event_scheduled.field_scheduled_location
     - field.field.node.food_truck_event_scheduled.field_start_time
@@ -30,6 +31,13 @@ content:
       increment: 30
     third_party_settings: {  }
     type: datetime_datelist
+  field_event_description:
+    weight: 26
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
   field_food_truck:
     weight: 1
     settings: {  }

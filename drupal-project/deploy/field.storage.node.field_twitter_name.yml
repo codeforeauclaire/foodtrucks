@@ -1,11 +1,11 @@
-uuid: dc24487d-7201-4fcd-994e-555d6a3e1d52
+uuid: 450d6325-87ce-474b-ad44-f6256c7354a4
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_food_truck_name
-field_name: field_food_truck_name
+id: node.field_twitter_name
+field_name: field_twitter_name
 entity_type: node
 type: string
 settings:

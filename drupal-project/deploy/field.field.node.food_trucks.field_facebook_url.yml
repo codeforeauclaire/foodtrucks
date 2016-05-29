@@ -1,0 +1,23 @@
+uuid: ec0aca21-8a1a-4357-a549-6d8f91fee874
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_facebook_url
+    - node.type.food_trucks
+  module:
+    - link
+id: node.food_trucks.field_facebook_url
+field_name: field_facebook_url
+entity_type: node
+bundle: food_trucks
+label: 'Facebook URL'
+description: "Begin with <code>http://</code> or <code>http://</code>\r\n<br/>\r\nExample: \r\n<pre>https://facebook.com/soulbrewedcoffee</pre>"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

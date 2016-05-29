@@ -1,0 +1,14 @@
+uuid: 4a6060b8-2843-4ed4-8bd6-ec03df8d9169
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.food_truck_owner
+  module:
+    - user
+id: user_remove_role_action.food_truck_owner
+label: 'Remove the Food Truck Owner role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: food_truck_owner

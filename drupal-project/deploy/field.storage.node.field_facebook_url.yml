@@ -1,18 +1,18 @@
-uuid: c5b5d1e2-acb7-4b00-aa00-a4f1438bd41d
+uuid: 71a32afe-450b-4e17-be07-b2905646da76
 langcode: en
 status: true
 dependencies:
   module:
     - link
     - node
-id: node.field_links
-field_name: field_links
+id: node.field_facebook_url
+field_name: field_facebook_url
 entity_type: node
 type: link
 settings: {  }
 module: link
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false
