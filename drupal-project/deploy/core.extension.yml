@@ -5,7 +5,6 @@ module:
   breakpoint: 0
   ckeditor: 0
   comment: 0
-  components: 0
   config: 0
   contact: 0
   contextual: 0
@@ -47,7 +46,6 @@ module:
 theme:
   stable: 0
   classy: 0
-  bartik: 0
   seven: 0
   foodtruckstheme: 0
 _core:
