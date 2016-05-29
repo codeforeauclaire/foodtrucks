@@ -11,7 +11,7 @@ _core:
 id: foodtruckstheme_messages
 theme: foodtruckstheme
 region: header
-weight: -2
+weight: -4
 provider: null
 plugin: system_messages_block
 settings:
