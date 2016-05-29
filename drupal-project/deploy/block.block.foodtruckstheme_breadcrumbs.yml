@@ -1,6 +1,6 @@
 uuid: a3cc1b25-a37d-4515-b354-a00bb9e5ec20
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -10,8 +10,8 @@ _core:
   default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
 id: foodtruckstheme_breadcrumbs
 theme: foodtruckstheme
-region: header
-weight: 0
+region: '-1'
+weight: -4
 provider: null
 plugin: system_breadcrumb_block
 settings:

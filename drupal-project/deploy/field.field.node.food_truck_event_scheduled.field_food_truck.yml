@@ -1,0 +1,25 @@
+uuid: aba2779c-7066-4532-88d1-d64c5ed05338
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_food_truck
+    - node.type.food_truck_event_scheduled
+id: node.food_truck_event_scheduled.field_food_truck
+field_name: field_food_truck
+entity_type: node
+bundle: food_truck_event_scheduled
+label: 'Food Truck'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: food_truck_list
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

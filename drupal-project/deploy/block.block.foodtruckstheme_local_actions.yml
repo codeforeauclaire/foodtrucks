@@ -9,7 +9,7 @@ _core:
 id: foodtruckstheme_local_actions
 theme: foodtruckstheme
 region: content
-weight: -20
+weight: -6
 provider: null
 plugin: local_actions_block
 settings:

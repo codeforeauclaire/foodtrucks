@@ -1,6 +1,6 @@
 uuid: 2b03c087-e719-4015-80fe-b93c896cfa30
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.footer
@@ -12,8 +12,8 @@ _core:
   default_config_hash: kkISXE1LT2FJEoYnqCrCpeFB-2pmGmMxMklVk7rQcfg
 id: foodtruckstheme_footer
 theme: foodtruckstheme
-region: header
-weight: 0
+region: '-1'
+weight: -3
 provider: null
 plugin: 'system_menu_block:footer'
 settings:

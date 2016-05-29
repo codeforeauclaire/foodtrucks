@@ -9,10 +9,10 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:'
-name: 'Food Truck Event Scheduled'
+name: 'Food Truck Event'
 type: food_truck_event_scheduled
 description: ''
 help: ''
-new_revision: null
+new_revision: false
 preview_mode: 1
 display_submitted: true

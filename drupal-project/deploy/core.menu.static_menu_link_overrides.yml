@@ -1,10 +1,4 @@
 definitions:
-  node__add_page:
-    weight: -50
-    menu_name: account
-    parent: ''
-    expanded: false
-    enabled: true
   user__page:
     weight: -49
     menu_name: account
