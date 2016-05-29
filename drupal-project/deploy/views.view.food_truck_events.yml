@@ -9,6 +9,8 @@ dependencies:
     - field.storage.node.field_start_time
     - node.type.food_truck_event_scheduled
     - system.menu.main
+    - user.role.administrator
+    - user.role.food_truck_owner
   module:
     - datetime
     - geolocation
@@ -30,9 +32,11 @@ display:
     position: 0
     display_options:
       access:
-        type: perm
+        type: role
         options:
-          perm: 'access content'
+          role:
+            administrator: administrator
+            food_truck_owner: food_truck_owner
       cache:
         type: tag
         options: {  }
@@ -639,7 +643,7 @@ display:
         - url.query_args
         - user
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags:
         - 'config:field.storage.node.field_end_time'
         - 'config:field.storage.node.field_event_description'
@@ -672,7 +676,7 @@ display:
         - url.query_args
         - user
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags:
         - 'config:field.storage.node.field_end_time'
         - 'config:field.storage.node.field_event_description'
@@ -773,7 +777,7 @@ display:
         - url.query_args
         - user
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags:
         - 'config:field.storage.node.field_end_time'
         - 'config:field.storage.node.field_event_description'

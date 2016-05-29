@@ -9,6 +9,8 @@ dependencies:
     - image.style.thumbnail
     - node.type.food_trucks
     - system.menu.main
+    - user.role.administrator
+    - user.role.food_truck_owner
   module:
     - image
     - node
@@ -30,9 +32,11 @@ display:
     position: 0
     display_options:
       access:
-        type: perm
+        type: role
         options:
-          perm: 'access content'
+          role:
+            administrator: administrator
+            food_truck_owner: food_truck_owner
       cache:
         type: tag
         options: {  }
@@ -352,7 +356,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags:
         - 'config:field.storage.node.field_food_truck_description'
         - 'config:field.storage.node.field_food_truck_logo'
@@ -376,7 +380,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags:
         - 'config:field.storage.node.field_food_truck_description'
         - 'config:field.storage.node.field_food_truck_logo'
@@ -680,7 +684,7 @@ display:
         - url
         - user
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags:
         - 'config:field.storage.node.field_food_truck_description'
         - 'config:field.storage.node.field_food_truck_logo'
