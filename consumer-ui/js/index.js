@@ -100,7 +100,7 @@ function isAfter(date1, date2){
 }
 
 function getPopupHtml(value, dateFormat, expired){
-  var content = '<a href="' + value[0].links + '">' + value[0].name + '</a><br/>';
+  var content = '<a href="' + value[0].website_url + '">' + value[0].title + '</a><br/>';
   if(value[0].logo) content += '<img src="' +value[0].logo+'" alt="logo"/>';
   content += '<p>' +value[0].description+'</p>';
   if (expired) content += '<p><strong> SERVICE HOURS HAVE PASSED!</strong></p>';
