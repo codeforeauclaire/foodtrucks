@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5126cefd5afb7c90aa34d343e6280628",
-    "content-hash": "36c22b6bb586dc179ea77e0472993908",
+    "hash": "46b23a0b8208bc782fe830895bc53101",
+    "content-hash": "97b7d0957b8ec96253ae663a6480403c",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -852,37 +852,6 @@
             "time": "2016-05-23 11:35:45"
         },
         {
-            "name": "drupal/components",
-            "version": "8.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/components.git",
-                "reference": "d6f3df460ca16373782f442ca92f9c251fbf311b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/components-8.x-1.0.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "drupal/core": "8.*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-8.x-1.x": "8.1.x-dev"
-                }
-            },
-            "notification-url": "https://packagist.drupal-composer.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "description": "Registers “component libraries” defined in modules and themes with the Twig system",
-            "homepage": "https://www.drupal.org/project/components",
-            "time": "2016-04-19 08:08:08"
-        },
-        {
             "name": "drupal/console",
             "version": "0.11.3",
             "source": {
@@ -1171,10 +1140,10 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/codeforeauclaire/foodtrucksjson.git",
-                "reference": "d1ed669f91de5d69311bfce490b554b298da79da"
+                "reference": "c31afd7744b9275dd547633072c3abaeb23dabf1"
             },
             "type": "drupal-module",
-            "time": "2016-05-26 21:33:07"
+            "time": "2016-05-29 13:43:50"
         },
         {
             "name": "drupal/foodtruckstheme",
@@ -1218,33 +1187,6 @@
             "description": "Provides a simple geolocation field type to store and display location data (lat, lng).",
             "homepage": "https://www.drupal.org/project/geolocation",
             "time": "2016-01-27 12:15:59"
-        },
-        {
-            "name": "drupal/graphql",
-            "version": "dev-8.x-2.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/graphql.git",
-                "reference": "4111b766b6b29e351cc3bded8b199ff0f63226d0"
-            },
-            "require": {
-                "drupal/core": "8.*",
-                "drupal/rest": "8.*",
-                "fubhy/graphql-php": "~1.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-8.x-2.x": "8.2.x-dev"
-                }
-            },
-            "notification-url": "https://packagist.drupal-composer.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "description": "Generates GraphQL schemas for content entity types.",
-            "homepage": "http://drupal.org/project/graphql",
-            "time": "2016-05-08 10:33:51"
         },
         {
             "name": "drupal/paragraphs",
@@ -1291,37 +1233,6 @@
             "description": "Implements the Paragraphs entity types, Entity Reference selection type and Entity Reference field widget.",
             "homepage": "https://www.drupal.org/project/paragraphs",
             "time": "2015-11-17 13:21:21"
-        },
-        {
-            "name": "drupal/patternlab",
-            "version": "8.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/patternlab.git",
-                "reference": "db0b91ae19a56aae74571e53cca7d668b469a5c2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/patternlab-8.x-1.1.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "drupal/core": "8.*"
-            },
-            "type": "drupal-theme",
-            "extra": {
-                "branch-alias": {
-                    "dev-8.x-1.x": "8.1.x-dev"
-                }
-            },
-            "notification-url": "https://packagist.drupal-composer.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "description": "A Drupal theme whose Twig templates are integrated with Pattern Lab.",
-            "homepage": "https://www.drupal.org/project/patternlab",
-            "time": "2016-05-12 16:49:31"
         },
         {
             "name": "drupal/simple_fb_connect",
@@ -1679,58 +1590,6 @@
                 "sdk"
             ],
             "time": "2016-05-18 22:04:36"
-        },
-        {
-            "name": "fubhy/graphql-php",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/fubhy/graphql-php.git",
-                "reference": "c1de2233c731ca29e5c5db4c43f3b9db36478c83"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/fubhy/graphql-php/zipball/c1de2233c731ca29e5c5db4c43f3b9db36478c83",
-                "reference": "c1de2233c731ca29e5c5db4c43f3b9db36478c83",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.7",
-                "scrutinizer/ocular": "~1.1"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Fubhy\\GraphQL\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sebastian Siemssen",
-                    "email": "fubhy@fubhy.com"
-                }
-            ],
-            "description": "A GraphQL parser for PHP.",
-            "homepage": "https://github.com/fubhy/graphql-php",
-            "keywords": [
-                "Relay",
-                "facebook",
-                "graphql",
-                "parser"
-            ],
-            "time": "2016-04-28 00:39:57"
         },
         {
             "name": "gabordemooij/redbean",
@@ -6152,7 +6011,6 @@
     "stability-flags": {
         "drupal/foodtrucksjson": 20,
         "drupal/foodtruckstheme": 20,
-        "drupal/graphql": 20,
         "drupal/simple_fb_connect": 20,
         "jcalderonzumba/gastonjs": 20
     },
