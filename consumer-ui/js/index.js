@@ -1,4 +1,4 @@
-var API = "http://vendors.foodtrucks.codeforeauclaire.org/api/events";
+var API = "http://dev.vendors.foodtrucks.codeforeauclaire.org/api/events";
 //API = "js/test/event.json"; //uncomment to use local test data
 
 $(document).on('pageshow', function() {
@@ -100,9 +100,9 @@ function isAfter(date1, date2){
 }
 
 function getPopupHtml(value, dateFormat, expired){
-  var content = '<a href="' + value.links + '">' + value.name + '</a><br/>';
-  if(value.logo) content += '<img src="' +value.logo+'" alt="logo"/>';
-  content += '<p>' +value.description+'</p>';
+  var content = '<a href="' + value[0].links + '">' + value[0].name + '</a><br/>';
+  if(value[0].logo) content += '<img src="' +value[0].logo+'" alt="logo"/>';
+  content += '<p>' +value[0].description+'</p>';
   if (expired) content += '<p><strong> SERVICE HOURS HAVE PASSED!</strong></p>';
   content += '<p>Hours: '
           + moment.utc(value.start_time).local().format(dateFormat)
