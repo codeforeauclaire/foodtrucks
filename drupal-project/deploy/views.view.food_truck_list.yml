@@ -543,6 +543,7 @@ display:
         filters: false
         filter_groups: false
         arguments: false
+        access: false
       filters:
         status:
           value: true
@@ -578,7 +579,7 @@ display:
           admin_label: ''
           default_action: default
           exception:
-            value: all
+            value: '1'
             title_enable: false
             title: All
           title_enable: false
@@ -605,6 +606,10 @@ display:
           entity_type: node
           entity_field: uid
           plugin_id: numeric
+      access:
+        type: perm
+        options:
+          perm: 'edit own food_truck_event_scheduled content'
     cache_metadata:
       max-age: -1
       contexts:
