@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "46b23a0b8208bc782fe830895bc53101",
-    "content-hash": "97b7d0957b8ec96253ae663a6480403c",
+    "hash": "e47e0da2c695053d29725bb3f3cc9884",
+    "content-hash": "619f01c4281a8cb3f2709e8649bceb85",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -818,7 +818,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/admin_toolbar-8.x-1.15.zip",
-                "reference": null,
+                "reference": "f8380381183bc76babaec9dfe392511011d54904",
                 "shasum": null
             },
             "require": {
@@ -1104,6 +1104,46 @@
             "time": "2016-05-04 11:20:24"
         },
         {
+            "name": "drupal/crop",
+            "version": "8.1.0-rc1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/crop.git",
+                "reference": "8506e099c9f7cd889db4e982890011df2b956bca"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/crop-8.x-1.0-rc1.zip",
+                "reference": "8506e099c9f7cd889db4e982890011df2b956bca",
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/image": "8.*",
+                "drupal/user": "8.*"
+            },
+            "replace": {
+                "drupal/crop_media_entity": "self.version"
+            },
+            "suggest": {
+                "drupal/core": "Required by drupal/crop_media_entity",
+                "drupal/media_entity": "Required by drupal/crop_media_entity"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Provides storage and API for image crops.",
+            "homepage": "https://www.drupal.org/project/crop",
+            "time": "2016-05-18 15:47:02"
+        },
+        {
             "name": "drupal/entity_reference_revisions",
             "version": "8.1.0-rc6",
             "source": {
@@ -1114,7 +1154,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/entity_reference_revisions-8.x-1.0-rc6.zip",
-                "reference": null,
+                "reference": "c9056323e728586436688d6aa1310a0b60c241d1",
                 "shasum": null
             },
             "require": {
@@ -1167,7 +1207,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/geolocation-8.x-1.5.zip",
-                "reference": null,
+                "reference": "6d279d17c722bf612e21bfdbe0545a972c105845",
                 "shasum": null
             },
             "require": {
@@ -1189,6 +1229,54 @@
             "time": "2016-01-27 12:15:59"
         },
         {
+            "name": "drupal/image_widget_crop",
+            "version": "8.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/image_widget_crop.git",
+                "reference": "5575c1e5e08be2be479232e5ac4d390b40f0002b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/image_widget_crop-8.x-1.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/crop": "8.*",
+                "drupal/image": "8.*"
+            },
+            "replace": {
+                "drupal/image_widget_crop_examples": "self.version"
+            },
+            "suggest": {
+                "drupal/core": "Required by drupal/image_widget_crop_examples",
+                "drupal/crop": "Required by drupal/image_widget_crop_examples",
+                "drupal/file_entity": "Required by drupal/image_widget_crop_examples",
+                "drupal/image": "Required by drupal/image_widget_crop_examples",
+                "drupal/inline_entity_form": "Required by drupal/image_widget_crop_examples",
+                "drupal/media_entity": "Required by drupal/image_widget_crop_examples",
+                "drupal/media_entity_image": "Required by drupal/image_widget_crop_examples",
+                "drupal/node": "Required by drupal/image_widget_crop_examples",
+                "drupal/responsive_image": "Required by drupal/image_widget_crop_examples",
+                "drupal/user": "Required by drupal/image_widget_crop_examples"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Provides an interface for using the features of the Crop API.",
+            "homepage": "https://www.drupal.org/project/image_widget_crop",
+            "time": "2016-03-23 10:29:45"
+        },
+        {
             "name": "drupal/paragraphs",
             "version": "8.1.0-rc4",
             "source": {
@@ -1199,7 +1287,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/paragraphs-8.x-1.0-rc4.zip",
-                "reference": null,
+                "reference": "740874bacb56a6a90683e7818c06ba77a638125c",
                 "shasum": null
             },
             "require": {
@@ -1271,7 +1359,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/smtp-8.x-1.0-alpha0.zip",
-                "reference": null,
+                "reference": "096739d9bba36d7e0f0bf8d0ccff67f3b5b5f9af",
                 "shasum": null
             },
             "require": {
@@ -1302,7 +1390,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/token-8.x-1.0-alpha2.zip",
-                "reference": null,
+                "reference": "918d0d5e8e8ee7f446d3e068cb6aa2d7c61ee625",
                 "shasum": null
             },
             "require": {
