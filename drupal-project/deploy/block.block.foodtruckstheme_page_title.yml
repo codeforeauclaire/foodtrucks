@@ -9,7 +9,7 @@ _core:
 id: foodtruckstheme_page_title
 theme: foodtruckstheme
 region: content
-weight: -6
+weight: -4
 provider: null
 plugin: page_title_block
 settings:

@@ -1180,10 +1180,10 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/codeforeauclaire/foodtrucksjson.git",
-                "reference": "c31afd7744b9275dd547633072c3abaeb23dabf1"
+                "reference": "c7ec251fb88d279a4844f1c70bb5b334301fd67c"
             },
             "type": "drupal-module",
-            "time": "2016-05-29 13:43:50"
+            "time": "2016-05-29 20:40:15"
         },
         {
             "name": "drupal/foodtruckstheme",
@@ -1191,10 +1191,10 @@
             "source": {
                 "type": "git",
                 "url": "https://gitlab.com/codeforeauclaire/foodtruckstheme.git",
-                "reference": "7bf9aedbaf5835b40da689dab4308be426dedf94"
+                "reference": "cc8b93dae1682a287376cbbad9bf20c41eb2478b"
             },
             "type": "drupal-theme",
-            "time": "2016-05-29 17:51:17"
+            "time": "2016-05-29 22:29:20"
         },
         {
             "name": "drupal/geolocation",

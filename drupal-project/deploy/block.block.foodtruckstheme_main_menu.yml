@@ -12,8 +12,8 @@ _core:
   default_config_hash: rx9IrdDv7Ldc4kpalZAxdhIPZfYIeOMh1N-qKoQZwHo
 id: foodtruckstheme_main_menu
 theme: foodtruckstheme
-region: header
-weight: -3
+region: content
+weight: -5
 provider: null
 plugin: 'system_menu_block:main'
 settings:
