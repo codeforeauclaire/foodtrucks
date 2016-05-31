@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.field.node.food_truck_event_scheduled.field_event_date
     - field.field.node.food_truck_event_scheduled.field_event_description
-    - field.field.node.food_truck_event_scheduled.field_event_end_time
+    - field.field.node.food_truck_event_scheduled.field_event_duration
     - field.field.node.food_truck_event_scheduled.field_event_start_hour
     - field.field.node.food_truck_event_scheduled.field_event_start_minute
     - field.field.node.food_truck_event_scheduled.field_food_truck
@@ -35,7 +35,7 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: basic_string
-  field_event_end_time:
+  field_event_duration:
     weight: 9
     label: above
     settings: {  }

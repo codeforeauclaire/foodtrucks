@@ -1,12 +1,12 @@
-uuid: 93b8eb44-067b-4e83-98f5-864363f7e4ff
+uuid: 1dccb66b-233d-4040-a1b7-a631190bc615
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - options
-id: node.field_event_end_time
-field_name: field_event_end_time
+id: node.field_event_duration
+field_name: field_event_duration
 entity_type: node
 type: list_integer
 settings:
