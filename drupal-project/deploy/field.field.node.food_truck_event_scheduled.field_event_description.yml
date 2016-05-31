@@ -9,7 +9,7 @@ id: node.food_truck_event_scheduled.field_event_description
 field_name: field_event_description
 entity_type: node
 bundle: food_truck_event_scheduled
-label: 'Event Description'
+label: Description
 description: ''
 required: false
 translatable: false

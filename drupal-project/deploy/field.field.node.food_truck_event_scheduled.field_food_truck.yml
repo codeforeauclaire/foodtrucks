@@ -10,7 +10,7 @@ field_name: field_food_truck
 entity_type: node
 bundle: food_truck_event_scheduled
 label: 'Food Truck'
-description: 'If there are no Food Trucks listed here, then please <a href="/node/add/food_trucks">Add Food Truck</a>'
+description: '<a href="/node/add/food_trucks" target="_blank">Add Food Truck</a>'
 required: true
 translatable: false
 default_value: {  }

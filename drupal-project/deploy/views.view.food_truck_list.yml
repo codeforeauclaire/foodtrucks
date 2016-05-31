@@ -8,7 +8,7 @@ dependencies:
     - field.storage.node.field_telephone_number
     - image.style.thumbnail
     - node.type.food_trucks
-    - system.menu.main
+    - system.menu.account
     - user.role.administrator
     - user.role.food_truck_owner
   module:
@@ -580,7 +580,7 @@ display:
         parent: ''
         weight: 1
         context: '0'
-        menu_name: main
+        menu_name: account
       style:
         type: table
         options:

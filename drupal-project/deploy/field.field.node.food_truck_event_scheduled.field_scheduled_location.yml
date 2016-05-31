@@ -11,7 +11,7 @@ id: node.food_truck_event_scheduled.field_scheduled_location
 field_name: field_scheduled_location
 entity_type: node
 bundle: food_truck_event_scheduled
-label: 'Scheduled Location'
+label: Location
 description: ''
 required: false
 translatable: true

@@ -1,0 +1,8 @@
+uuid: 432a4942-4a9d-4020-9307-631804e5329f
+langcode: en
+status: true
+dependencies: {  }
+id: event-menu
+label: 'Event Menu'
+description: ''
+locked: false

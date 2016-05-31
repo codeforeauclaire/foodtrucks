@@ -16,7 +16,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
-  foodtrucksjson: 0
+  foodtrucksmodule: 0
   geolocation: 0
   image: 0
   link: 0
@@ -41,6 +41,7 @@ module:
   user: 0
   views_ui: 0
   menu_link_content: 1
+  auto_nodetitle: 5
   views: 10
   standard: 1000
 theme:

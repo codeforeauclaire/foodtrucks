@@ -8,7 +8,7 @@ dependencies:
     - field.storage.node.field_scheduled_location
     - field.storage.node.field_start_time
     - node.type.food_truck_event_scheduled
-    - system.menu.main
+    - system.menu.event-menu
     - user.role.administrator
     - user.role.food_truck_owner
   module:
@@ -665,7 +665,7 @@ display:
         parent: ''
         weight: 0
         context: '0'
-        menu_name: main
+        menu_name: event-menu
       display_description: ''
     cache_metadata:
       max-age: 0
@@ -698,7 +698,7 @@ display:
         parent: ''
         weight: 0
         context: '0'
-        menu_name: main
+        menu_name: event-menu
       display_description: ''
       filters:
         status:
@@ -764,10 +764,12 @@ display:
       defaults:
         filters: false
         filter_groups: false
+        title: false
       filter_groups:
         operator: AND
         groups:
           1: AND
+      title: 'Upcoming Events'
     cache_metadata:
       max-age: 0
       contexts:

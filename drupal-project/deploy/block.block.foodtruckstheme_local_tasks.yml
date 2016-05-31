@@ -2,6 +2,8 @@ uuid: dbfa338c-c676-47d1-813b-45e4c4facc26
 langcode: en
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - foodtruckstheme
 _core:
@@ -19,4 +21,9 @@ settings:
   label_display: '0'
   primary: true
   secondary: true
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: "/user\r\n/user/*"
+    negate: true
+    context_mapping: {  }
