@@ -14,6 +14,10 @@ function foodtrucksmodule_user_login() {
  */
 function foodtrucksmodule_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
   if ($form_id == 'node_food_truck_event_scheduled_form' || $form_id == 'node_food_truck_event_scheduled_edit_form') {
+//    prepopulate the title field
+    if (!isset($form['title']['widget'][0]['value']['#default_value'])) {
+      $form['title']['widget'][0]['value']['#default_value'] = date('Y-m-d');
+    }
     if (is_array($form['field_food_truck']['widget']['#options']) && count($form['field_food_truck']['widget']['#options']) == 0) {
       $link = \Drupal\Core\Link::fromTextAndUrl("Add Food Truck", \Drupal\Core\Url::fromUserInput('/node/add/food_trucks'))
         ->toString();

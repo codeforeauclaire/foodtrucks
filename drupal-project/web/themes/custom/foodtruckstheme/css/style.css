@@ -14,6 +14,11 @@
  *
  */
 @import url("//fonts.googleapis.com/css?family=Lato:400,700,900");
+/* line 3, ../scss/00-config/_utilities.scss */
+.node-food-truck-event-scheduled-edit-form.node-form .field--name-title, .node-food-truck-event-scheduled-form.node-form .field--name-title {
+  display: none;
+}
+
 /* line 1, ../scss/30-global/_header.scss */
 header {
   color: #000;
