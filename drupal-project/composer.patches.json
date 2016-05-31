@@ -1,0 +1,7 @@
+{
+  "patches": {
+    "drupal/geolocation": {
+      "Patch title": "patches/geolocation-zoom-level.patch"
+    }
+  }
+}

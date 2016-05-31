@@ -65,6 +65,7 @@
         "post-install-cmd": "sh ./scripts/composer/post-install.sh"
     },
     "extra": {
+        "patches-file": "composer.patches.json",
         "installer-paths": {
             "web/core": ["type:drupal-core"],
             "web/modules/contrib/{$name}": ["type:drupal-module"],

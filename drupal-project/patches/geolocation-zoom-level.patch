@@ -1,0 +1,15 @@
+diff --git a/js/geolocation.js b/js/geolocation.js
+old mode 100644
+new mode 100755
+index f413c35..aee3995
+--- a/js/geolocation.js
++++ b/js/geolocation.js
+@@ -29,7 +29,7 @@
+         position: google.maps.ControlPosition.LEFT_TOP
+       },
+       mapTypeId: google.maps.MapTypeId.ROADMAP,
+-      zoom: 2
++      zoom: 16
+     };
+   };
+ 
