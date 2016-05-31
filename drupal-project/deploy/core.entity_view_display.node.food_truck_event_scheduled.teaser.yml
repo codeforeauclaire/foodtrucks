@@ -19,6 +19,8 @@ content:
   links:
     weight: 100
 hidden:
+  field_duration_hours: true
+  field_duration_minutes: true
   field_event_description: true
   field_food_truck: true
   field_food_trucks: true
