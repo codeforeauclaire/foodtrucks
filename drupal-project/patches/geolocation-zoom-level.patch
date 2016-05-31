@@ -9,7 +9,7 @@ index f413c35..aee3995
        },
        mapTypeId: google.maps.MapTypeId.ROADMAP,
 -      zoom: 2
-+      zoom: 16
++      zoom: 14
      };
    };
  
