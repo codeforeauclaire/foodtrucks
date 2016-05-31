@@ -28,8 +28,14 @@ class EventApiController {
     $data = [];
     $key = 'type';
     $value = 'food_truck_event_scheduled';
-    $query = \Drupal::entityQuery('node')
-      ->condition($key, $value);
+    if ($date) {
+      $query = \Drupal::entityQuery('node')
+        ->condition($key, $value)
+        ->condition('field_event_date.value', $date);
+    }else{
+      $query = \Drupal::entityQuery('node')
+        ->condition($key, $value);
+    }
     $results = $query->execute();
     foreach ($results as $result) {
       JsonApiProcessor::processEvent($data, $result);

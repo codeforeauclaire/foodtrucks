@@ -138,6 +138,7 @@ class JsonApiProcessor extends ControllerBase {
   public static function processKeyName(&$name) {
     $strings = [
       'food_truck_' => '',
+      'event_' => '',
       'telephone_' => '',
       'field_' => '',
       'workout_' => '',
