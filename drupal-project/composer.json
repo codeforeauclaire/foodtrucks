@@ -42,6 +42,8 @@
         "drupal/paragraphs": "8.1.x",
         "drupal/simple_fb_connect": "dev-8.x-3.x",
         "drupal/smtp": "8.1.x",
+        "drupal/auto_nodetitle": "dev-8.x-1.x",
+        "drupal/rules": "8.3.x-dev",
         "drupal/image_widget_crop": "8.1.x"
     },
     "require-dev": {

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e47e0da2c695053d29725bb3f3cc9884",
-    "content-hash": "619f01c4281a8cb3f2709e8649bceb85",
+    "hash": "96299230423e483d4d99a1d284ac79cc",
+    "content-hash": "691da867d74bf9b2fcc68391934d002e",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -852,6 +852,30 @@
             "time": "2016-05-23 11:35:45"
         },
         {
+            "name": "drupal/auto_nodetitle",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Lowell20/auto_nodetitle.git",
+                "reference": "515175569464c759ac302962f0df96f8512d09dd"
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "",
+                    "homepage": "https://www.drupal.org"
+                }
+            ],
+            "homepage": "http://drupal.org/project/auto_nodetitle",
+            "support": {
+                "issues": "https://www.drupal.org/project/issues/auto_nodetitle"
+            },
+            "time": "2016-04-07 16:50:09"
+        },
+        {
             "name": "drupal/console",
             "version": "0.11.3",
             "source": {
@@ -1321,6 +1345,31 @@
             "description": "Implements the Paragraphs entity types, Entity Reference selection type and Entity Reference field widget.",
             "homepage": "https://www.drupal.org/project/paragraphs",
             "time": "2015-11-17 13:21:21"
+        },
+        {
+            "name": "drupal/rules",
+            "version": "dev-8.x-3.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/rules",
+                "reference": "475910feef298475400ef9e87f43304306559313"
+            },
+            "require": {
+                "drupal/core": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-3.x": "8.3.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "React on events and conditionally evaluate actions.",
+            "homepage": "https://www.drupal.org/project/rules",
+            "time": "2016-05-08 20:35:33"
         },
         {
             "name": "drupal/simple_fb_connect",
@@ -4374,16 +4423,16 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v3.0.6",
+            "version": "v3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "0e918c269093ba4c77fca14e9424fa74ed16f1a6"
+                "reference": "436195b421e8c0493ca3e390c1fbecd8ee08c546"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/0e918c269093ba4c77fca14e9424fa74ed16f1a6",
-                "reference": "0e918c269093ba4c77fca14e9424fa74ed16f1a6",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/436195b421e8c0493ca3e390c1fbecd8ee08c546",
+                "reference": "436195b421e8c0493ca3e390c1fbecd8ee08c546",
                 "shasum": ""
             },
             "require": {
@@ -4399,7 +4448,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0-dev"
+                    "dev-master": "3.1-dev"
                 }
             },
             "autoload": {
@@ -4433,7 +4482,7 @@
                 "debug",
                 "dump"
             ],
-            "time": "2016-04-25 11:17:47"
+            "time": "2016-05-24 10:06:56"
         },
         {
             "name": "symfony/yaml",
@@ -4486,16 +4535,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.24.0",
+            "version": "v1.24.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "3e5aa30ebfbafd5951fb1b01e338e1800ce7e0e8"
+                "reference": "3566d311a92aae4deec6e48682dc5a4528c4a512"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/3e5aa30ebfbafd5951fb1b01e338e1800ce7e0e8",
-                "reference": "3e5aa30ebfbafd5951fb1b01e338e1800ce7e0e8",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/3566d311a92aae4deec6e48682dc5a4528c4a512",
+                "reference": "3566d311a92aae4deec6e48682dc5a4528c4a512",
                 "shasum": ""
             },
             "require": {
@@ -4543,7 +4592,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2016-01-25 21:22:18"
+            "time": "2016-05-30 09:11:59"
         },
         {
             "name": "zendframework/zend-diactoros",
@@ -6038,16 +6087,16 @@
         },
         {
             "name": "symfony/browser-kit",
-            "version": "v3.0.6",
+            "version": "v3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/browser-kit.git",
-                "reference": "e07127ac31230b30887c2dddf3708d883d239b14"
+                "reference": "b645a9b23d6c0eeba5ac823fa87bf010db9aff22"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/browser-kit/zipball/e07127ac31230b30887c2dddf3708d883d239b14",
-                "reference": "e07127ac31230b30887c2dddf3708d883d239b14",
+                "url": "https://api.github.com/repos/symfony/browser-kit/zipball/b645a9b23d6c0eeba5ac823fa87bf010db9aff22",
+                "reference": "b645a9b23d6c0eeba5ac823fa87bf010db9aff22",
                 "shasum": ""
             },
             "require": {
@@ -6064,7 +6113,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0-dev"
+                    "dev-master": "3.1-dev"
                 }
             },
             "autoload": {
@@ -6091,7 +6140,7 @@
             ],
             "description": "Symfony BrowserKit Component",
             "homepage": "https://symfony.com",
-            "time": "2016-03-04 07:55:57"
+            "time": "2016-03-04 07:56:56"
         }
     ],
     "aliases": [],
@@ -6100,6 +6149,8 @@
         "drupal/foodtrucksjson": 20,
         "drupal/foodtruckstheme": 20,
         "drupal/simple_fb_connect": 20,
+        "drupal/auto_nodetitle": 20,
+        "drupal/rules": 20,
         "jcalderonzumba/gastonjs": 20
     },
     "prefer-stable": true,
