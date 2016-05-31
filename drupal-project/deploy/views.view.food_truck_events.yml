@@ -3,7 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_event_date
     - field.storage.node.field_event_description
+    - field.storage.node.field_event_duration
+    - field.storage.node.field_event_start_hour
+    - field.storage.node.field_event_start_minute
     - field.storage.node.field_scheduled_location
     - node.type.food_truck_event_scheduled
     - system.menu.event-menu
@@ -13,6 +17,7 @@ dependencies:
     - datetime
     - geolocation
     - node
+    - options
     - user
 id: food_truck_events
 label: 'Food Truck Events'
@@ -87,12 +92,13 @@ display:
           description: ''
           columns:
             title: title
-            field_start_time: field_start_time
-            field_start_time_1: field_start_time
-            field_duration_hours: field_start_time
-            field_duration_minutes: field_start_time
+            field_event_date: field_event_date
+            field_event_start_minute: field_event_date
+            field_event_start_hour: field_event_date
+            field_event_duration: field_event_date
             field_scheduled_location: field_scheduled_location
             field_event_description: field_event_description
+            edit_node: edit_node
           info:
             title:
               sortable: false
@@ -101,28 +107,28 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-            field_start_time:
+            field_event_date:
               sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            field_start_time_1:
+            field_event_start_minute:
               sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            field_duration_hours:
+            field_event_start_hour:
               sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            field_duration_minutes:
+            field_event_duration:
               sortable: false
               default_sort_order: asc
               align: ''
@@ -135,6 +141,13 @@ display:
               empty_column: false
               responsive: ''
             field_event_description:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            edit_node:
+              sortable: false
+              default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
@@ -208,6 +221,256 @@ display:
           field_api_classes: false
           entity_type: node
           entity_field: title
+          plugin_id: field
+        field_event_date:
+          id: field_event_date
+          table: node__field_event_date
+          field: field_event_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Event Date'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: datetime_default
+          settings:
+            timezone_override: America/Chicago
+            format_type: html_date
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_event_start_hour:
+          id: field_event_start_hour
+          table: node__field_event_start_hour
+          field: field_event_start_hour
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Start Time'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_event_start_minute:
+          id: field_event_start_minute
+          table: node__field_event_start_minute
+          field: field_event_start_minute
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Start Time'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_event_duration:
+          id: field_event_duration
+          table: node__field_event_duration
+          field: field_event_duration
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Duration
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
           plugin_id: field
         field_scheduled_location:
           id: field_scheduled_location
@@ -412,14 +675,14 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
-        field_start_time_value:
-          id: field_start_time_value
-          table: node__field_start_time
-          field: field_start_time_value
+        field_event_date_value:
+          id: field_event_date_value
+          table: node__field_event_date
+          field: field_event_date_value
           relationship: none
           group_type: group
           admin_label: ''
-          operator: '<='
+          operator: '<'
           value:
             min: ''
             max: ''
@@ -471,7 +734,20 @@ display:
       title: ''
       header: {  }
       footer: {  }
-      empty: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: '<a href="/node/add/food_truck_event_scheduled">Add Event</a>'
+            format: basic_html
+          plugin_id: text
       relationships: {  }
       arguments:
         uid:
@@ -522,7 +798,11 @@ display:
         - 'user.node_grants:view'
         - user.roles
       tags:
+        - 'config:field.storage.node.field_event_date'
         - 'config:field.storage.node.field_event_description'
+        - 'config:field.storage.node.field_event_duration'
+        - 'config:field.storage.node.field_event_start_hour'
+        - 'config:field.storage.node.field_event_start_minute'
         - 'config:field.storage.node.field_scheduled_location'
   page_1:
     display_plugin: page
@@ -542,6 +822,74 @@ display:
         context: '0'
         menu_name: event-menu
       display_description: ''
+      filters:
+        status:
+          value: true
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            food_truck_event_scheduled: food_truck_event_scheduled
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+        field_event_date_value:
+          id: field_event_date_value
+          table: node__field_event_date
+          field: field_event_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '<'
+          value:
+            min: ''
+            max: ''
+            value: now
+            type: offset
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: datetime
+      defaults:
+        filters: false
+        filter_groups: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: 0
       contexts:
@@ -553,7 +901,11 @@ display:
         - 'user.node_grants:view'
         - user.roles
       tags:
+        - 'config:field.storage.node.field_event_date'
         - 'config:field.storage.node.field_event_description'
+        - 'config:field.storage.node.field_event_duration'
+        - 'config:field.storage.node.field_event_start_hour'
+        - 'config:field.storage.node.field_event_start_minute'
         - 'config:field.storage.node.field_scheduled_location'
   page_2:
     display_plugin: page
@@ -594,10 +946,10 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
-        field_start_time_value:
-          id: field_start_time_value
-          table: node__field_start_time
-          field: field_start_time_value
+        field_event_date_value:
+          id: field_event_date_value
+          table: node__field_event_date
+          field: field_event_date_value
           relationship: none
           group_type: group
           admin_label: ''
@@ -654,5 +1006,9 @@ display:
         - 'user.node_grants:view'
         - user.roles
       tags:
+        - 'config:field.storage.node.field_event_date'
         - 'config:field.storage.node.field_event_description'
+        - 'config:field.storage.node.field_event_duration'
+        - 'config:field.storage.node.field_event_start_hour'
+        - 'config:field.storage.node.field_event_start_minute'
         - 'config:field.storage.node.field_scheduled_location'
