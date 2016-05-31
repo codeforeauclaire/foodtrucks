@@ -1,0 +1,18 @@
+foodtrucksjson.events:
+  path: "/api/events"
+  defaults:
+    _controller: '\Drupal\foodtrucksmodule\Controller\EventApiController::handleRequest'
+  requirements:
+    _permission: 'access content'
+foodtrucksjson.events_with_date:
+  path: "/api/events/{date}"
+  defaults:
+    _controller: '\Drupal\foodtrucksmodule\Controller\EventApiController::handleRequest'
+  requirements:
+    _permission: 'access content'
+foodtrucksjson.vendors:
+  path: "/api/vendors"
+  defaults:
+    _controller: '\Drupal\foodtrucksmodule\Controller\VendorApiController::handleRequest'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,5 @@
+name: Food Truck Module
+type: module
+description: Provides JSON Endpoints and custom Drupal Hook Usages
+core: 8.x
+package: Custom
