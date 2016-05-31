@@ -112,6 +112,7 @@ class JsonApiProcessor extends ControllerBase {
         case "uuid":
         case "datetime":
         case "integer":
+        case "list_integer":
         case "string":
         case "string_long":
         case "telephone":
