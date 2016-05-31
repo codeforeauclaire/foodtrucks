@@ -1,0 +1,29 @@
+uuid: 0cc65b1c-3bd2-4023-862c-038326c8c87b
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.event-menu
+  module:
+    - system
+  theme:
+    - foodtruckstheme
+id: eventmenu
+theme: foodtruckstheme
+region: content
+weight: -3
+provider: null
+plugin: 'system_menu_block:event-menu'
+settings:
+  id: 'system_menu_block:event-menu'
+  label: 'Event Menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility:
+  request_path:
+    id: request_path
+    pages: "/upcoming-events\r\n/past-events"
+    negate: false
+    context_mapping: {  }

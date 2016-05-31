@@ -578,7 +578,7 @@ display:
         description: ''
         expanded: false
         parent: ''
-        weight: 1
+        weight: -50
         context: '0'
         menu_name: account
       style:

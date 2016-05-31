@@ -1,0 +1,23 @@
+uuid: 3908bf23-6eb9-4db0-a0c7-96e9961b65a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_duration_hours
+    - node.type.food_truck_event_scheduled
+  module:
+    - options
+id: node.food_truck_event_scheduled.field_duration_hours
+field_name: field_duration_hours
+entity_type: node
+bundle: food_truck_event_scheduled
+label: Hours
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 2
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

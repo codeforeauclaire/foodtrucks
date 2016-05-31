@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.food_truck_event_scheduled.field_end_time
     - field.field.node.food_truck_event_scheduled.field_event_description
     - field.field.node.food_truck_event_scheduled.field_food_truck
     - field.field.node.food_truck_event_scheduled.field_scheduled_location
@@ -20,7 +19,6 @@ content:
   links:
     weight: 100
 hidden:
-  field_end_time: true
   field_event_description: true
   field_food_truck: true
   field_food_trucks: true

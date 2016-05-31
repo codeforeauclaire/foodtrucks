@@ -2,8 +2,6 @@ uuid: dbfa338c-c676-47d1-813b-45e4c4facc26
 langcode: en
 status: true
 dependencies:
-  module:
-    - system
   theme:
     - foodtruckstheme
 _core:
@@ -11,7 +9,7 @@ _core:
 id: foodtruckstheme_local_tasks
 theme: foodtruckstheme
 region: content
-weight: -2
+weight: -1
 provider: null
 plugin: local_tasks_block
 settings:
@@ -21,9 +19,4 @@ settings:
   label_display: '0'
   primary: true
   secondary: true
-visibility:
-  request_path:
-    id: request_path
-    pages: "/user\r\n/user/*"
-    negate: true
-    context_mapping: {  }
+visibility: {  }
