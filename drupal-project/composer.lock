@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ca92275053e2560acd82d1e7af96c4c5",
-    "content-hash": "f050820509c089f1a9598cc521232c61",
+    "hash": "7865e77c9d90cd6f86c292b35f0628d2",
+    "content-hash": "c220399717362cbdcc920c52052a8a28",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -852,30 +852,6 @@
             "time": "2016-05-23 11:35:45"
         },
         {
-            "name": "drupal/auto_nodetitle",
-            "version": "dev-8.x-1.x",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Lowell20/auto_nodetitle.git",
-                "reference": "515175569464c759ac302962f0df96f8512d09dd"
-            },
-            "type": "drupal-module",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "",
-                    "homepage": "https://www.drupal.org"
-                }
-            ],
-            "homepage": "http://drupal.org/project/auto_nodetitle",
-            "support": {
-                "issues": "https://www.drupal.org/project/issues/auto_nodetitle"
-            },
-            "time": "2016-04-07 16:50:09"
-        },
-        {
             "name": "drupal/console",
             "version": "0.11.3",
             "source": {
@@ -1197,28 +1173,6 @@
             "description": "Adds a Entity Reference field type with revision support.",
             "homepage": "https://www.drupal.org/project/entity_reference_revisions",
             "time": "2016-04-12 23:57:54"
-        },
-        {
-            "name": "drupal/foodtrucksjson",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://gitlab.com/codeforeauclaire/foodtrucksjson.git",
-                "reference": "c7ec251fb88d279a4844f1c70bb5b334301fd67c"
-            },
-            "type": "drupal-module",
-            "time": "2016-05-29 20:40:15"
-        },
-        {
-            "name": "drupal/foodtruckstheme",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://gitlab.com/codeforeauclaire/foodtruckstheme.git",
-                "reference": "243b4e8a873c397b8ecf84e5ec41f5220bb2b3dc"
-            },
-            "type": "drupal-theme",
-            "time": "2016-05-31 16:26:36"
         },
         {
             "name": "drupal/geolocation",
@@ -6149,10 +6103,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drupal/foodtrucksjson": 20,
-        "drupal/foodtruckstheme": 20,
         "drupal/simple_fb_connect": 20,
-        "drupal/auto_nodetitle": 20,
         "drupal/rules": 20,
         "jcalderonzumba/gastonjs": 20
     },
