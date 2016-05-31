@@ -1,0 +1,5 @@
+{
+  "name": "drupal/foodtruckstheme",
+  "type": "drupal-theme",
+  "require": { }
+}

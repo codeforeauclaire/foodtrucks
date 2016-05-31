@@ -1,0 +1,6 @@
+variables:
+  pathProject: "/var/www/version-three/foodtrucks"
+
+deploy:
+  script:
+    - deployTheme $CI_BUILD_REF_NAME $pathProject

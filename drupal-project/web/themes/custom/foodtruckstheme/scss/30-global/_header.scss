@@ -1,0 +1,52 @@
+header {
+  color: #000;
+  position: relative;
+  border-bottom: $border;
+  background-color: lightgrey;
+  height: 65px;
+  padding: 20px;
+  //@include breakpoint($bp--medium-up) {
+  //  .search-form {
+  //    position: absolute;
+  //    top: $spacing;
+  //    right: $spacing;
+  //  }
+  //}
+  a {
+    text-decoration: none;
+    color: #000;
+    &.is-active {
+      color: red;
+    }
+  }
+  ul.menu {
+    a {
+      text-decoration: none;
+      color: #000;
+      &.is-active {
+        color: red;
+      }
+    }
+  }
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.block-system-branding-block {
+  float: left;
+}
+.menu--main .menu-item {
+  float: right;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+main {
+  &::before {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}

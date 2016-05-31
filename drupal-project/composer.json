@@ -11,18 +11,6 @@
     ],
     "repositories": [
         {
-            "type": "git",
-            "url": "https://gitlab.com/codeforeauclaire/foodtruckstheme.git"
-        },
-        {
-            "type": "git",
-            "url": "https://gitlab.com/codeforeauclaire/foodtrucksjson.git"
-        },
-        {
-            "type": "git",
-            "url": "https://github.com/Lowell20/auto_nodetitle.git"
-        },
-        {
             "type": "composer",
             "url": "https://packagist.drupal-composer.org"
         }
@@ -37,12 +25,9 @@
         "drupal/admin_toolbar": "8.1.x",
         "drupal/token": "8.1.x",
         "drupal/geolocation": "8.1.x",
-        "drupal/foodtrucksjson": "dev-master",
-        "drupal/foodtruckstheme": "dev-master",
         "drupal/paragraphs": "8.1.x",
         "drupal/simple_fb_connect": "dev-8.x-3.x",
         "drupal/smtp": "8.1.x",
-        "drupal/auto_nodetitle": "dev-8.x-1.x",
         "drupal/rules": "8.3.x-dev",
         "drupal/image_widget_crop": "8.1.x"
     },

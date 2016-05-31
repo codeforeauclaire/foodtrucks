@@ -1,0 +1,428 @@
+/**
+ * Breakpoint Configuration
+ * @see https://github.com/Team-Sass/breakpoint/wiki
+ *
+ * Usage:
+ * display: none; // hidden for mobile
+ * @include breakpoint($bp--small-up) {
+ *   display: block; // shown above 400
+ * }
+ */
+/**
+ *
+ * Settings variables
+ *
+ */
+@import url("//fonts.googleapis.com/css?family=Lato:400,700,900");
+/* line 1, ../scss/30-global/_header.scss */
+header {
+  color: #000;
+  position: relative;
+  border-bottom: solid 1px #68696d;
+  background-color: lightgrey;
+  height: 65px;
+  padding: 20px;
+}
+/* line 15, ../scss/30-global/_header.scss */
+header a {
+  text-decoration: none;
+  color: #000;
+}
+/* line 18, ../scss/30-global/_header.scss */
+header a.is-active {
+  color: red;
+}
+/* line 23, ../scss/30-global/_header.scss */
+header ul.menu a {
+  text-decoration: none;
+  color: #000;
+}
+/* line 26, ../scss/30-global/_header.scss */
+header ul.menu a.is-active {
+  color: red;
+}
+/* line 31, ../scss/30-global/_header.scss */
+header::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* line 38, ../scss/30-global/_header.scss */
+.block-system-branding-block {
+  float: left;
+}
+
+/* line 41, ../scss/30-global/_header.scss */
+.menu--main .menu-item {
+  float: right;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* line 47, ../scss/30-global/_header.scss */
+main::before {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* line 1, ../scss/30-global/_html-elements.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 5, ../scss/30-global/_html-elements.scss */
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* line 9, ../scss/30-global/_html-elements.scss */
+h1 {
+  font-family: "Lato", sans-serif;
+}
+
+/* line 13, ../scss/30-global/_html-elements.scss */
+blockquote {
+  font-style: italic;
+  border-left: solid 3px #68696d;
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+/* line 20, ../scss/30-global/_html-elements.scss */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 26, ../scss/30-global/_html-elements.scss */
+:last-child {
+  margin-bottom: 0;
+}
+
+/* line 31, ../scss/30-global/_html-elements.scss */
+[class]:last-child {
+  margin-bottom: 0;
+}
+
+/* line 2, ../scss/30-global/_view.scss */
+.views-row {
+  clear: both;
+}
+
+/* line 13, ../scss/40-components/_btn.scss */
+.btn {
+  background: #0B81C9;
+  padding: 5px 10px;
+  display: inline-block;
+  color: #e8e8e8;
+  text-decoration: none;
+}
+/* line 15, ../scss/40-components/_btn.scss */
+.btn--alt {
+  background: #0B81C9;
+  padding: 5px 10px;
+  display: inline-block;
+  color: #e8e8e8;
+  text-decoration: none;
+  background: #e8e8e8;
+  color: #0B81C9;
+}
+
+/* line 21, ../scss/40-components/_btn.scss */
+input[type="submit"],
+.form-submit {
+  background: #0B81C9;
+  padding: 5px 10px;
+  display: inline-block;
+  color: #e8e8e8;
+  text-decoration: none;
+  border: 0;
+}
+
+/**
+ * A demo block to show BEM in action
+ *
+ */
+/* line 6, ../scss/40-components/_demo-block.scss */
+.demo-block {
+  width: 25%;
+}
+
+/* line 9, ../scss/40-components/_demo-block.scss */
+.demo-block--large {
+  width: 100%;
+}
+
+/* line 12, ../scss/40-components/_demo-block.scss */
+.demo-block__title {
+  font-size: 16px;
+}
+
+/* line 15, ../scss/40-components/_demo-block.scss */
+.demo-block__thumbnail {
+  height: 60px;
+  width: 60px;
+}
+
+/* line 1, ../scss/40-components/_menu.scss */
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* line 8, ../scss/40-components/_menu.scss */
+.navigation.menu--account ul, .navigation.menu--event-menu ul {
+  width: 450px;
+  /*can be in percentage also.*/
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  font-size: 1.4rem;
+  padding: 30px 0;
+}
+/* line 16, ../scss/40-components/_menu.scss */
+.navigation.menu--account .menu-item, .navigation.menu--event-menu .menu-item {
+  display: inline;
+}
+/* line 19, ../scss/40-components/_menu.scss */
+.navigation.menu--account .menu-item a, .navigation.menu--event-menu .menu-item a {
+  padding: 0 30px;
+}
+/* line 21, ../scss/40-components/_menu.scss */
+.navigation.menu--account .menu-item a.is-active, .navigation.menu--event-menu .menu-item a.is-active {
+  text-decoration: none;
+}
+/* line 26, ../scss/40-components/_menu.scss */
+.navigation.menu--account::after, .navigation.menu--event-menu::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* line 1, ../scss/40-components/_node-teaser.scss */
+.node-teaser {
+  margin-bottom: 20px;
+}
+
+/* line 1, ../scss/40-components/_primary-nav.scss */
+.primary-nav {
+  padding: 10px 0;
+}
+/* line 5, ../scss/40-components/_primary-nav.scss */
+.primary-nav > .menu ul {
+  margin-left: 20px;
+}
+
+/* line 2, ../scss/40-components/_search-form.scss */
+.search-form fieldset {
+  border: none;
+}
+
+/* line 1, ../scss/50-templates/_layout--content.scss */
+.block-page-title-block {
+  text-align: center;
+}
+
+/* line 4, ../scss/50-templates/_layout--content.scss */
+.layout-content {
+  width: 590px;
+  margin: auto;
+}
+
+/* line 8, ../scss/50-templates/_layout--content.scss */
+.layout-container {
+  margin: 0;
+}
+
+/*------------------------------------*\
+    $PATTERN LAB-SPECIFIC STYLES
+\*------------------------------------*/
+/**
+ * This stylesheet is for styles you want to include only when the interface is being viewed within Pattern Lab.
+ * This is helpful for displaying demo styles for grids, animations, color swatches, etc
+ * It's also helpful for overriding context-specific styles like fixed or absolutely positioned elements
+ * These styles will not be your production CSS.
+ */
+/* line 11, ../scss/60-pages/_styleguide-specific.scss */
+pre {
+  margin-top: 0;
+}
+
+/* line 16, ../scss/60-pages/_styleguide-specific.scss */
+.sg-colors {
+  overflow: hidden;
+  margin: 5px;
+  padding: 0;
+}
+/* line 20, ../scss/60-pages/_styleguide-specific.scss */
+.sg-colors > li {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  padding: 0.3em;
+  margin: 0 0 10px;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+/* line 27, ../scss/60-pages/_styleguide-specific.scss */
+.sg-colors > li .sg-swatch {
+  display: block;
+  height: 25px;
+  outline: dotted 1px gray;
+}
+/* line 34, ../scss/60-pages/_styleguide-specific.scss */
+.sg-colors > li .sg-info {
+  line-height: 1;
+}
+@media all and (min-width: 400px) {
+  /* line 20, ../scss/60-pages/_styleguide-specific.scss */
+  .sg-colors > li {
+    float: left;
+    width: 49%;
+    margin-right: 1%;
+  }
+}
+@media all and (min-width: 700px) {
+  /* line 20, ../scss/60-pages/_styleguide-specific.scss */
+  .sg-colors > li {
+    width: 24%;
+  }
+  /* line 49, ../scss/60-pages/_styleguide-specific.scss */
+  .sg-colors > li:nth-child(4n+1) {
+    clear: both;
+  }
+}
+
+/* line 57, ../scss/60-pages/_styleguide-specific.scss */
+.sg-breakpoints ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 61, ../scss/60-pages/_styleguide-specific.scss */
+.sg-breakpoints li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 67, ../scss/60-pages/_styleguide-specific.scss */
+.sg-breakpoints .breakpoints > li {
+  position: absolute;
+  border-left: solid 3px #595959;
+  height: 100%;
+}
+/* line 75, ../scss/60-pages/_styleguide-specific.scss */
+.sg-breakpoints .breakpoints > li > .label {
+  display: block;
+  background: #595959;
+  padding: 3px;
+  color: white;
+}
+/* line 85, ../scss/60-pages/_styleguide-specific.scss */
+.sg-breakpoints .breakpoints > li:hover {
+  border-left-color: rgba(89, 89, 89, 0.3);
+}
+/* line 88, ../scss/60-pages/_styleguide-specific.scss */
+.sg-breakpoints .breakpoints > li:hover > .label {
+  opacity: 0;
+}
+/* line 95, ../scss/60-pages/_styleguide-specific.scss */
+.sg-breakpoints .device_widths {
+  padding-top: 20px;
+}
+/* line 97, ../scss/60-pages/_styleguide-specific.scss */
+.sg-breakpoints .device_widths > li {
+  border-bottom: solid 3px #cccccc;
+  text-align: right;
+  margin-bottom: 15px;
+  padding-right: 15px;
+  border-right: solid 3px #cccccc;
+}
+
+/* line 108, ../scss/60-pages/_styleguide-specific.scss */
+.sg-font-sizes thead {
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 2px solid black;
+}
+/* line 113, ../scss/60-pages/_styleguide-specific.scss */
+.sg-font-sizes th,
+.sg-font-sizes td {
+  text-align: left;
+  white-space: nowrap;
+  line-height: 1.5em;
+}
+/* line 118, ../scss/60-pages/_styleguide-specific.scss */
+.sg-font-sizes th:first-child,
+.sg-font-sizes td:first-child {
+  padding-right: 12px;
+}
+
+/* line 124, ../scss/60-pages/_styleguide-specific.scss */
+.demo__block {
+  height: 200px;
+  background-color: rgba(104, 105, 109, 0.5);
+}
+
+/* line 130, ../scss/60-pages/_styleguide-specific.scss */
+.icons-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 25px;
+}
+
+/* line 135, ../scss/60-pages/_styleguide-specific.scss */
+.icons-demo {
+  margin-bottom: 40px;
+}
+@media all and (min-width: 600px) {
+  /* line 135, ../scss/60-pages/_styleguide-specific.scss */
+  .icons-demo {
+    column-count: 3;
+    column-gap: 20px;
+  }
+}
+@media all and (min-width: 800px) {
+  /* line 135, ../scss/60-pages/_styleguide-specific.scss */
+  .icons-demo {
+    column-count: 5;
+  }
+}
+
+/* line 145, ../scss/60-pages/_styleguide-specific.scss */
+.icons__item,
+.icons__item i {
+  line-height: 2em;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* line 151, ../scss/60-pages/_styleguide-specific.scss */
+.icons__item:hover {
+  color: #3c90be;
+}
+
+/* line 154, ../scss/60-pages/_styleguide-specific.scss */
+.icons__item i {
+  display: inline-block;
+  width: 32px;
+  text-align: center;
+}
+/* line 158, ../scss/60-pages/_styleguide-specific.scss */
+.icons__item i:hover i {
+  transform: scale(1.5);
+}
+
+/* line 162, ../scss/60-pages/_styleguide-specific.scss */
+.icons-demo__footer {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #999;
+}
+
+/* line 176, ../scss/60-pages/_styleguide-specific.scss */
+.demo .g .gi {
+  text-align: center;
+  outline: dotted 1px #ccc;
+}

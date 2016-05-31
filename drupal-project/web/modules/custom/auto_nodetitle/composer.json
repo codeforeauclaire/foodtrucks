@@ -1,0 +1,17 @@
+{
+  "name": "drupal/auto_nodetitle",
+  "description": "",
+  "type": "drupal-module",
+  "homepage": "http://drupal.org/project/auto_nodetitle",
+  "authors": [
+    {
+      "name": "",
+      "homepage": "https://www.drupal.org"
+    }
+  ],
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/auto_nodetitle"
+  },
+  "license": "GPL-2.0+",
+  "require": { }
+}
