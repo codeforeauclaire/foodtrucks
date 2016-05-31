@@ -3,12 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.food_truck_event_scheduled.field_duration_hours
-    - field.field.node.food_truck_event_scheduled.field_duration_minutes
+    - field.field.node.food_truck_event_scheduled.field_event_date
     - field.field.node.food_truck_event_scheduled.field_event_description
+    - field.field.node.food_truck_event_scheduled.field_event_end_time
+    - field.field.node.food_truck_event_scheduled.field_event_start_hour
+    - field.field.node.food_truck_event_scheduled.field_event_start_minute
     - field.field.node.food_truck_event_scheduled.field_food_truck
     - field.field.node.food_truck_event_scheduled.field_scheduled_location
-    - field.field.node.food_truck_event_scheduled.field_start_time
     - node.type.food_truck_event_scheduled
   module:
     - datetime
@@ -24,16 +25,14 @@ content:
     weight: 3
     settings: {  }
     third_party_settings: {  }
-  field_duration_hours:
-    weight: 8
-    settings: {  }
+  field_event_date:
+    weight: 7
+    settings:
+      date_order: MDY
+      time_type: none
+      increment: 15
     third_party_settings: {  }
-    type: options_select
-  field_duration_minutes:
-    weight: 9
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
+    type: datetime_datelist
   field_event_description:
     weight: 11
     settings:
@@ -41,24 +40,31 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+  field_event_end_time:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_event_start_hour:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_event_start_minute:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
   field_food_truck:
     weight: 1
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
   field_scheduled_location:
-    weight: 10
+    weight: 12
     settings: {  }
     third_party_settings: {  }
     type: geolocation_googlegeocoder
-  field_start_time:
-    weight: 7
-    settings:
-      date_order: MDY
-      time_type: '12'
-      increment: 15
-    third_party_settings: {  }
-    type: datetime_datelist
   path:
     type: path
     weight: 6

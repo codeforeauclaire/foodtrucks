@@ -15,14 +15,7 @@ label: Location
 description: ''
 required: false
 translatable: true
-default_value:
-  -
-    lat: '44.811349'
-    lng: '-91.4984941'
-    lat_sin: null
-    lat_cos: null
-    lng_rad: null
-    data: null
+default_value: {  }
 default_value_callback: ''
 settings: {  }
 field_type: geolocation

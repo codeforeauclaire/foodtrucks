@@ -3,12 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.food_truck_event_scheduled.field_duration_hours
-    - field.field.node.food_truck_event_scheduled.field_duration_minutes
+    - field.field.node.food_truck_event_scheduled.field_event_date
     - field.field.node.food_truck_event_scheduled.field_event_description
+    - field.field.node.food_truck_event_scheduled.field_event_end_time
+    - field.field.node.food_truck_event_scheduled.field_event_start_hour
+    - field.field.node.food_truck_event_scheduled.field_event_start_minute
     - field.field.node.food_truck_event_scheduled.field_food_truck
     - field.field.node.food_truck_event_scheduled.field_scheduled_location
-    - field.field.node.food_truck_event_scheduled.field_start_time
     - node.type.food_truck_event_scheduled
   module:
     - datetime
@@ -20,24 +21,38 @@ targetEntityType: node
 bundle: food_truck_event_scheduled
 mode: default
 content:
-  field_duration_hours:
-    weight: 8
+  field_event_date:
+    weight: 6
     label: above
-    settings: {  }
+    settings:
+      format_type: medium
+      timezone_override: ''
     third_party_settings: {  }
-    type: list_default
-  field_duration_minutes:
-    weight: 7
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
+    type: datetime_default
   field_event_description:
     weight: 4
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+  field_event_end_time:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_event_start_hour:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_event_start_minute:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
   field_food_truck:
     weight: 1
     label: hidden
@@ -58,14 +73,6 @@ content:
       title: ''
     third_party_settings: {  }
     type: geolocation_map
-  field_start_time:
-    weight: 2
-    label: inline
-    settings:
-      timezone_override: America/Chicago
-      date_format: 'Y-m-d g:ia'
-    third_party_settings: {  }
-    type: datetime_custom
   links:
     weight: 0
     settings: {  }

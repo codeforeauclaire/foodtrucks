@@ -1,12 +1,12 @@
-uuid: 9d09202a-2e2e-4992-a0f6-90234c5bc12f
+uuid: 3f396da9-fa37-440c-8740-90d56974d603
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - options
-id: node.field_duration_minutes
-field_name: field_duration_minutes
+id: node.field_event_start_minute
+field_name: field_event_start_minute
 entity_type: node
 type: list_integer
 settings:

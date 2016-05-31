@@ -1,0 +1,93 @@
+uuid: 60d36e00-3980-4026-aa0b-62a21fb947ea
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_event_start_hour
+field_name: field_event_start_hour
+entity_type: node
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: 0
+      label: midnight
+    -
+      value: 1
+      label: 1am
+    -
+      value: 2
+      label: 2am
+    -
+      value: 3
+      label: 3am
+    -
+      value: 4
+      label: 4am
+    -
+      value: 5
+      label: 5am
+    -
+      value: 6
+      label: 6am
+    -
+      value: 7
+      label: 7am
+    -
+      value: 8
+      label: 8am
+    -
+      value: 9
+      label: 9am
+    -
+      value: 10
+      label: 10am
+    -
+      value: 11
+      label: 11am
+    -
+      value: 12
+      label: 12noon
+    -
+      value: 13
+      label: 1pm
+    -
+      value: 14
+      label: 2pm
+    -
+      value: 15
+      label: 3pm
+    -
+      value: 16
+      label: 4pm
+    -
+      value: 17
+      label: 5pm
+    -
+      value: 18
+      label: 6pm
+    -
+      value: 19
+      label: 7pm
+    -
+      value: 20
+      label: 8pm
+    -
+      value: 21
+      label: 9pm
+    -
+      value: 22
+      label: 10pm
+    -
+      value: 23
+      label: 11pm
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

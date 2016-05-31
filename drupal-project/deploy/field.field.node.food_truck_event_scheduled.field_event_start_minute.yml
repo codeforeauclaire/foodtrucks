@@ -1,0 +1,23 @@
+uuid: 26e24d84-fbe2-4f2b-a1d3-8aa22fdf1a4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_start_minute
+    - node.type.food_truck_event_scheduled
+  module:
+    - options
+id: node.food_truck_event_scheduled.field_event_start_minute
+field_name: field_event_start_minute
+entity_type: node
+bundle: food_truck_event_scheduled
+label: 'Start Time'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

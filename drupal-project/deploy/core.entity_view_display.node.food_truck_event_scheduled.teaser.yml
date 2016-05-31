@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.food_truck_event_scheduled.field_event_description
     - field.field.node.food_truck_event_scheduled.field_food_truck
     - field.field.node.food_truck_event_scheduled.field_scheduled_location
-    - field.field.node.food_truck_event_scheduled.field_start_time
     - node.type.food_truck_event_scheduled
   module:
     - user
@@ -19,10 +18,7 @@ content:
   links:
     weight: 100
 hidden:
-  field_duration_hours: true
-  field_duration_minutes: true
   field_event_description: true
   field_food_truck: true
   field_food_trucks: true
   field_scheduled_location: true
-  field_start_time: true

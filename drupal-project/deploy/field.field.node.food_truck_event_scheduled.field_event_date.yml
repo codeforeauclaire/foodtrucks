@@ -1,20 +1,20 @@
-uuid: 399cec04-df5c-4070-8078-b66f2df31dd1
+uuid: 37ced0ab-9723-45b4-8f55-d6ee0e4c3955
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_start_time
+    - field.storage.node.field_event_date
     - node.type.food_truck_event_scheduled
   module:
     - datetime
-id: node.food_truck_event_scheduled.field_start_time
-field_name: field_start_time
+id: node.food_truck_event_scheduled.field_event_date
+field_name: field_event_date
 entity_type: node
 bundle: food_truck_event_scheduled
-label: 'Start Time'
+label: 'Event Date'
 description: ''
-required: false
-translatable: true
+required: true
+translatable: false
 default_value:
   -
     default_date_type: now
