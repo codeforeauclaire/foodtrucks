@@ -10,17 +10,20 @@ function foodtrucksmodule_user_login() {
 }
 
 /**
- * Implements hook_form_FORM_ID_alter().
+ * Implements hook_form_alter().
  */
-function foodtrucksmodule_form_node_food_truck_event_scheduled_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-  if (is_array($form['field_food_truck']['widget']['#options']) && count($form['field_food_truck']['widget']['#options']) == 0 ) {
-    $link = \Drupal\Core\Link::fromTextAndUrl("Add Food Truck", \Drupal\Core\Url::fromUserInput('/node/add/food_trucks'))->toString();
-    $rendered_message = \Drupal\Core\Render\Markup::create("$link is required");
-    drupal_set_message($rendered_message, 'error');
+function foodtrucksmodule_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'node_food_truck_event_scheduled_form' || $form_id == 'node_food_truck_event_scheduled_edit_form') {
+    if (is_array($form['field_food_truck']['widget']['#options']) && count($form['field_food_truck']['widget']['#options']) == 0) {
+      $link = \Drupal\Core\Link::fromTextAndUrl("Add Food Truck", \Drupal\Core\Url::fromUserInput('/node/add/food_trucks'))
+        ->toString();
+      $rendered_message = \Drupal\Core\Render\Markup::create("$link is required");
+      drupal_set_message($rendered_message, 'error');
 //    $response = new \Symfony\Component\HttpFoundation\RedirectResponse("/node/add/food_trucks");
 //    $response->send();
-  }
-  if (is_array($form['field_food_truck']['widget']['#options']) && count($form['field_food_truck']['widget']['#options']) < 2 ) {
-    unset($form['field_food_truck']);
+    }
+    if (is_array($form['field_food_truck']['widget']['#options']) && count($form['field_food_truck']['widget']['#options']) < 2) {
+      unset($form['field_food_truck']);
+    }
   }
 }
