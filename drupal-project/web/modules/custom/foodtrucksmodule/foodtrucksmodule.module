@@ -20,7 +20,7 @@ function foodtrucksmodule_form_node_food_truck_event_scheduled_form_alter(&$form
 //    $response = new \Symfony\Component\HttpFoundation\RedirectResponse("/node/add/food_trucks");
 //    $response->send();
   }
-  if (is_array($form['field_food_truck']['widget']['#options']) && count($form['field_food_truck']['widget']['#options']) == 1 ) {
-//    unset($form['field_food_truck']);
+  if (is_array($form['field_food_truck']['widget']['#options']) && count($form['field_food_truck']['widget']['#options']) < 2 ) {
+    unset($form['field_food_truck']);
   }
 }
