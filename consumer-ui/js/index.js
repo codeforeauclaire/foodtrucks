@@ -104,8 +104,8 @@ function getPopupHtml (value, dateFormat, expired) {
   content += '<p>' + value[0].description + '</p>'
   if (expired) content += '<p><strong> SERVICE HOURS HAVE PASSED!</strong></p>'
   content += '<p>Hours: ' +
-    moment.utc(value.start_time).local().format(dateFormat) + ' - ' +
-	moment.utc(value.end_time).local().format(dateFormat) + '</p>'
+    moment(value.start_time).format(dateFormat) + ' - ' +
+	moment(value.end_time).format(dateFormat) + '</p>'
   return content
 }
 
