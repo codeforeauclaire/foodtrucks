@@ -1,3 +1,4 @@
+/* globals L, moment */
 var API = 'http://vendors.foodtrucks.codeforeauclaire.org/api/events'
 // API = "js/test/event.json"; //uncomment to use local test data
 
@@ -10,7 +11,7 @@ $(document).on('pageshow', function () {
 
   var markerCluster = L.markerClusterGroup()
   map.addLayer(markerCluster)
-  var markers = new Array()
+  var markers = []
 
   var dateFormat = 'M/D/YY h:mm a'
 
@@ -30,7 +31,6 @@ $(document).on('pageshow', function () {
   })
   .done(function (data) {
     $.each(data, function (key, value) {
-
       if (value.lat) {
         var expired = isExpired(new Date(value.end_time))
         var marker = new L.Marker(new L.LatLng(value.lat, value.lng))
@@ -48,7 +48,6 @@ $(document).on('pageshow', function () {
     } else {
       $('#dateFilter').trigger('change')
     }
-
   })
   .fail(function (err) {
     console.log(err)
@@ -104,14 +103,16 @@ function getPopupHtml (value, dateFormat, expired) {
   if (value[0].logo) content += '<img src="' + value[0].logo + '" alt="logo"/>'
   content += '<p>' + value[0].description + '</p>'
   if (expired) content += '<p><strong> SERVICE HOURS HAVE PASSED!</strong></p>'
-  content += '<p>Hours: '
-          + moment.utc(value.start_time).local().format(dateFormat)
-          + ' - ' + moment.utc(value.end_time).local().format(dateFormat) + '</p>'
+  content += '<p>Hours: ' +
+    moment.utc(value.start_time).local().format(dateFormat) + ' - ' +
+	moment.utc(value.end_time).local().format(dateFormat) + '</p>'
   return content
 }
 
 function isExpired (endtime, date) {
-  var now = date ? date : new Date()
-  if (endtime < now) return true
+  if (date === undefined) {
+    date = new Date()
+  }
+  if (endtime < date) return true
   else return false
 }
