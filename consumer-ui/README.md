@@ -1,3 +1,5 @@
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
+
 # Food Trucks :: Consumer UI
 
 Displays where food trucks so consumers can get some food.
@@ -18,6 +20,8 @@ Use these instructions to setup a temporary* development environment of this pro
 *For a permanent development environment we recommend you read the referenced script above to install locally.
 
 ## Development Notes
+
+### Misc
 
 * Don't work directly on the gh-pages branch, the script /consumer-ui/bin/deploy-to-gh-pages sends code there
 * Mapping via Leaflet http://leafletjs.com/
