@@ -1,8 +1,14 @@
 # Food Trucks
 
-## Live site (a work in progress)
+## Live sites (a work in progress)
+
+#### Consumers (if you  eat at trucks)
 
 http://foodtrucks.codeforeauclaire.org/
+
+#### Vendors (if you own a truck)
+
+http://vendors.foodtrucks.codeforeauclaire.org/
 
 ## Developers please refer to
 
