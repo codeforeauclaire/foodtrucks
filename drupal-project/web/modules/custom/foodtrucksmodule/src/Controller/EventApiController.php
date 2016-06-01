@@ -40,6 +40,11 @@ class EventApiController {
     foreach ($results as $result) {
       JsonApiProcessor::processEvent($data, $result);
       if (isset($data[0])) {
+        $data['start_time'] = $data['date'] .'T'. sprintf("%02d", $data['start_hour']) .':'. sprintf("%02d", $data['start_minute']) .':00';
+        unset($data['title']);
+        unset($data['date']);
+        unset($data['start_hour']);
+        unset($data['start_minute']);
         $dataArray[] = $data;
         $data = '';
       }
