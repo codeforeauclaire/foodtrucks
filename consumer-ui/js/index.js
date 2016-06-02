@@ -34,8 +34,7 @@ $(document).on('pageshow', function () {
     $.each(data, function (key, value) {
       if (value.lat) {
         // Adjust API which look like UTC but are actually CDT
-        value.end_time += '-05:00'
-        var expired = isExpired(new Date(value.end_time))
+        var expired = isExpired(value.end_time)
         var marker = new L.Marker(new L.LatLng(value.lat, value.lng))
           .bindPopup(getPopupHtml(value, dateFormat, timeFormat, expired))
 
@@ -113,6 +112,7 @@ function getPopupHtml (value, dateFormat, timeFormat, expired) {
   return content
 }
 
+// Takes end_time in format given by api
 function isExpired (endtime) {
-  return new Date() > endtime
+  return new Date() > new Date(endtime + (moment().isDST() ? '-05:00' : '-06:00'))
 }
