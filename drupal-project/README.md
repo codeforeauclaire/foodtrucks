@@ -18,6 +18,32 @@ Use these instructions to setup a temporary* development environment of this pro
 
 *For a permanent development environment we recommend you read the referenced script above to install locally.
 
+## API
+
+* `/api/events` returns details of all events with their associate food trucks nested
+* `/api/vendors` returns details for all vendor food trucks
+* `/api/events/yyyy-mm-dd` returns only events with the same `start_time`, ignoring the `Thh:mm:ss` portion of the returned `start_time`
+
+### Events
+* Returned `uuid` is the unique identifier
+* Returned `start_time` is exactly as they are entered by vendors with no timezone adjustments (assumed to be local Eau Claire time already DST adjusted)
+* Returned `end_time` is simply offset by adding the `duration` entered by vendor to the `start_time`
+* Returned `description`
+* Returned `lat` is latitude 
+* Returned `lng` is longitude 
+* Returned `#` are the Vendor Food Truck(s) associated with the Event
+
+### Vendor Food Trucks
+* Returned `uuid` is the unique identifier
+* Returned `title`
+* Returned `description`
+* Returned `logo` is the full `http(s)` url to the logo
+* Returned `website_url` is a full `http(s)` url
+* Returned `facebook_url` is a full `http(s)` url
+* Returned `twitter_name` should be an `@twitter-name` value
+* Returned `telephone_number` should be a telephone number
+
+
 ## TODO
 
 * [General Specs](../SPECS.md)
