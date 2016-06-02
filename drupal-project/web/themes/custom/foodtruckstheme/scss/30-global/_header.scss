@@ -42,9 +42,6 @@ header {
   float: right;
   padding-left: 10px;
   padding-right: 10px;
-  a:active {
-    color: #ff0000;
-  }
 }
 main {
   &::before {
@@ -52,4 +49,7 @@ main {
     display: block;
     clear: both;
   }
+}
+.path-user header ul.menu li:last-child {
+  color: #ff0000;
 }

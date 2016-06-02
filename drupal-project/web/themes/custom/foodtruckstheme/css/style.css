@@ -64,16 +64,17 @@ header::after {
   padding-left: 10px;
   padding-right: 10px;
 }
-/* line 45, ../scss/30-global/_header.scss */
-.menu--main .menu-item a:active {
-  color: #ff0000;
-}
 
-/* line 50, ../scss/30-global/_header.scss */
+/* line 47, ../scss/30-global/_header.scss */
 main::before {
   content: '';
   display: block;
   clear: both;
+}
+
+/* line 53, ../scss/30-global/_header.scss */
+.path-user header ul.menu li:last-child {
+  color: #ff0000;
 }
 
 /* line 1, ../scss/30-global/_html-elements.scss */
