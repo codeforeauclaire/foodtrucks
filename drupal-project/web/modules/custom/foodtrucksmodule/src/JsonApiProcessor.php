@@ -139,7 +139,7 @@ class JsonApiProcessor extends ControllerBase {
     $strings = [
       'food_truck_' => '',
       'event_' => '',
-      'telephone_' => '',
+      '' => '',
       'field_' => '',
       'workout_' => '',
       'set_' => '',
