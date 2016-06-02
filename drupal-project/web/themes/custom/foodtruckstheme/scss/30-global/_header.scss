@@ -50,6 +50,8 @@ main {
     clear: both;
   }
 }
-.path-user header ul.menu li:last-child a {
-  color: #ff0000;
+.path-user, .path-food-trucks {
+  header ul.menu li:last-child a {
+    color: #ff0000;
+  }
 }

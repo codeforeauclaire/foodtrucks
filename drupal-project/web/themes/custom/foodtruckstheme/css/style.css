@@ -72,8 +72,8 @@ main::before {
   clear: both;
 }
 
-/* line 53, ../scss/30-global/_header.scss */
-.path-user header ul.menu li:last-child a {
+/* line 54, ../scss/30-global/_header.scss */
+.path-user header ul.menu li:last-child a, .path-food-trucks header ul.menu li:last-child a {
   color: #ff0000;
 }
 
