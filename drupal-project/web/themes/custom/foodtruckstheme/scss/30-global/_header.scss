@@ -42,6 +42,9 @@ header {
   float: right;
   padding-left: 10px;
   padding-right: 10px;
+  a:active {
+    color: #ff0000;
+  }
 }
 main {
   &::before {
