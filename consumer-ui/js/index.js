@@ -108,7 +108,9 @@ function getPopupHtml (value, dateFormat, timeFormat, expired) {
   content += '<p>Hours on ' +
     moment(value.start_time).format(dateFormat) + ' : ' +
     moment(value.start_time).format(timeFormat) + ' - ' +
-	moment(value.end_time).format(timeFormat) + ' CDT</p>'
+	moment(value.end_time).format(timeFormat) + ' ' +
+        (moment().isDST() ? 'CDT' : 'CST') +
+        '</p>'
   return content
 }
 
