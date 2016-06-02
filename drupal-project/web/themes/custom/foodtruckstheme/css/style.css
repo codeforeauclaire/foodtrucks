@@ -73,7 +73,7 @@ main::before {
 }
 
 /* line 53, ../scss/30-global/_header.scss */
-.path-user header ul.menu li:last-child {
+.path-user header ul.menu li:last-child a {
   color: #ff0000;
 }
 
