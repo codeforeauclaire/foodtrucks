@@ -6,7 +6,7 @@ $(document).on('pageshow', function () {
   var map = new L.Map('map', {
     center: new L.LatLng(44.799, -91.464),
     zoom: 12,
-    layers: [new L.StamenTileLayer('toner-lite')]
+    layers: [new L.StamenTileLayer('terrain')]
   })
 
   var markerCluster = L.markerClusterGroup()
