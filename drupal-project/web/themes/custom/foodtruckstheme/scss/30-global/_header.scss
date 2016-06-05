@@ -1,10 +1,11 @@
 header {
   color: #000;
   position: relative;
-  border-bottom: $border;
-  background-color: lightgrey;
-  height: 65px;
-  padding: 20px;
+  box-shadow: 0 0 2px #aaa;
+  border: none;
+  background-color: #00695c;
+  height: 50px;
+  padding: 0px;
   //@include breakpoint($bp--medium-up) {
   //  .search-form {
   //    position: absolute;
@@ -14,7 +15,7 @@ header {
   //}
   a {
     text-decoration: none;
-    color: #000;
+    color: #fff;
     &.is-active {
       color: red;
     }
@@ -22,12 +23,30 @@ header {
   ul.menu {
     a {
       text-decoration: none;
-      color: #000;
+      color: #fff;
       &.is-active {
         color: red;
       }
     }
   }
+
+  .site-name {
+    color: #80cbc4;
+    float: left;
+    font-family: "Montserrat",sans-serif;
+    font-size: 1.5em;
+    font-weight: normal;
+    height: 50px;
+    line-height: 2.1em;
+    margin: auto auto auto 10px;
+    padding: 0;
+    text-align: left;
+    text-shadow: none;
+    a {
+      color: #80cbc4;
+    }
+  }
+
   &::after {
     content: '';
     display: block;
