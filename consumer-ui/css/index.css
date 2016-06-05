@@ -14,17 +14,17 @@ html, body {
 	left: 0;
 	right: 0;
 	height: 50px;
-	background-color: #f6f3eb;
+	background-color: #00695C;
   border: medium none;
   color: #000;
-  font-weight: 700;
   box-shadow: 0px 0px 2px #aaa;
   text-shadow: none;
 }
 #header h1 {
 	box-shadow: none;
-	color: #ef3c2c;
+	color: #80CBC4;
 	float: left;
+	font-weight: normal;
 	font-family: "Montserrat",sans-serif;
 	font-size: 1.5em;
 	height: 50px;
@@ -41,7 +41,7 @@ html, body {
 #header h1 a:hover,
 #header h1 a:active {
 	text-decoration: none;
-	color: #313236;
+	color: #80CBC4;
 }
 
 #header h1 span {
@@ -57,13 +57,22 @@ html, body {
 }
 
 #header ul li {
+	color: #80CBC4;
 	display: inline;
+	padding: 0 15px;
 }
 
 #header ul li a {
 	display: inline;
-	padding: 0 15px;
+	color: white;
   text-decoration: none;
+}
+
+#header ul li a:hover {
+  text-decoration: underline;
+}
+.main-content {
+	padding: 100px 30px;
 }
 
 #map {
@@ -121,6 +130,20 @@ html, body {
 
 html body .ui-datepicker .ui-state-highlight {
 	background-color: #ccc;
+}
+
+html body .ui-datepicker .ui-state-active {
+    background-color: #80CBC4;
+    border-color: #80CBC4;
+    color: #fff;
+    text-shadow: 0 1px 0 #004D40;
+}
+
+html body .ui-datepicker .ui-state-hover {
+    background-color: #B2DFDB;
+    border-color: #B2DFDB;
+    color: #004D40;
+    text-shadow: 0;
 }
 
 .leaflet-popup-content-wrapper {
