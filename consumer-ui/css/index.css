@@ -1,6 +1,7 @@
 body {
 	padding: 0;
 	margin: 0;
+	font-family: 'Montserrat', sans-serif;"
 }
 html, body {
 	height: 100%;
@@ -12,16 +13,69 @@ html, body {
 	top: 0;
 	left: 0;
 	right: 0;
-	height: 35px;
+	height: 50px;
+	background-color: #f6f3eb;
+  border: medium none;
+  color: #000;
+  font-weight: 700;
+  box-shadow: 0px 0px 2px #aaa;
+  text-shadow: none;
 }
 #header h1 {
-	margin: auto;
+	background-color: #ef3c2c;
+	box-shadow: none;
+	color: white;
+	float: left;
+	font-family: "Montserrat",sans-serif;
+	font-size: 1.5em;
+	height: 50px;
+	line-height: 2.1em;
+	margin: auto auto auto 10px;
+	padding: 0 0 0 15px;
+	text-align: left;
+	text-shadow: none;
+}
+
+#header h1 a,
+#header h1 a:link,
+#header h1 a:visited,
+#header h1 a:hover,
+#header h1 a:active {
+	text-decoration: none;
+	color: white;
+}
+
+#header h1 span {
+	background-color: #313236;
+	color: white;
+	display: inline-block;
+	height: 50px;
+	margin-left: 9px;
+	padding: 0 15px;
+}
+
+#header ul {
+	float: right;
+	list-style: outside none none;
+	margin: 16px 15px 0 0;
+	padding: 0;
+}
+
+#header ul li {
+	display: inline;
+}
+
+#header ul li a {
+	color: #313236;
+	display: inline;
+	padding: 0 15px;
+  text-decoration: none;
 }
 
 #map {
 	position: fixed;
 	z-index: 5;
-	top: 35px;
+	top: 50px;
 	bottom: 0;
 	width: 100%;
 }
@@ -30,7 +84,7 @@ html, body {
 	position: absolute;
 	z-index: 10;
 	top: 50px;
-	right: 10px;
+	right: 15px;
 }
 #datepicker input[type='text'] {
 	text-align: center;
@@ -38,17 +92,69 @@ html, body {
 #datepicker .right-arrow {
 	width: 20px;
 	position: absolute;
-	top: 11px;
+	top: 20px;
 	right: 10px;
 	z-index: 11;
 }
 #datepicker .left-arrow {
 	width: 20px;
 	position: absolute;
-	top: 11px;
+	top: 20px;
 	left: 10px;
 	z-index: 11;
-    -ms-transform: rotate(180deg); /* IE 9 */
-    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
-    transform: rotate(180deg);
+	-ms-transform: rotate(180deg); /* IE 9 */
+	-webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+	transform: rotate(180deg);
 }
+
+.ui-input-text input, .ui-input-search input {
+	font-family: "Montserrat";
+	letter-spacing: 1px;
+}
+
+.ui-body-inherit {
+	background-color: #fff;
+	border: medium none;
+	box-shadow: 0 0 2px #777;
+	color: #333;
+	padding: 9px;
+	text-shadow: none;
+}
+
+#datepicker input[type="text"] {
+    text-align: center;
+}
+
+html body .ui-datepicker .ui-state-highlight {
+	background-color: #ccc;
+}
+
+.leaflet-popup-content-wrapper {
+	border-radius: 12px;
+	font-family: 'Montserrat', sans-serif;"
+	font-size: 1.3em;
+	padding: 1px 0 10px;
+	text-align: center;
+}
+
+.leaflet-popup-content a:first-child {
+	display: inline-block;
+	font-size: 1.8em;
+	padding: 0 0 10px;
+}
+
+.leaflet-popup-content p {
+    margin: 10px 0;
+}
+
+.leaflet-popup-content .ended {
+	font-size: 1.6em;
+	color: #ef3c2c;
+	font-style: italic;
+}
+
+.leaflet-popup-content p.details {
+	font-size: 1.6em;
+	margin-bottom: 0;
+}
+

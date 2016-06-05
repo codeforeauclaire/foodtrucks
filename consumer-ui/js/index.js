@@ -13,7 +13,7 @@ $(document).on('pageshow', function () {
   map.addLayer(markerCluster)
   var markers = []
 
-  var timeFormat = 'h:mm a'
+  var timeFormat = 'h:mma'
   var dateFormat = 'M/D/YY'
 
   var pastEventIcon = new L.Icon({
@@ -104,13 +104,14 @@ function getPopupHtml (value, dateFormat, timeFormat, expired) {
   var content = '<a href="' + value[0].website_url + '">' + value[0].title + '</a><br/>'
   if (value[0].logo) content += '<img src="' + value[0].logo + '" alt="logo"/>'
   content += '<p>' + value[0].description + '</p>'
-  if (expired) content += '<p><strong> SERVICE HOURS HAVE PASSED!</strong></p>'
-  content += '<p>Hours on ' +
-    moment(value.start_time).format(dateFormat) + ' : ' +
+  
+  content += '<p class="details">Here on ' +
+    moment(value.start_time).format(dateFormat) + ' <br><strong>' +
     moment(value.start_time).format(timeFormat) + ' - ' +
 	moment(value.end_time).format(timeFormat) + ' ' +
-        (moment().isDST() ? 'CDT' : 'CST') +
-        '</p>'
+        (moment().isDST() ? '' : '') +
+        '</strong></p>'
+  if (expired) content += '<strong class="ended">(Ended)</strong>'
   return content
 }
 
