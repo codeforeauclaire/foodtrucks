@@ -22,16 +22,15 @@ html, body {
   text-shadow: none;
 }
 #header h1 {
-	background-color: #ef3c2c;
 	box-shadow: none;
-	color: white;
+	color: #ef3c2c;
 	float: left;
 	font-family: "Montserrat",sans-serif;
 	font-size: 1.5em;
 	height: 50px;
 	line-height: 2.1em;
 	margin: auto auto auto 10px;
-	padding: 0 0 0 15px;
+	padding: 0;
 	text-align: left;
 	text-shadow: none;
 }
@@ -42,16 +41,12 @@ html, body {
 #header h1 a:hover,
 #header h1 a:active {
 	text-decoration: none;
-	color: white;
+	color: #313236;
 }
 
 #header h1 span {
-	background-color: #313236;
-	color: white;
 	display: inline-block;
 	height: 50px;
-	margin-left: 9px;
-	padding: 0 15px;
 }
 
 #header ul {
@@ -66,7 +61,6 @@ html, body {
 }
 
 #header ul li a {
-	color: #313236;
 	display: inline;
 	padding: 0 15px;
   text-decoration: none;
@@ -166,7 +160,8 @@ html body .ui-datepicker .ui-state-highlight {
   }
   #header h1 {
   	margin: 0;
-  	width: 100%
+  	width: 100%;
+  	text-align: center;
   }
   #header ul {
     clear: both;
