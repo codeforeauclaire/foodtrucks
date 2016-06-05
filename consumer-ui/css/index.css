@@ -158,3 +158,27 @@ html body .ui-datepicker .ui-state-highlight {
 	margin-bottom: 0;
 }
 
+
+@media only screen and (max-width: 600px) {
+  #header {
+    height: 90px;
+    text-align: center;
+  }
+  #header h1 {
+  	margin: 0;
+  	width: 100%
+  }
+  #header ul {
+    clear: both;
+    float: none;
+    margin: 58px 15px 0 0;
+    padding: 0;
+    text-align: center;
+	}
+	#map {
+    top: 90px;
+	}
+	#datepicker {
+	    top: 90px;
+	}
+}
