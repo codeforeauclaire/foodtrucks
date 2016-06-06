@@ -26,6 +26,7 @@ module:
   page_cache: 0
   paragraphs: 0
   path: 0
+  r4032login: 0
   rest: 0
   serialization: 0
   shortcut: 0

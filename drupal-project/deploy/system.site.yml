@@ -3,8 +3,8 @@ name: 'EC Food Trucks'
 mail: foodtruck.vendors@digitalfarrier.com
 slogan: ''
 page:
-  403: /user/login
-  404: /user/login
+  403: ''
+  404: ''
   front: /upcoming-events
 admin_compact_mode: false
 weight_select_max: 100
