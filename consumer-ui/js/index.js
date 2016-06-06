@@ -1,6 +1,8 @@
 /* globals L, moment */
-var API = 'http://vendors.foodtrucks.codeforeauclaire.org/api/events'
-// API = "js/test/event.json"; //uncomment to use local test data
+var API_EVENTS = 'http://vendors.foodtrucks.codeforeauclaire.org/api/events'
+ //API_EVENTS = "js/test/event.json"; //uncomment to use local test data
+var API_VENDORS = 'http://vendors.foodtrucks.codeforeauclaire.org/api/vendors'
+ //API_VENDORS = "js/test/vendor.json"; //uncomment to use local test data
 
 $(document).on('pageshow', function () {
   var map = new L.Map('map', {
@@ -26,9 +28,25 @@ $(document).on('pageshow', function () {
   })
   // current events use default marker
 
+  //get vendor list
   $.getJSON({
     dataType: 'json',
-    url: API
+    url: API_VENDORS
+  })
+  .done(function (data) {
+    $.each(data, function (key, value) {
+      $('#trucks').append("<div><p><b><a href='"+value.website_url+"' target='_blank'>"+value.title+"</a></b> "+value.description+"</p></div>")
+    })
+  })
+  .fail(function (err) {
+    console.log(err)
+  })
+
+
+  //get event list
+  $.getJSON({
+    dataType: 'json',
+    url: API_EVENTS
   })
   .done(function (data) {
     $.each(data, function (key, value) {
@@ -101,10 +119,10 @@ function isAfter (date1, date2) {
 }
 
 function getPopupHtml (value, dateFormat, timeFormat, expired) {
-  var content = '<a href="' + value[0].website_url + '">' + value[0].title + '</a><br/>'
+  var content = '<a href="' + (value[0].website_url ? value[0].website_url : '#') + '">' + value[0].title + '</a><br/>'
   if (value[0].logo) content += '<img src="' + value[0].logo + '" alt="logo"/>'
   content += '<p>' + value[0].description + '</p>'
-  
+
   content += '<p class="details">Here on ' +
     moment(value.start_time).format(dateFormat) + ' <br><strong>' +
     moment(value.start_time).format(timeFormat) + ' - ' +
