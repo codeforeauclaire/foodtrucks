@@ -29,7 +29,8 @@
         "drupal/simple_fb_connect": "dev-8.x-3.x",
         "drupal/smtp": "8.1.x",
         "drupal/rules": "8.3.x-dev",
-        "drupal/image_widget_crop": "8.1.x"
+        "drupal/image_widget_crop": "8.1.x",
+        "drupal/r4032login": "8.1.x-dev"
     },
     "require-dev": {
         "behat/mink": "~1.6",

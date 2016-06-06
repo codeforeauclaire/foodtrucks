@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7865e77c9d90cd6f86c292b35f0628d2",
-    "content-hash": "c220399717362cbdcc920c52052a8a28",
+    "hash": "37f840446bc9fd0f702414f7435b8b9b",
+    "content-hash": "480df59c52fa218a1716ff13516f2f86",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -226,16 +226,16 @@
         },
         {
             "name": "composer/semver",
-            "version": "1.4.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/semver.git",
-                "reference": "84c47f3d8901440403217afc120683c7385aecb8"
+                "reference": "03c9de5aa25e7672c4ad251eeaba0c47a06c8b98"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/semver/zipball/84c47f3d8901440403217afc120683c7385aecb8",
-                "reference": "84c47f3d8901440403217afc120683c7385aecb8",
+                "url": "https://api.github.com/repos/composer/semver/zipball/03c9de5aa25e7672c4ad251eeaba0c47a06c8b98",
+                "reference": "03c9de5aa25e7672c4ad251eeaba0c47a06c8b98",
                 "shasum": ""
             },
             "require": {
@@ -284,7 +284,7 @@
                 "validation",
                 "versioning"
             ],
-            "time": "2016-03-30 13:16:03"
+            "time": "2016-06-02 09:04:51"
         },
         {
             "name": "cweagans/composer-patches",
@@ -938,16 +938,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.1.1",
+            "version": "8.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal-composer/drupal-core.git",
-                "reference": "e405a10c85a874a70932fe53670993f790df746f"
+                "reference": "a5d3f14db87ef953d227fb411489bada1afbb0a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal-composer/drupal-core/zipball/e405a10c85a874a70932fe53670993f790df746f",
-                "reference": "e405a10c85a874a70932fe53670993f790df746f",
+                "url": "https://api.github.com/repos/drupal-composer/drupal-core/zipball/a5d3f14db87ef953d227fb411489bada1afbb0a8",
+                "reference": "a5d3f14db87ef953d227fb411489bada1afbb0a8",
                 "shasum": ""
             },
             "require": {
@@ -1008,6 +1008,7 @@
                 "drupal/core-discovery": "self.version",
                 "drupal/core-event-dispatcher": "self.version",
                 "drupal/core-file-cache": "self.version",
+                "drupal/core-filesystem": "self.version",
                 "drupal/core-gettext": "self.version",
                 "drupal/core-graph": "self.version",
                 "drupal/core-php-storage": "self.version",
@@ -1071,7 +1072,7 @@
                 "drupal/views_ui": "self.version"
             },
             "require-dev": {
-                "behat/mink": "~1.6",
+                "behat/mink": "~1.7",
                 "behat/mink-goutte-driver": "~1.2",
                 "jcalderonzumba/gastonjs": "~1.0.2",
                 "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
@@ -1101,7 +1102,7 @@
                 "GPL-2.0+"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2016-05-04 11:20:24"
+            "time": "2016-06-01 23:31:24"
         },
         {
             "name": "drupal/crop",
@@ -1145,16 +1146,16 @@
         },
         {
             "name": "drupal/entity_reference_revisions",
-            "version": "8.1.0-rc6",
+            "version": "8.1.0-rc7",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/entity_reference_revisions.git",
-                "reference": "c9056323e728586436688d6aa1310a0b60c241d1"
+                "reference": "09b19416018f59e1b1f4acef6cfd34496ba991ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/entity_reference_revisions-8.x-1.0-rc6.zip",
-                "reference": "c9056323e728586436688d6aa1310a0b60c241d1",
+                "url": "https://ftp.drupal.org/files/projects/entity_reference_revisions-8.x-1.0-rc7.zip",
+                "reference": "09b19416018f59e1b1f4acef6cfd34496ba991ba",
                 "shasum": null
             },
             "require": {
@@ -1172,7 +1173,7 @@
             ],
             "description": "Adds a Entity Reference field type with revision support.",
             "homepage": "https://www.drupal.org/project/entity_reference_revisions",
-            "time": "2016-04-12 23:57:54"
+            "time": "2016-05-26 00:06:06"
         },
         {
             "name": "drupal/geolocation",
@@ -1185,7 +1186,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/geolocation-8.x-1.5.zip",
-                "reference": null,
+                "reference": "6d279d17c722bf612e21bfdbe0545a972c105845",
                 "shasum": null
             },
             "require": {
@@ -1220,7 +1221,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/image_widget_crop-8.x-1.0.zip",
-                "reference": null,
+                "reference": "5575c1e5e08be2be479232e5ac4d390b40f0002b",
                 "shasum": null
             },
             "require": {
@@ -1259,16 +1260,16 @@
         },
         {
             "name": "drupal/paragraphs",
-            "version": "8.1.0-rc4",
+            "version": "8.1.0-rc5",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/paragraphs",
-                "reference": "740874bacb56a6a90683e7818c06ba77a638125c"
+                "reference": "bed1bddffdf03626ba057ab697635b049d8d98de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/paragraphs-8.x-1.0-rc4.zip",
-                "reference": "740874bacb56a6a90683e7818c06ba77a638125c",
+                "url": "https://ftp.drupal.org/files/projects/paragraphs-8.x-1.0-rc5.zip",
+                "reference": "bed1bddffdf03626ba057ab697635b049d8d98de",
                 "shasum": null
             },
             "require": {
@@ -1287,7 +1288,10 @@
                 "drupal/field_ui": "Required by drupal/paragraphs_demo",
                 "drupal/image": "Required by drupal/paragraphs_demo",
                 "drupal/language": "Required by drupal/paragraphs_demo",
-                "drupal/node": "Required by drupal/paragraphs_demo"
+                "drupal/node": "Required by drupal/paragraphs_demo",
+                "drupal/search_api": "Required by drupal/paragraphs_demo",
+                "drupal/search_api_db": "Required by drupal/paragraphs_demo",
+                "drupal/views": "Required by drupal/paragraphs_demo"
             },
             "type": "drupal-module",
             "extra": {
@@ -1299,9 +1303,34 @@
             "license": [
                 "GPL-2.0+"
             ],
-            "description": "Implements the Paragraphs entity types, Entity Reference selection type and Entity Reference field widget.",
+            "description": "Enables the creation of paragraphs entities. To safely uninstall, go first to Structure > Paragraphs types > Settings.",
             "homepage": "https://www.drupal.org/project/paragraphs",
-            "time": "2015-11-17 13:21:21"
+            "time": "2016-05-31 19:59:20"
+        },
+        {
+            "name": "drupal/r4032login",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/r4032login",
+                "reference": "4b2077aa70e3f7b00b8a9cba25af5b948ba2e3b9"
+            },
+            "require": {
+                "drupal/core": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Redirect anonymous users from 403 Access Denied pages to the /user/login page.",
+            "homepage": "https://www.drupal.org/project/r4032login",
+            "time": "2016-03-01 13:56:38"
         },
         {
             "name": "drupal/rules",
@@ -1309,7 +1338,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/rules",
-                "reference": "475910feef298475400ef9e87f43304306559313"
+                "reference": "1b70312cd21c4eaad29cd7de9c155482bc7099f7"
             },
             "require": {
                 "drupal/core": "8.*"
@@ -1326,7 +1355,7 @@
             ],
             "description": "React on events and conditionally evaluate actions.",
             "homepage": "https://www.drupal.org/project/rules",
-            "time": "2016-05-08 20:35:33"
+            "time": "2016-06-01 10:02:07"
         },
         {
             "name": "drupal/simple_fb_connect",
@@ -2627,16 +2656,16 @@
         },
         {
             "name": "phpseclib/phpseclib",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "ba6fb78f727cd09f2a649113b95468019e490585"
+                "reference": "3d265f7c079f5b37d33475f996d7a383c5fc8aeb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/ba6fb78f727cd09f2a649113b95468019e490585",
-                "reference": "ba6fb78f727cd09f2a649113b95468019e490585",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/3d265f7c079f5b37d33475f996d7a383c5fc8aeb",
+                "reference": "3d265f7c079f5b37d33475f996d7a383c5fc8aeb",
                 "shasum": ""
             },
             "require": {
@@ -2656,6 +2685,9 @@
             },
             "type": "library",
             "autoload": {
+                "files": [
+                    "phpseclib/bootstrap.php"
+                ],
                 "psr-4": {
                     "phpseclib\\": "phpseclib/"
                 }
@@ -2712,7 +2744,7 @@
                 "x.509",
                 "x509"
             ],
-            "time": "2016-01-18 17:07:21"
+            "time": "2016-05-13 01:15:21"
         },
         {
             "name": "psr/http-message",
@@ -2875,22 +2907,22 @@
         },
         {
             "name": "stack/builder",
-            "version": "v1.0.3",
+            "version": "v1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stackphp/builder.git",
-                "reference": "c1f8a4693b55c563405024f708a76ef576c3b276"
+                "reference": "59fcc9b448a8ce5e338a04c4e2e4aca893e83425"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stackphp/builder/zipball/c1f8a4693b55c563405024f708a76ef576c3b276",
-                "reference": "c1f8a4693b55c563405024f708a76ef576c3b276",
+                "url": "https://api.github.com/repos/stackphp/builder/zipball/59fcc9b448a8ce5e338a04c4e2e4aca893e83425",
+                "reference": "59fcc9b448a8ce5e338a04c4e2e4aca893e83425",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0",
-                "symfony/http-foundation": "~2.1",
-                "symfony/http-kernel": "~2.1"
+                "symfony/http-foundation": "~2.1|~3.0",
+                "symfony/http-kernel": "~2.1|~3.0"
             },
             "require-dev": {
                 "silex/silex": "~1.0"
@@ -2920,7 +2952,7 @@
             "keywords": [
                 "stack"
             ],
-            "time": "2014-11-23 20:37:11"
+            "time": "2016-06-02 06:58:42"
         },
         {
             "name": "stecman/symfony-console-completion",
@@ -6105,6 +6137,7 @@
     "stability-flags": {
         "drupal/simple_fb_connect": 20,
         "drupal/rules": 20,
+        "drupal/r4032login": 20,
         "jcalderonzumba/gastonjs": 20
     },
     "prefer-stable": true,

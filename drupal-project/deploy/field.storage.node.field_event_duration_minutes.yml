@@ -1,28 +1,28 @@
-uuid: 3f396da9-fa37-440c-8740-90d56974d603
+uuid: fa675ae6-fa32-44b4-9502-4bea36c6ae5b
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - options
-id: node.field_event_start_minute
-field_name: field_event_start_minute
+id: node.field_event_duration_minutes
+field_name: field_event_duration_minutes
 entity_type: node
 type: list_integer
 settings:
   allowed_values:
     -
       value: 0
-      label: '0'
+      label: '0 minutes'
     -
       value: 15
-      label: '15'
+      label: '15 minutes'
     -
       value: 30
-      label: '30'
+      label: '30 minutes'
     -
       value: 45
-      label: '45'
+      label: '45 minutes'
   allowed_values_function: ''
 module: options
 locked: false
