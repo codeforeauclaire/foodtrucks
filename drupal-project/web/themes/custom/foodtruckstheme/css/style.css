@@ -13,7 +13,7 @@
  * Settings variables
  *
  */
-@import url("//fonts.googleapis.com/css?family=Lato:400,700,900");
+@import url("//fonts.googleapis.com/css?family=Montserrat:400,700");
 /* line 3, ../scss/00-config/_utilities.scss */
 .node-food-truck-event-scheduled-edit-form.node-form .field--name-title, .node-food-truck-event-scheduled-form.node-form .field--name-title {
   display: none;
@@ -23,56 +23,75 @@
 header {
   color: #000;
   position: relative;
-  border-bottom: solid 1px #68696d;
-  background-color: lightgrey;
-  height: 65px;
-  padding: 20px;
+  box-shadow: 0 0 2px #aaa;
+  border: none;
+  background-color: #00695c;
+  height: 50px;
+  padding: 0;
 }
-/* line 15, ../scss/30-global/_header.scss */
+/* line 16, ../scss/30-global/_header.scss */
 header a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
 }
-/* line 18, ../scss/30-global/_header.scss */
+/* line 19, ../scss/30-global/_header.scss */
 header a.is-active {
   color: red;
 }
-/* line 23, ../scss/30-global/_header.scss */
+/* line 24, ../scss/30-global/_header.scss */
 header ul.menu a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
 }
-/* line 26, ../scss/30-global/_header.scss */
+/* line 27, ../scss/30-global/_header.scss */
 header ul.menu a.is-active {
   color: red;
 }
-/* line 31, ../scss/30-global/_header.scss */
+/* line 33, ../scss/30-global/_header.scss */
+header .site-name {
+  color: #80cbc4;
+  float: left;
+  font-family: "Montserrat",sans-serif;
+  font-size: 1.5em;
+  font-weight: normal;
+  height: 50px;
+  line-height: 2.1em;
+  margin: auto auto auto 10px;
+  padding: 0;
+  text-align: left;
+  text-shadow: none;
+}
+/* line 45, ../scss/30-global/_header.scss */
+header .site-name a {
+  color: #80cbc4;
+}
+/* line 50, ../scss/30-global/_header.scss */
 header::after {
   content: '';
   display: block;
   clear: both;
 }
 
-/* line 38, ../scss/30-global/_header.scss */
+/* line 57, ../scss/30-global/_header.scss */
 .block-system-branding-block {
   float: left;
 }
 
-/* line 41, ../scss/30-global/_header.scss */
+/* line 60, ../scss/30-global/_header.scss */
 .menu--main .menu-item {
   float: right;
   padding-left: 10px;
   padding-right: 10px;
 }
 
-/* line 47, ../scss/30-global/_header.scss */
+/* line 66, ../scss/30-global/_header.scss */
 main::before {
   content: '';
   display: block;
   clear: both;
 }
 
-/* line 54, ../scss/30-global/_header.scss */
+/* line 73, ../scss/30-global/_header.scss */
 .path-user header ul.menu li:last-child a, .path-food-trucks header ul.menu li:last-child a {
   color: #ff0000;
 }
@@ -84,12 +103,12 @@ main::before {
 
 /* line 5, ../scss/30-global/_html-elements.scss */
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* line 9, ../scss/30-global/_html-elements.scss */
 h1 {
-  font-family: "Lato", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* line 13, ../scss/30-global/_html-elements.scss */
