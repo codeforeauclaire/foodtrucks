@@ -85,9 +85,13 @@ sudo service nginx restart
 chown www-data /var/foodtrucks -R
 
 # Watch for CSS changes
-## TODO: Make this run on server startup, not just hacked here
-## TODO: It'll break if the connection is lost
-cd /var/foodtrucks/drupal-project/web/themes/custom/foodtruckstheme
-compass watch &
+crontab -l > /tmp/mycron09280398234098
+echo "@reboot (cd /var/foodtrucks/drupal-project/web/themes/custom/foodtruckstheme && compass watch)" >> /tmp/mycron09280398234098
+crontab /tmp/mycron09280398234098
+rm /tmp/mycron09280398234098
+echo
+echo "Rebooting machine, give it (10-30?) seconds, then reconnect"
+echo
+reboot
 
 } # this ensures the entire script is downloaded and run #
