@@ -65,6 +65,9 @@ $(document).on('pageshow', function () {
     if (window.location.hash.toLowerCase() === '#all') {
       $('#dateFilter').val('All')
       markerCluster.addLayers(markers)
+      if (markerCluster._topClusterLevel.getChildCount() === 0) {
+        $('#message').popup('open')
+      }
     } else {
       $('#dateFilter').trigger('change')
     }
@@ -99,6 +102,10 @@ $(document).on('pageshow', function () {
       if (isBefore(open, filterDate) && isAfter(close, filterDate)) {
         markerCluster.addLayer(markers[i])
       }
+    }
+
+    if (markerCluster._topClusterLevel.getChildCount() === 0) {
+      $('#message').popup('open')
     }
   })
 })
