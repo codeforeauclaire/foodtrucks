@@ -26,8 +26,8 @@ function foodtrucksmodule_form_alter(&$form, \Drupal\Core\Form\FormStateInterfac
 //    $response = new \Symfony\Component\HttpFoundation\RedirectResponse("/node/add/food_trucks");
 //    $response->send();
     }
-    if (is_array($form['field_food_truck']['widget']['#options']) && count($form['field_food_truck']['widget']['#options']) == 0) {
-//      unset($form['field_food_truck']);
+    if (is_array($form['field_food_truck']['widget']['#options']) && count($form['field_food_truck']['widget']['#options']) <= 1) {
+      $form['field_food_truck']['#attributes']['class'][] = 'hidden';
     }
   }
 }
