@@ -92,4 +92,21 @@ sudo service nginx restart
 # TODO: * It's breaking sshing into the server
 chown www-data /root -R
 
+# Watch for CSS changes
+## TODO: Once this is confirmed working, move up in install procedurce
+## TODO: * Ruby expected to be stable, and I want to see any errors from Drupal / Drush which is more bleeding edge
+## Install Ruby - https://www.brightbox.com/docs/ruby/ubuntu/
+### Digitial Ocean's instructions have us compiling which is error prone and takes a while, so not using (https://goo.gl/TpZ2wL)
+sudo apt-add-repository ppa:brightbox/ruby-ng
+sudo apt-get update
+sudo apt-get install ruby2.2 ruby2.2-dev
+## Install Compass http://compass-style.org/install/
+gem update --system
+gem install compass
+## Watch files
+### TODO: Make this run on server startup, not just hacked here
+### TODO: It'll break if the connection is lost
+cd /root/foodtrucks/drupal-project/web/themes/custom/foodtruckstheme
+compass watch &
+
 } # this ensures the entire script is downloaded and run #
