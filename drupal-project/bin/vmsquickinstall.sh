@@ -19,9 +19,17 @@ sudo apt-get update && sudo apt-get upgrade -y
 
 # Add custom repositories
 sudo apt-get install -y software-properties-common
-sudo add-apt-repository 'deb [arch=amd64,i386] http://nyc2.mirrors.digitalocean.com/mariadb/repo/10.1/ubuntu trusty main' -y
 sudo add-apt-repository ppa:ondrej/php -y
+sudo add-apt-repository 'deb [arch=amd64,i386] http://nyc2.mirrors.digitalocean.com/mariadb/repo/10.1/ubuntu trusty main' -y
+sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xcbcb082a1bb943db
 sudo apt-get update
+
+# Setup Maria DB installation (1 of 2)
+# * Instructions from https://goo.gl/d1vOx6 (Ubuntu >> 14.04 >> 10.1 >> DigitalOcean - New York)
+# * No password for maria db install from http://dba.stackexchange.com/a/60192
+export DEBIAN_FRONTEND=noninteractive
+sudo debconf-set-selections <<< 'mariadb-server-10.0 mysql-server/root_password password PASS'
+sudo debconf-set-selections <<< 'mariadb-server-10.0 mysql-server/root_password_again password PASS'
 
 # Install packaged stuff
 # * Some versions from DO article @ https://goo.gl/jCiEhS
@@ -34,14 +42,7 @@ sudo apt-get update
 # ** PHP extensions
 sudo apt-get install -y git nginx ruby-compass mariadb-server php5.6 php5-mysql php5-curl php5-gd php5-fpm php5.6-xml
 
-# Setup Maria DB
-# * Instructions from https://goo.gl/d1vOx6 (Ubuntu >> 14.04 >> 10.1 >> DigitalOcean - New York)
-# * No password for maria db install from http://dba.stackexchange.com/a/60192
-sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xcbcb082a1bb943db
-sudo apt-get update
-export DEBIAN_FRONTEND=noninteractive
-sudo debconf-set-selections <<< 'mariadb-server-10.0 mysql-server/root_password password PASS'
-sudo debconf-set-selections <<< 'mariadb-server-10.0 mysql-server/root_password_again password PASS'
+# Setup Maria DB installation (2 of 2)
 mysql -uroot -pPASS -e "SET PASSWORD = PASSWORD('');"
 
 # Install composer - https://getcomposer.org/download/
