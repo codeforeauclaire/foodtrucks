@@ -8,14 +8,14 @@ Use these instructions to setup a temporary* development environment of this pro
 
 1. Fork this repository
 1. Create a new [Virtual Machine](http://vms.codeforeauclaire.org/) (1gb+ recommended) >> SSH in >> Run vms quick install:
- 1. `export GHUSER='AnthonyAstige'` (Replace AnthonyAstige with your username)
- 1. `curl -L -o- https://rawgit.com/$GHUSER/foodtrucks/master/drupal-project/bin/vmsquickinstall.sh | bash`
+    1. `export GHUSER='AnthonyAstige'` (Replace AnthonyAstige with your username)
+    1. `curl -L -o- https://rawgit.com/$GHUSER/foodtrucks/master/drupal-project/bin/vmsquickinstall.sh | bash`
 1. See app running
- 1. Visit http://{vms-ip} in your browser
+    1. Visit http://{vms-ip} in your browser
 1. Options to move forward
- 1. Play with UI: Use `(cd ~/foodtrucks/drupal-project/web && drush uli 1)` for login link to login as admin
-     1. Replace `default` in the login url with {vms-ip}
- 1. Be a dev: Edit a file (Files in `~/foodtrucks/` >> refresh page >> see changes in your browser
+    1. Play with UI: Use `(cd ~/foodtrucks/drupal-project/web && drush uli 1)` for login link to login as admin
+        1. Replace `default` in the login url with {vms-ip}
+    1. Be a dev: Edit a file (Files in `~/foodtrucks/` >> refresh page >> see changes in your browser
 
 *For a permanent development environment we recommend you read the referenced script above to install locally.
 
