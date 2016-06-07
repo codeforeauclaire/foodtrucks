@@ -67,6 +67,8 @@ $(document).on('pageshow', function () {
       markerCluster.addLayers(markers)
       if (markerCluster._topClusterLevel.getChildCount() === 0) {
         $('#message').popup('open')
+      } else {
+        map.fitBounds(markerCluster.getBounds())
       }
     } else {
       $('#dateFilter').trigger('change')
@@ -106,6 +108,8 @@ $(document).on('pageshow', function () {
 
     if (markerCluster._topClusterLevel.getChildCount() === 0) {
       $('#message').popup('open')
+    } else {
+      map.fitBounds(markerCluster.getBounds())
     }
   })
 })
