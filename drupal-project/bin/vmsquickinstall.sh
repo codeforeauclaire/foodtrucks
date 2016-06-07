@@ -48,7 +48,7 @@ sudo add-apt-repository ppa:ondrej/php -y
 sudo apt-get update
 sudo apt-get install -y python-software-properties
 sudo apt-get update
-sudo apt-get install -y php5.6 # TODO: Fix this so it doesn't try to install apache?
+sudo apt-get install -y php5.6
 
 # Install PHP extensions
 sudo apt-get install -y php5-mysql php5-curl php5-gd php5-fpm
