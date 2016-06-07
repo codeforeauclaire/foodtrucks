@@ -1,0 +1,19 @@
+uuid: 5ce5ab5c-2b04-4599-9d9d-5deaf1fda3fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_special_comments
+    - node.type.food_truck_event_scheduled
+id: node.food_truck_event_scheduled.field_special_comments
+field_name: field_special_comments
+entity_type: node
+bundle: food_truck_event_scheduled
+label: 'Special Comments'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

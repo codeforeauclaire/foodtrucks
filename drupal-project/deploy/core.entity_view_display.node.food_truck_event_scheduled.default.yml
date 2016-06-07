@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.food_truck_event_scheduled.field_event_start_minute
     - field.field.node.food_truck_event_scheduled.field_food_truck
     - field.field.node.food_truck_event_scheduled.field_scheduled_location
+    - field.field.node.food_truck_event_scheduled.field_special_comments
     - node.type.food_truck_event_scheduled
   module:
     - datetime
@@ -80,6 +81,12 @@ content:
       title: ''
     third_party_settings: {  }
     type: geolocation_map
+  field_special_comments:
+    weight: 11
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
   links:
     weight: 0
     settings: {  }
