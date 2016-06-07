@@ -24,7 +24,6 @@
         "drupal/console": "~0.10",
         "drupal/admin_toolbar": "8.1.x",
         "drupal/token": "8.1.x",
-        "drupal/geolocation": "8.1.x",
         "drupal/paragraphs": "8.1.x",
         "drupal/simple_fb_connect": "dev-8.x-3.x",
         "drupal/smtp": "8.1.x",

@@ -5,12 +5,13 @@ dependencies:
   config:
     - field.field.node.food_truck_event_scheduled.field_event_date
     - field.field.node.food_truck_event_scheduled.field_event_description
-    - field.field.node.food_truck_event_scheduled.field_event_duration
-    - field.field.node.food_truck_event_scheduled.field_event_duration_minutes
+    - field.field.node.food_truck_event_scheduled.field_event_end_hour
+    - field.field.node.food_truck_event_scheduled.field_event_end_minute
     - field.field.node.food_truck_event_scheduled.field_event_start_hour
     - field.field.node.food_truck_event_scheduled.field_event_start_minute
     - field.field.node.food_truck_event_scheduled.field_food_truck
     - field.field.node.food_truck_event_scheduled.field_scheduled_location
+    - field.field.node.food_truck_event_scheduled.field_special_comments
     - node.type.food_truck_event_scheduled
   module:
     - datetime
@@ -36,13 +37,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: basic_string
-  field_event_duration:
+  field_event_end_hour:
     weight: 9
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
-  field_event_duration_minutes:
+  field_event_end_minute:
     weight: 10
     label: above
     settings: {  }
@@ -80,6 +81,12 @@ content:
       title: ''
     third_party_settings: {  }
     type: geolocation_map
+  field_special_comments:
+    weight: 11
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
   links:
     weight: 0
     settings: {  }

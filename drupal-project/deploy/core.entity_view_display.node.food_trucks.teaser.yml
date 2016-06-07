@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.food_trucks.field_food_truck_logo
     - field.field.node.food_trucks.field_telephone_number
     - field.field.node.food_trucks.field_twitter_name
-    - field.field.node.food_trucks.field_website_url
     - node.type.food_trucks
   module:
     - user
@@ -26,4 +25,3 @@ hidden:
   field_food_truck_logo: true
   field_telephone_number: true
   field_twitter_name: true
-  field_website_url: true

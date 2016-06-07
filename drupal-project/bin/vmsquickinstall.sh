@@ -40,11 +40,11 @@ mysql -uroot -pPASS -e "SET PASSWORD = PASSWORD('');"
 
 # Install PHP 5.6
 # * https://www.dev-metal.com/install-setup-php-5-6-ubuntu-14-04-lts/
-sudo add-apt-repository ppa:ondrej/php5-5.6 -y
+sudo add-apt-repository ppa:ondrej/php -y
 sudo apt-get update
 sudo apt-get install -y python-software-properties
 sudo apt-get update
-sudo apt-get install -y php5 # TODO: Fix this so it doesn't try to install apache?
+sudo apt-get install -y php5.6 # TODO: Fix this so it doesn't try to install apache?
 
 # Install PHP extensions
 sudo apt-get install -y php5-mysql php5-curl php5-gd php5-fpm
@@ -67,29 +67,42 @@ sudo mv drush.phar /usr/local/bin/drush
 # drush init # Wanted to prompt, -y didn't seem to work
 
 # Clone repository
-git clone https://github.com/$GHUSER/foodtrucks.git /root/foodtrucks
+git clone https://github.com/$GHUSER/foodtrucks.git /var/foodtrucks
 
 # Configure website (From /drupal-project/README.md)
-(cd /root/foodtrucks && rm -rf drupal-project)
-(cd /root/foodtrucks && composer create-project drupal-composer/drupal-project:8.x-dev drupal-project --stability dev --no-interaction)
-(cd /root/foodtrucks && git reset --hard HEAD)
-(cd /root/foodtrucks/drupal-project && composer install)
-mkdir -p /root/foodtrucks/drupal-project/web/sites/default/
-cp /root/foodtrucks/drupal-project/bin/vmsquickinstall.settings.php /root/foodtrucks/drupal-project/web/sites/default/settings.php
-(cd /root/foodtrucks/drupal-project/web && drush si --account-pass=admin -y)
-(cd /root/foodtrucks/drupal-project/web && drush cedit system.site --file="/root/foodtrucks/drupal-project/deploy/system.site.yml" -y)
-(cd /root/foodtrucks/drupal-project/web && drush cedit shortcut.set.default --file="/root/foodtrucks/drupal-project/deploy/shortcut.set.default.yml" -y)
-
-# WIP
-echo "Make this work in progress work"
-(cd /root/foodtrucks/drupal-project/web drush sqlc < ../db.sql) # Give us some data to play with
-(cd /root/foodtrucks/drupal-project/web && drush cim -y)		# Configure the site
-(cd /etc/nginx/sites-enabled/ && rm default && ln -s /root/foodtrucks/drupal-project/bin/nginx.conf default)
+(cd /var/foodtrucks && rm -rf drupal-project)
+(cd /var/foodtrucks && composer create-project drupal-composer/drupal-project:8.x-dev drupal-project --stability dev --no-interaction)
+(cd /var/foodtrucks && git reset --hard HEAD)
+(cd /var/foodtrucks/drupal-project && composer install)
+mkdir -p /var/foodtrucks/drupal-project/web/sites/default/
+cp /var/foodtrucks/drupal-project/bin/vmsquickinstall.settings.php /var/foodtrucks/drupal-project/web/sites/default/settings.php
+(cd /var/foodtrucks/drupal-project/web && drush si --account-pass=admin -y)
+(cd /var/foodtrucks/drupal-project/web && drush cedit system.site --file="/var/foodtrucks/drupal-project/deploy/system.site.yml" -y)
+(cd /var/foodtrucks/drupal-project/web && drush cedit shortcut.set.default --file="/var/foodtrucks/drupal-project/deploy/shortcut.set.default.yml" -y)
+# Base foodtrucks setup
+(cd /var/foodtrucks/drupal-project/web drush sqlc < ../db.sql) # Give us some data to play with
+(cd /var/foodtrucks/drupal-project/web && drush cim -y)		# Configure the site
+(cd /etc/nginx/sites-enabled/ && rm default && ln -s /var/foodtrucks/drupal-project/bin/nginx.conf default)
 sudo service nginx restart
 
-# Give nginx & php5-fpm access to all files
-# TODO: Remove this hack & do it right.  Shouldn't be placing files in /root
-# TODO: * It's breaking sshing into the server
-chown www-data /root -R
+# Give nginx & php5-fpm access to foodtrucks install
+chown www-data /var/foodtrucks -R
+
+# Watch for CSS changes
+## TODO: Once this is confirmed working, move up in install procedurce
+## TODO: * Ruby expected to be stable, and I want to see any errors from Drupal / Drush which is more bleeding edge
+## Install Ruby - https://www.brightbox.com/docs/ruby/ubuntu/
+### Digitial Ocean's instructions have us compiling which is error prone and takes a while, so not using (https://goo.gl/TpZ2wL)
+sudo apt-add-repository ppa:brightbox/ruby-ng
+sudo apt-get update
+sudo apt-get install ruby2.2 ruby2.2-dev
+## Install Compass http://compass-style.org/install/
+gem update --system
+gem install compass
+## Watch files
+### TODO: Make this run on server startup, not just hacked here
+### TODO: It'll break if the connection is lost
+cd /var/foodtrucks/drupal-project/web/themes/custom/foodtruckstheme
+compass watch &
 
 } # this ensures the entire script is downloaded and run #

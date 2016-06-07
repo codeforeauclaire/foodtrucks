@@ -22,12 +22,12 @@ function foodtrucksmodule_form_alter(&$form, \Drupal\Core\Form\FormStateInterfac
       $link = \Drupal\Core\Link::fromTextAndUrl("Add Food Truck", \Drupal\Core\Url::fromUserInput('/node/add/food_trucks'))
         ->toString();
       $rendered_message = \Drupal\Core\Render\Markup::create("$link is required");
-      drupal_set_message($rendered_message, 'error');
+      drupal_set_message($rendered_message, 'warning');
 //    $response = new \Symfony\Component\HttpFoundation\RedirectResponse("/node/add/food_trucks");
 //    $response->send();
     }
-    if (is_array($form['field_food_truck']['widget']['#options']) && count($form['field_food_truck']['widget']['#options']) == 0) {
-//      unset($form['field_food_truck']);
+    if (is_array($form['field_food_truck']['widget']['#options']) && count($form['field_food_truck']['widget']['#options']) <= 1) {
+      $form['field_food_truck']['#attributes']['class'][] = 'hidden';
     }
   }
 }

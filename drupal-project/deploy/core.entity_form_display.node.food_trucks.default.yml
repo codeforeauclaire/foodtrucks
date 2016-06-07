@@ -13,7 +13,6 @@ dependencies:
     - node.type.food_trucks
   module:
     - image
-    - link
     - path
     - telephone
 id: node.food_trucks.default
@@ -29,10 +28,10 @@ content:
   field_facebook_url:
     weight: 10
     settings:
-      placeholder_url: 'https://facebook.com/your-facebook-account-name'
-      placeholder_title: ''
+      size: 60
+      placeholder: 'https://facebook.com/your-facebook-account-name'
     third_party_settings: {  }
-    type: link_default
+    type: string_textfield
   field_food_truck_description:
     weight: 7
     settings:
@@ -63,10 +62,10 @@ content:
   field_website_url:
     weight: 9
     settings:
-      placeholder_url: 'https://your-website.com'
-      placeholder_title: ''
+      size: 60
+      placeholder: 'https://your-website.com'
     third_party_settings: {  }
-    type: link_default
+    type: string_textfield
   path:
     type: path
     weight: 5

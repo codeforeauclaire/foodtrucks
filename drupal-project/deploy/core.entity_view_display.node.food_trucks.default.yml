@@ -13,7 +13,6 @@ dependencies:
     - node.type.food_trucks
   module:
     - image
-    - link
     - telephone
     - user
 id: node.food_trucks.default
@@ -22,16 +21,12 @@ bundle: food_trucks
 mode: default
 content:
   field_facebook_url:
-    weight: 7
+    weight: 9
     label: above
     settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
+      link_to_entity: false
     third_party_settings: {  }
-    type: link
+    type: string
   field_food_truck_description:
     weight: 1
     label: above
@@ -61,16 +56,12 @@ content:
     third_party_settings: {  }
     type: string
   field_website_url:
-    weight: 6
+    weight: 10
     label: above
     settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
+      link_to_entity: false
     third_party_settings: {  }
-    type: link
+    type: string
   links:
     weight: 0
     settings: {  }

@@ -1,23 +1,23 @@
-uuid: 8de30468-7017-4aa8-b10d-2bdb5d307d69
+uuid: 79248579-3183-404e-a923-fb66a6aaf765
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_event_duration
+    - field.storage.node.field_event_end_hour
     - node.type.food_truck_event_scheduled
   module:
     - options
-id: node.food_truck_event_scheduled.field_event_duration
-field_name: field_event_duration
+id: node.food_truck_event_scheduled.field_event_end_hour
+field_name: field_event_end_hour
 entity_type: node
 bundle: food_truck_event_scheduled
-label: 'Duration Hours'
+label: 'End Time'
 description: ''
 required: true
 translatable: false
 default_value:
   -
-    value: 120
+    value: '12'
 default_value_callback: ''
 settings: {  }
-field_type: list_integer
+field_type: list_string
