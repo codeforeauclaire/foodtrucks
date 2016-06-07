@@ -23,7 +23,11 @@ sudo apt-get update && sudo apt-get upgrade -y
 
 # Install the simple stuff
 # * Some versions from DO article @ https://goo.gl/jCiEhS
-sudo apt-get install -y git nginx
+# * Compass
+# ** We could compile Ruby - Digitial Ocean's instructions - https://goo.gl/TpZ2wL
+# ** We could install Ruby - https://www.brightbox.com/docs/ruby/ubuntu/
+# ** However we can just do `ruby-compass` much quicker, simpler, and more reliably with a single command (not doing ruby dev, we don't need fluff)
+sudo apt-get install -y git nginx ruby-compass
 
 # Install Maria DB
 # * Instructions from https://goo.gl/d1vOx6 (Ubuntu >> 14.04 >> 10.1 >> DigitalOcean - New York)
@@ -44,10 +48,10 @@ sudo add-apt-repository ppa:ondrej/php -y
 sudo apt-get update
 sudo apt-get install -y python-software-properties
 sudo apt-get update
-sudo apt-get install -y php5.6 # TODO: Fix this so it doesn't try to install apache?
+sudo apt-get install -y php5.6
 
 # Install PHP extensions
-sudo apt-get install -y php5-mysql php5-curl php5-gd php5-fpm
+sudo apt-get install -y php5-mysql php5-curl php5-gd php5-fpm php5.6-xml
 
 # Install composer - https://getcomposer.org/download/
 # * TODO: Figure out a real way to do this as page says not to distribute the installation code, this is a hack
@@ -89,14 +93,8 @@ sudo service nginx restart
 chown www-data /var/foodtrucks -R
 
 # Watch for CSS changes
-# Install compass
-## We could compile Ruby - Digitial Ocean's instructions - https://goo.gl/TpZ2wL
-## We could install Ruby - https://www.brightbox.com/docs/ruby/ubuntu/
-## However we can just install compass much quicker, simpler, and more reliably with a single command (not doing ruby dev, we don't need fluff)
-sudo apt-get install ruby-compass
-## Watch files
-### TODO: Make this run on server startup, not just hacked here
-### TODO: It'll break if the connection is lost
+## TODO: Make this run on server startup, not just hacked here
+## TODO: It'll break if the connection is lost
 cd /var/foodtrucks/drupal-project/web/themes/custom/foodtruckstheme
 compass watch &
 
