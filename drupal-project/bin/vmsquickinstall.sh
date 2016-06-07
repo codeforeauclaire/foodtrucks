@@ -40,11 +40,11 @@ mysql -uroot -pPASS -e "SET PASSWORD = PASSWORD('');"
 
 # Install PHP 5.6
 # * https://www.dev-metal.com/install-setup-php-5-6-ubuntu-14-04-lts/
-sudo add-apt-repository ppa:ondrej/php5-5.6 -y
+sudo add-apt-repository ppa:ondrej/php -y
 sudo apt-get update
 sudo apt-get install -y python-software-properties
 sudo apt-get update
-sudo apt-get install -y php5 # TODO: Fix this so it doesn't try to install apache?
+sudo apt-get install -y php5.6 # TODO: Fix this so it doesn't try to install apache?
 
 # Install PHP extensions
 sudo apt-get install -y php5-mysql php5-curl php5-gd php5-fpm
