@@ -28,14 +28,11 @@ content:
     third_party_settings: {  }
   field_event_date:
     weight: 7
-    settings:
-      date_order: MDY
-      time_type: none
-      increment: 15
+    settings: {  }
     third_party_settings: {  }
-    type: datetime_datelist
+    type: datetime_default
   field_event_description:
-    weight: 12
+    weight: 13
     settings:
       rows: 5
       placeholder: ''
@@ -67,7 +64,7 @@ content:
     third_party_settings: {  }
     type: options_buttons
   field_scheduled_location:
-    weight: 13
+    weight: 12
     settings: {  }
     third_party_settings: {  }
     type: geolocation_googlegeocoder

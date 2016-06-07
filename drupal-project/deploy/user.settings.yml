@@ -1,5 +1,5 @@
 anonymous: Anonymous
-verify_mail: true
+verify_mail: false
 notify:
   cancel_confirm: true
   password_reset: true
@@ -12,7 +12,7 @@ notify:
 register: visitors
 cancel_method: user_cancel_reassign
 password_reset_timeout: 86400
-password_strength: true
+password_strength: false
 langcode: en
 _core:
   default_config_hash: r4kwhOM0IWXVMUZDz744Yc16EOh37ZhYbA8kGOhSmLk
