@@ -5,8 +5,6 @@ dependencies:
   config:
     - field.field.node.food_truck_event_scheduled.field_event_date
     - field.field.node.food_truck_event_scheduled.field_event_description
-    - field.field.node.food_truck_event_scheduled.field_event_duration
-    - field.field.node.food_truck_event_scheduled.field_event_duration_minutes
     - field.field.node.food_truck_event_scheduled.field_event_start_hour
     - field.field.node.food_truck_event_scheduled.field_event_start_minute
     - field.field.node.food_truck_event_scheduled.field_food_truck
@@ -38,16 +36,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
-  field_event_duration:
-    weight: 10
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-  field_event_duration_minutes:
-    weight: 11
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
   field_event_start_hour:
     weight: 8
     settings: {  }
