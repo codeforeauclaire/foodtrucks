@@ -93,9 +93,9 @@ chown www-data /var/foodtrucks -R
 ## TODO: * Ruby expected to be stable, and I want to see any errors from Drupal / Drush which is more bleeding edge
 ## Install Ruby - https://www.brightbox.com/docs/ruby/ubuntu/
 ### Digitial Ocean's instructions have us compiling which is error prone and takes a while, so not using (https://goo.gl/TpZ2wL)
-sudo apt-add-repository ppa:brightbox/ruby-ng
+sudo apt-add-repository -y ppa:brightbox/ruby-ng
 sudo apt-get update
-sudo apt-get install ruby2.2 ruby2.2-dev
+sudo apt-get install -y ruby2.2 ruby2.2-dev
 ## Install Compass http://compass-style.org/install/
 gem update --system
 gem install compass
