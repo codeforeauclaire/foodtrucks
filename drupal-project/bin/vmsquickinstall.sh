@@ -89,16 +89,11 @@ sudo service nginx restart
 chown www-data /var/foodtrucks -R
 
 # Watch for CSS changes
-## TODO: Once this is confirmed working, move up in install procedurce
-## TODO: * Ruby expected to be stable, and I want to see any errors from Drupal / Drush which is more bleeding edge
-## Install Ruby - https://www.brightbox.com/docs/ruby/ubuntu/
-### Digitial Ocean's instructions have us compiling which is error prone and takes a while, so not using (https://goo.gl/TpZ2wL)
-sudo apt-add-repository -y ppa:brightbox/ruby-ng
-sudo apt-get update
-sudo apt-get install -y ruby2.2 ruby2.2-dev
-## Install Compass http://compass-style.org/install/
-gem update --system
-gem install compass
+# Install compass
+## We could compile Ruby - Digitial Ocean's instructions - https://goo.gl/TpZ2wL
+## We could install Ruby - https://www.brightbox.com/docs/ruby/ubuntu/
+## However we can just install compass much quicker, simpler, and more reliably with a single command (not doing ruby dev, we don't need fluff)
+sudo apt-get install ruby-compass
 ## Watch files
 ### TODO: Make this run on server startup, not just hacked here
 ### TODO: It'll break if the connection is lost
