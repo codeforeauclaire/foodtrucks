@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.node.field_event_date
     - field.storage.node.field_event_description
+    - field.storage.node.field_event_end_hour
+    - field.storage.node.field_event_end_minute
     - field.storage.node.field_event_start_hour
     - field.storage.node.field_event_start_minute
     - field.storage.node.field_scheduled_location
@@ -92,9 +94,10 @@ display:
           columns:
             title: title
             field_event_date: field_event_date
-            field_event_start_minute: field_event_date
             field_event_start_hour: field_event_date
-            field_event_duration: field_event_date
+            field_event_start_minute: field_event_date
+            field_event_end_hour: field_event_date
+            field_event_end_minute: field_event_date
             field_scheduled_location: field_scheduled_location
             field_event_description: field_event_description
             edit_node: edit_node
@@ -113,13 +116,6 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-            field_event_start_minute:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
             field_event_start_hour:
               sortable: false
               default_sort_order: asc
@@ -127,7 +123,21 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-            field_event_duration:
+            field_event_start_minute:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_event_end_hour:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_event_end_minute:
               sortable: false
               default_sort_order: asc
               align: ''
@@ -334,7 +344,7 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: list_default
+          type: list_key
           settings: {  }
           group_column: value
           group_columns: {  }
@@ -354,7 +364,69 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Start Time'
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_event_end_hour:
+          id: field_event_end_hour
+          table: node__field_event_end_hour
+          field: field_event_end_hour
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'End Time'
           exclude: false
           alter:
             alter_text: false
@@ -388,6 +460,68 @@ display:
           element_label_type: ''
           element_label_class: ''
           element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_key
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_event_end_minute:
+          id: field_event_end_minute
+          table: node__field_event_end_minute
+          field: field_event_end_minute
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -670,8 +804,7 @@ display:
           granularity: second
       title: ''
       header: {  }
-      footer: {  }
-      empty:
+      footer:
         area:
           id: area
           table: views
@@ -685,6 +818,7 @@ display:
             value: '<a href="/node/add/food_truck_event_scheduled">Add Event</a>'
             format: basic_html
           plugin_id: text
+      empty: {  }
       relationships: {  }
       arguments:
         uid:
@@ -737,6 +871,8 @@ display:
       tags:
         - 'config:field.storage.node.field_event_date'
         - 'config:field.storage.node.field_event_description'
+        - 'config:field.storage.node.field_event_end_hour'
+        - 'config:field.storage.node.field_event_end_minute'
         - 'config:field.storage.node.field_event_start_hour'
         - 'config:field.storage.node.field_event_start_minute'
         - 'config:field.storage.node.field_scheduled_location'
@@ -839,6 +975,8 @@ display:
       tags:
         - 'config:field.storage.node.field_event_date'
         - 'config:field.storage.node.field_event_description'
+        - 'config:field.storage.node.field_event_end_hour'
+        - 'config:field.storage.node.field_event_end_minute'
         - 'config:field.storage.node.field_event_start_hour'
         - 'config:field.storage.node.field_event_start_minute'
         - 'config:field.storage.node.field_scheduled_location'
@@ -943,6 +1081,8 @@ display:
       tags:
         - 'config:field.storage.node.field_event_date'
         - 'config:field.storage.node.field_event_description'
+        - 'config:field.storage.node.field_event_end_hour'
+        - 'config:field.storage.node.field_event_end_minute'
         - 'config:field.storage.node.field_event_start_hour'
         - 'config:field.storage.node.field_event_start_minute'
         - 'config:field.storage.node.field_scheduled_location'
