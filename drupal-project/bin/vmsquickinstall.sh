@@ -51,7 +51,7 @@ sudo apt-get update
 sudo apt-get install -y php5.6
 
 # Install PHP extensions
-sudo apt-get install -y php5-mysql php5-curl php5-gd php5-fpm
+sudo apt-get install -y php5-mysql php5-curl php5-gd php5-fpm php5.6-xml
 
 # Install composer - https://getcomposer.org/download/
 # * TODO: Figure out a real way to do this as page says not to distribute the installation code, this is a hack
