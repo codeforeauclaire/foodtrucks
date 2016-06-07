@@ -35,7 +35,7 @@ $(document).on('pageshow', function () {
   })
   .done(function (data) {
     $.each(data, function (key, value) {
-      $('#trucks').append("<div><p><b><a href='" + (value.website_url || '#') + "' target='_blank'>" +
+      $('#truck-list').append("<div><p><b><a href='" + (value.website_url || '#') + "' target='_blank'>" +
         value.title + '</a></b> ' + (value.description || '') + '</p></div>')
     })
   })
