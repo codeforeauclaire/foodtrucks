@@ -1,38 +1,67 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<title>Eau Claire Food Trucks</title>
 
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-	<link rel="stylesheet" href="/dependencies/leaflet/leaflet.css" />
-	<link rel="stylesheet" href="/dependencies/leaflet/MarkerCluster.css" />
-	<link rel="stylesheet" href="/dependencies/leaflet/MarkerCluster.Default.css" />
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="deps/jquery-mobile/jquery.mobile.css" />
+	<link rel="stylesheet" type="text/css" href="deps/leaflet/leaflet.css" />
+	<link rel="stylesheet" type="text/css" href="deps/leaflet/MarkerCluster.css" />
+	<link rel="stylesheet" type="text/css" href="deps/leaflet/MarkerCluster.Default.css" />
+	<link rel="stylesheet" type="text/css" href="deps/jquery-mobile/datepicker/jquery.mobile.datepicker.css" />
+	<link rel="stylesheet" type="text/css" href="deps/jquery-mobile/datepicker/jquery.mobile.datepicker.theme.css" />
+
 	<link rel="stylesheet" type="text/css" href="css/index.css">
-	<link rel="stylesheet" href="css/jquery.mobile.datepicker.css" />
-	<link rel="stylesheet" href="css/jquery.mobile.datepicker.theme.css" />
 	<link rel="stylesheet" type="text/css" href="css/hacks.css">
 
-	<script src="http://code.jquery.com/jquery-1.12.2.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-	<script src="/dependencies/leaflet/leaflet.js"></script>
-	<script src="/dependencies/leaflet/leaflet.markercluster.js"></script>
-	<script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.3.0"></script>
-	<script src="js/index.js"></script>
-	<script src="js/external/jquery-ui/datepicker.js"></script>
-	<script src="js/jquery.mobile.datepicker.js"></script>
-</head>
+	<script type="text/javascript" src="deps/jquery-1.12.2.min.js"></script>
+	<script type="text/javascript" src="deps/jquery-mobile/jquery.mobile.js"></script>
+	<script type="text/javascript" src="deps/leaflet/leaflet.js"></script>
+	<script type="text/javascript" src="deps/leaflet/leaflet.markercluster.js"></script>
+	<script type="text/javascript" src="deps/tile.stamen.js"></script>
+	<script type="text/javascript" src="deps/jquery-ui/datepicker.js"></script>
+	<script type="text/javascript" src="deps/jquery-mobile/datepicker/jquery.mobile.datepicker.js"></script>
+	<script type="text/javascript" src="deps/moment.min.js"></script>
 
+	<script type="text/javascript" src="js/index.js"></script>
+</head>
 <body>
 	<div id="map"></div>
+	<div data-role="popup" id="message" data-transition="fade"  data-overlay-theme="b">
+		<p>Rubber Bisquit! There are no food truck service events scheduled for the selected date.</p>
+		<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+	</div>
+	<div data-role="popup" id="trucks" data-position-to="window" data-transition="fade" data-overlay-theme="b">
+		<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+		<div id="truck-list"></div>
+		<div class="signup"><p>Are you a Food Truck vendor in the Eau Claire area and want your events to show up on the map?!</p>
+			<a href="http://vendors.foodtrucks.codeforeauclaire.org/">Create an account / Sign in</a>
+		</div>
+	</div>
+	<div data-role="popup" id="about" data-position-to="window" data-transition="fade" data-overlay-theme="b">
+		<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. </p>
+
+		<p>Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. </p>
+
+		<p>Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. <b>Maecenas mattis</b>. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. <b>Proin ut ligula vel nunc egestas porttitor</b>. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. <i>Maecenas mattis</i>. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. </p>
+
+		<div class="signup"><p>Are you a Food Truck vendor in the Eau Claire area and want your events to show up on the map?!</p>
+			<a href="http://vendors.foodtrucks.codeforeauclaire.org/">Create an account / Sign in</a>
+		</div>
+	</div>
 
 	<div data-role="header" id="header">
-		<h1>Eau Claire Food Trucks</h1>
+		<h1><a href="/">Eau Claire <span>Food Trucks</span></a></h1>
+		<ul>
+			<li>Map</li>
+			<li><a href="#trucks" data-rel="popup">Trucks</a></li>
+			<li><a href="#about" data-rel="popup">About</a></li>
+		</ul>
 	</div><!-- /header -->
 
 	<div id="datepicker"><a href="#"><img src="images/arrow.png" class="left-arrow" /></a><input type="text" data-role="date" value="Today" id="dateFilter" readonly><a href="#"><img src="images/arrow.png" class="right-arrow" /></a></div>
 </body>
 </html>
-

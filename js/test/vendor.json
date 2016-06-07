@@ -1,0 +1,60 @@
+[
+   {
+      "uuid":"a9a14b42-d87b-47a8-8c34-6882141dd7ee",
+      "description":"Truck based mobile latin cuisine - Old-school Latin American food, with seasonal menu items and daily specials",
+      "title":"Gordo's",
+      "website_url":"",
+      "telephone_number":"(715) 497-2943",
+      "facebook_url":"https://www.facebook.com/gordosfoodtruck",
+      "twitter_name":""
+   },
+   {
+      "uuid":"5874167e-efe3-4050-97e6-3ce9659c5486",
+      "description":"Trailer based asian/hmong food associated with the now closed Asian Cafe restaurant on Eddy Lane. Despite this they continued to have the trailer at the downtown Farmer’s Market and may be interested in further locations with this ordinance change.",
+      "title":"Asian Cafe",
+      "website_url":"https://www.facebook.com/AsianCafe/",
+      "telephone_number":"(715) 497-2943"
+   },
+   {
+      "uuid":"2c57049c-5c84-4f7b-8b9c-e817170bfccd",
+      "description":"Truck based specialty hot dogs & brats - Davis Dogs is a family owned and operated food truck. We serve only quality food that will always keep you coming back for more. Happy customers, cleanliness, and great tasting food are our top priorities.",
+      "title":"Davis Dogs",
+      "website_url":"http://www.davisdogsllc.com/",
+      "telephone_number":"715-505-0922"
+   },
+   {
+      "uuid":"5ec386b2-a9f8-4a79-9b46-f9e9aff1fd08",
+      "description":"Trailer that serves flavored shaved ice, historically most often in Harbour Freight parking lot.",
+      "title":"Lodies Shaved Ice",
+      "website_url":"http://lodiesshavedice.com/",
+      "telephone_number":"715-505-0922"
+   },
+   {
+      "uuid":"529ea003-37c7-4499-aad5-07256b73486b",
+      "description":"Trailer that serves Italian beef, Chicago style hot dogs and desserts.",
+      "title":"What’s Cookin’",
+      "website_url":"https://www.facebook.com/Whats-Cookin-LLC-108967852647667/",
+      "telephone_number":"715-505-0922"
+   },
+   {
+      "uuid":"e1d00747-775f-4cce-aab9-019426984fb1",
+      "description":"Trailer based BBQ, typically by reservation only.",
+      "title":"Bubbles BBQ",
+      "website_url":"http://bubblesbbq.com/",
+      "telephone_number":"1.715.828.7868"
+   },
+   {
+      "uuid":"70cc3db4-9fcf-4312-80f2-efde1724d64c",
+      "description":"Trailer based wood fired pizza, owned by Lonnette & Tom Breneman and Julie & Eric Nelson (partner in Fired Up Pizza and owner of Coffee Grounds)",
+      "title":"Tutto Bene",
+      "website_url":"https://www.facebook.com/Tutto-Bene-Wood-Fired-Pizza-363488437073894/",
+      "telephone_number":"(715) 797-2370"
+   },
+   {
+      "uuid":"e2d164dd-d160-42f8-bfb4-438bfe2d2d5e",
+      "description":"The mission of Biggie and Bull BBQ is to consistently produce and proudly serve the highest quality of BBQ in the Chippewa Valley and Beyond. We also strive to proudly represent the Chippewa Valley in regional and national BBQ competitions",
+      "title":"Biggie and Bull BBQ",
+      "website_url":"http://www.biggieandbullbbq.com/",
+      "telephone_number":"(715) 579-9124"
+   }
+]
