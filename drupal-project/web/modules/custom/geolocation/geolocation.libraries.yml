@@ -1,0 +1,47 @@
+# Geolocation core library.
+geolocation.core:
+  version: 8.x-1.x
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/underscore
+    - core/drupalSettings
+  js:
+    js/geolocation.js: {}
+# Google maps display formatter.
+geolocation.maps:
+  version: 8.x-1.x
+  js:
+    js/geolocation-formatter-googlemap.js: {}
+  dependencies:
+    - geolocation/geolocation.core
+# Google geocoder widget library.
+geolocation.widgets.googlegeocoder:
+  version: 1.x
+  css:
+    theme:
+      css/geolocation-widget-googlegeocoder.css: {}
+  js:
+    js/geolocation-widget-googlegeocoder.js: { scope: footer }
+  dependencies:
+    - geolocation/geolocation.core
+# HTML5 widget library.
+geolocation.widgets.html5:
+  version: 1.x
+  css:
+    theme:
+      css/geolocation-widget-html5.css: {}
+  js:
+    js/geolocation-widget-html5.js: { scope: footer }
+  dependencies:
+    - geolocation/geolocation.core
+# CommonMap widget library.
+geolocation.commonmap:
+  css:
+    theme:
+      css/geolocation-common-map.css: {}
+  js:
+    https://maps.googleapis.com/maps/api/js: { type: external }
+    js/geolocation-common-map.js: {}
+  dependencies:
+    - core/jquery

@@ -1,0 +1,31 @@
+views.style.maps_common:
+  type: views_style
+  label: 'Geolocation CommonMap'
+  mapping:
+    geolocation_field:
+      type: string
+      label: 'Geolocation Field'
+    title_field:
+      type: string
+      label: 'Title Field'
+    centre:
+      type: sequence
+      label: 'Centre Option'
+      sequence:
+        type: mapping
+        mapping:
+          weight:
+            type: integer
+            label: 'Weight'
+          enable:
+            type: boolean
+            label: 'enable'
+          settings:
+            type: sequence
+            label: 'Settings'
+            sequence:
+              type: string
+
+views.field.geolocation_field:
+  type: views.field.field
+  label: 'Geolocation Field'
