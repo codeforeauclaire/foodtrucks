@@ -37,6 +37,9 @@ cp $CONSUMER_UI_PATH/* $RANDOM_TMP_PATH -r
 # Get on github-pages branch
 git checkout gh-pages
 
+# Pull updates into branch so we don't get divergent
+git pull
+
 # Restore
 git rm -r *
 cp $RANDOM_TMP_PATH/* $BASE_CLONE_PATH -r
