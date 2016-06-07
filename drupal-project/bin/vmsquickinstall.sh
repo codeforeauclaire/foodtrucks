@@ -62,8 +62,9 @@ chmod +x drush.phar
 sudo mv drush.phar /usr/local/bin/drush
 # drush init # Wanted to prompt, -y didn't seem to work
 
-# Clone repository
+# Clone repository & make easy access
 git clone https://github.com/$GHUSER/foodtrucks.git /var/foodtrucks
+ln -s /var/foodtrucks /root/foodtrucks
 
 # Configure website (From /drupal-project/README.md)
 (cd /var/foodtrucks && rm -rf drupal-project)

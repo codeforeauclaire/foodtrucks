@@ -13,9 +13,9 @@ Use these instructions to setup a temporary* development environment of this pro
 1. See app running
  1. Visit http://{vms-ip} in your browser
 1. Options to move forward
- 1. Play with UI: Use `(cd /var/foodtrucks/drupal-project/web && drush uli 1)` for login link to login as admin
+ 1. Play with UI: Use `(cd ~/foodtrucks/drupal-project/web && drush uli 1)` for login link to login as admin
      1. Replace `default` in the login url with {vms-ip}
- 1. Be a dev: Edit a file (Files in `/var/foodtrucks/` >> refresh page >> see changes in your browser
+ 1. Be a dev: Edit a file (Files in `~/foodtrucks/` >> refresh page >> see changes in your browser
 
 *For a permanent development environment we recommend you read the referenced script above to install locally.
 
