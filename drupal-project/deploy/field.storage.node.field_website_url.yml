@@ -1,16 +1,18 @@
-uuid: ce5f329a-a380-4936-8a32-0070ed0be87b
+uuid: 2b538903-5114-41d1-af21-42cab6a225a2
 langcode: en
 status: true
 dependencies:
   module:
-    - link
     - node
 id: node.field_website_url
 field_name: field_website_url
 entity_type: node
-type: link
-settings: {  }
-module: link
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
 locked: false
 cardinality: 1
 translatable: true
