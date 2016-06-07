@@ -77,7 +77,7 @@ git clone https://github.com/$GHUSER/foodtrucks.git /var/foodtrucks
 (cd /var/foodtrucks && rm -rf drupal-project)
 (cd /var/foodtrucks && composer create-project drupal-composer/drupal-project:8.x-dev drupal-project --stability dev --no-interaction)
 (cd /var/foodtrucks && git reset --hard HEAD)
-(cd /var/foodtrucks/drupal-project && composer install)
+(cd /var/foodtrucks/drupal-project && composer install --no-dev)
 mkdir -p /var/foodtrucks/drupal-project/web/sites/default/
 cp /var/foodtrucks/drupal-project/bin/vmsquickinstall.settings.php /var/foodtrucks/drupal-project/web/sites/default/settings.php
 (cd /var/foodtrucks/drupal-project/web && drush si --account-pass=admin -y)
