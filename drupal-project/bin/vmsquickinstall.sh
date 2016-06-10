@@ -93,10 +93,10 @@ sudo service nginx restart
 chown www-data:www-data /var/foodtrucks/drupal-project/web/sites/default/files -R
 
 # Watch for CSS changes
-crontab -l > /tmp/mycron09280398234098
-echo "@reboot (cd /var/foodtrucks/drupal-project/web/themes/custom/foodtruckstheme && compass watch)" >> /tmp/mycron09280398234098
-crontab /tmp/mycron09280398234098
-rm /tmp/mycron09280398234098
+#crontab -l > /tmp/mycron09280398234098
+#echo "@reboot (cd /var/foodtrucks/drupal-project/web/themes/custom/foodtruckstheme && compass watch)" >> /tmp/mycron09280398234098
+#crontab /tmp/mycron09280398234098
+#rm /tmp/mycron09280398234098
 echo
 (cd /var/foodtrucks/drupal-project/web/sites/default && drush uli)
 echo
