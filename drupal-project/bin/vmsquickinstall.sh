@@ -80,6 +80,8 @@ cp /var/foodtrucks/drupal-project/bin/vmsquickinstall.settings.php /var/foodtruc
 #(cd /var/foodtrucks/drupal-project/web && drush cedit system.site --file="/var/foodtrucks/drupal-project/deploy/system.site.yml" -y)
 #(cd /var/foodtrucks/drupal-project/web && drush cedit shortcut.set.default --file="/var/foodtrucks/drupal-project/deploy/shortcut.set.default.yml" -y)
 # Base foodtrucks setup
+mysql -e "create database food_trucks"
+
 (cd /var/foodtrucks/drupal-project/web && drush sqlc < /var/foodtrucks/drupal-project/data/db.sql) # Give us some data to play with
 cp -r /var/foodtrucks/drupal-project/data/files /var/foodtrucks/drupal-project/web/sites/default/
 #(cd /var/foodtrucks/drupal-project/web && drush cim -y)		# Configure the site
