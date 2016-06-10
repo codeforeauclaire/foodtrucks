@@ -98,6 +98,8 @@ chown www-data:www-data /var/foodtrucks/drupal-project/web/sites/default/files -
 #crontab /tmp/mycron09280398234098
 #rm /tmp/mycron09280398234098
 echo
+(cd /var/foodtrucks/drupal-project/web/sites/default && drush cr)
+(cd /var/foodtrucks/drupal-project/web/sites/default && drush st)
 (cd /var/foodtrucks/drupal-project/web/sites/default && drush uli)
 echo
 echo "Rebooting machine, give it (10-30?) seconds, then reconnect"
