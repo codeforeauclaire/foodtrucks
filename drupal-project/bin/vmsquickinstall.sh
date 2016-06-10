@@ -40,7 +40,10 @@ sudo debconf-set-selections <<< 'mariadb-server-10.0 mysql-server/root_password_
 # * PHP 5.6
 # ** https://www.dev-metal.com/install-setup-php-5-6-ubuntu-14-04-lts/
 # ** PHP extensions
-sudo apt-get install -y git nginx ruby-compass mariadb-server php5.6 php5-mysql php5-curl php5-gd php5-fpm php5.6-xml
+sudo apt-get install -y git nginx ruby-compass mariadb-server php php-mysql php-curl php-gd php-fpm php-xml php-curl php-xdebug drush
+sed -i 's/zend_extension=xdebug.so/#zend_extension=xdebug.so/' /etc/php/7.0/mods-available/xdebug.ini
+
+composer global require "hirak/prestissimo:^0.3"
 
 # Setup Maria DB installation (2 of 2)
 mysql -uroot -pPASS -e "SET PASSWORD = PASSWORD('');"
