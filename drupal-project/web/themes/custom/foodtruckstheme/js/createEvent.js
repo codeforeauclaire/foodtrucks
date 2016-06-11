@@ -23,5 +23,19 @@
 				e.preventDefault()
 			})
 		})
+		// Fail submission if start time after end time
+		$('.node-food-truck-event-scheduled-form').submit(function() {
+			var startHour = Number($('#edit-field-event-start-hour').val())
+			var startMinute = Number($('#edit-field-event-start-minute').val())
+			var endHour = Number($('#edit-field-event-end-hour').val())
+			var endMinute = Number($('#edit-field-event-end-minute').val())
+			var start = (60 * startHour) + startMinute
+			var end = (60 * endHour) + endMinute
+			if (start >= end) {
+				alert('Please adjust your event times so it ends after it starts')
+				return false
+			}
+			return true
+		})
 	});
 }(jQuery))
