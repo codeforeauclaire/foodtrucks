@@ -30,9 +30,9 @@ class VendorApiController {
     $value = 'food_trucks';
     $query = \Drupal::entityQuery('node')
       ->condition($key, $value);
-    $results = $query->execute();
-    foreach ($results as $result) {
-      JsonApiProcessor::processVendor($data, $result);
+    $nids = $query->execute();
+    foreach ($nids as $nid) {
+      JsonApiProcessor::processVendor($data, $nid);
       $dataArray[] = $data;
       $data = '';
     }

@@ -33,6 +33,7 @@ class JsonApiProcessor extends ControllerBase {
         break;
     }
   }
+
   static public function processVendor(&$data, $nid) {
     $nodeObject = \Drupal::entityTypeManager()->getStorage('node')->load($nid);
     if ($nodeObject == null) { return; }
@@ -51,6 +52,7 @@ class JsonApiProcessor extends ControllerBase {
       }
     }
   }
+
   static public function processEvent(&$data, $nid) {
     $nodeObject = \Drupal::entityTypeManager()->getStorage('node')->load($nid);
     if ($nodeObject == null) { return; }
@@ -72,6 +74,7 @@ class JsonApiProcessor extends ControllerBase {
       }
     }
   }
+
   public static function processUUID(&$data, $field) {
     $name = JsonApiProcessor::getName($field);
     JsonApiProcessor::processKeyName($name);
@@ -80,6 +83,7 @@ class JsonApiProcessor extends ControllerBase {
       $data[$name] = $value['value'];
     }
   }
+
   public static function processUID(&$data, $field) {
     $name = JsonApiProcessor::getName($field);
     JsonApiProcessor::processKeyName($name);
@@ -97,15 +101,14 @@ class JsonApiProcessor extends ControllerBase {
       }
     }
   }
+
+  /** @var \Drupal\Core\Field\EntityReferenceFieldItemList $field */
   public static function getFieldName($field) {
-    /** @var \Drupal\Core\Field\EntityReferenceFieldItemList $field */
-    $definition = $field->getFieldDefinition();
-    /** @var \Drupal\Core\Field\EntityReferenceFieldItemList $field */
-    return $definition->getName();
+    return $field->getFieldDefinition()->getName();
   }
 
+  /** @var \Drupal\Core\Field\EntityReferenceFieldItemList $field */
   public static function processField(&$data, $field) {
-    /** @var \Drupal\Core\Field\EntityReferenceFieldItemList $field */
     $type = $field->getFieldDefinition()->getType();
 
       switch ($type) {
@@ -127,14 +130,15 @@ class JsonApiProcessor extends ControllerBase {
         case "entity_reference":
           JsonApiProcessor::processEntityReference($data, $field);
           break;
-        case "entity_reference_revisions":
-          JsonApiProcessor::processEntityReferenceRevision($data, $field);
-          break;
+//        case "entity_reference_revisions":
+//          JsonApiProcessor::processEntityReferenceRevision($data, $field);
+//          break;
         case "geolocation":
           JsonApiProcessor::processGeolocation($data, $field);
           break;
     }
   }
+
   public static function processKeyName(&$name) {
     $strings = [
       'food_truck_' => '',
@@ -150,6 +154,7 @@ class JsonApiProcessor extends ControllerBase {
       $name = str_replace($key, $value, $name);
     }
   }
+
   public static function processGeolocation (&$data, $field) {
     $name = JsonApiProcessor::getName($field);
     JsonApiProcessor::processKeyName($name);
@@ -159,6 +164,7 @@ class JsonApiProcessor extends ControllerBase {
       $data['lng'] = $value['lng'];
     }
   }
+
   public static function processCommon(&$data, $field) {
     $name = JsonApiProcessor::getName($field);
     JsonApiProcessor::processKeyName($name);
@@ -167,6 +173,7 @@ class JsonApiProcessor extends ControllerBase {
       $data[$name] = $value['value'];
     }
   }
+
   public static function processLink(&$data, $field) {
     $name = JsonApiProcessor::getName($field);
     JsonApiProcessor::processKeyName($name);
@@ -175,6 +182,7 @@ class JsonApiProcessor extends ControllerBase {
       $data[$name] = $value['uri'];
     }
   }
+
   public static function processImage(&$data, $field) {
     $name = JsonApiProcessor::getName($field);
     JsonApiProcessor::processKeyName($name);
@@ -183,6 +191,7 @@ class JsonApiProcessor extends ControllerBase {
       $data[$name] = $GLOBALS['base_url'].'/sites/default/files/'.str_replace('public://','',File::load($value['target_id'])->getFileUri());
     }
   }
+
   public static function processEntityReference(&$data, $field) {
     $name = JsonApiProcessor::getName($field);
     JsonApiProcessor::processKeyName($name);
@@ -193,7 +202,7 @@ class JsonApiProcessor extends ControllerBase {
       case 'node':
         foreach ($values as $value) {
           $nid = $value['target_id'];
-          JsonApiProcessor::processVendor($data[], $nid);
+          JsonApiProcessor::processVendor($data['foodtruck'], $nid);
         }
         break;
     }
@@ -214,18 +223,18 @@ class JsonApiProcessor extends ControllerBase {
 //        break;
 //    }
   }
-  public static function processEntityReferenceRevision(&$data, $field) {
-    $name = JsonApiProcessor::getName($field);
-    JsonApiProcessor::processKeyName($name);
-    $values = JsonApiProcessor::getValues($field);
-    $i = 0;
-    foreach ($values as $value) {
-      $i++;
-      foreach (Paragraph::load($value['target_id'])->getFields() as $field) {
-        JsonApiProcessor::processField($data[$name.$i], $field);
-      }
-    }
-  }
+//  public static function processEntityReferenceRevision(&$data, $field) {
+//    $name = JsonApiProcessor::getName($field);
+//    JsonApiProcessor::processKeyName($name);
+//    $values = JsonApiProcessor::getValues($field);
+//    $i = 0;
+//    foreach ($values as $value) {
+//      $i++;
+//      foreach (Paragraph::load($value['target_id'])->getFields() as $field) {
+//        JsonApiProcessor::processField($data[$name.$i], $field);
+//      }
+//    }
+//  }
 
 //  /** @var \Drupal\node\Entity\Node $object */
 //  public static function getNodeFieldValues($field) {
@@ -245,39 +254,40 @@ class JsonApiProcessor extends ControllerBase {
 //    return $list;
 //  }
 
-  public static function getNidArrays($conditions) {
-    $nidArray = [];
-    foreach ($conditions as $condition) {
-      foreach ($condition as $key => $value) {
-        $query = \Drupal::entityQuery('node')
-          ->condition($key, $value);
-        $result = $query->execute();
-        $resultArray = [];
-        foreach ($result as $resultKey => $resultValue) {
-          $resultArray[] = $resultValue;
-        }
-        $label = '';
-        if ($value == '0') {
-          $label = 'unpublished';
-        }
-        if ($value == '1') {
-          $label = 'published';
-        }
-        $nidArray[$label] = $resultArray;
-      }
-    }
-    return $nidArray;
-  }
+//  public static function getNidArrays($conditions) {
+//    $nidArray = [];
+//    foreach ($conditions as $condition) {
+//      foreach ($condition as $key => $value) {
+//        $query = \Drupal::entityQuery('node')
+//          ->condition($key, $value);
+//        $result = $query->execute();
+//        $resultArray = [];
+//        foreach ($result as $resultKey => $resultValue) {
+//          $resultArray[] = $resultValue;
+//        }
+//        $label = '';
+//        if ($value == '0') {
+//          $label = 'unpublished';
+//        }
+//        if ($value == '1') {
+//          $label = 'published';
+//        }
+//        $nidArray[$label] = $resultArray;
+//      }
+//    }
+//    return $nidArray;
+//  }
 
   /** @var \Drupal\Core\Field\EntityReferenceFieldItemList $field */
   public static function getName($field) {
     return $field->getFieldDefinition()->getName();
   }
+
+  /**
+   * TODO: return multiple values if they exist, as with the links field
+   */
+  /** @var \Drupal\Core\Field\EntityReferenceFieldItemList $field */
   public static function getValues($field) {
-    /**
-     * TODO: return multiple values if they exist, as with the links field
-     */
-    /** @var \Drupal\Core\Field\EntityReferenceFieldItemList $field */
     return $field->getValue();
   }
 

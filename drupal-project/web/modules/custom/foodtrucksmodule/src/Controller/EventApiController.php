@@ -39,7 +39,7 @@ class EventApiController {
     $results = $query->execute();
     foreach ($results as $result) {
       JsonApiProcessor::processEvent($data, $result);
-      if (isset($data[0])) {
+      if (isset($data['foodtruck'])) {
         $data['start_time'] = $data['date'] .'T'. sprintf("%02d", $data['start_hour']) .':'. sprintf("%02d", $data['start_minute']) .':00';
         $timestamp = date_create($data['start_time'])->getTimestamp();
         $end_timestamp = $timestamp + ($data['duration'] * 60);
