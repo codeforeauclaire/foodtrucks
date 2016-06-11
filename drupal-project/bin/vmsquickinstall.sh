@@ -74,13 +74,20 @@ ln -s /var/foodtrucks /root/foodtrucks
 (cd /var/foodtrucks && composer create-project drupal-composer/drupal-project:8.x-dev drupal-project --stability dev --no-interaction)
 (cd /var/foodtrucks && git reset --hard HEAD)
 (cd /var/foodtrucks/drupal-project && composer install --no-dev)
-mkdir -p /var/foodtrucks/drupal-project/web/sites/default
+#mkdir -p /var/foodtrucks/drupal-project/web/sites/default
 cp /var/foodtrucks/drupal-project/bin/vmsquickinstall.settings.php /var/foodtrucks/drupal-project/web/sites/default/settings.php
+cp /var/foodtrucks/drupal-project/web/sites/example.settings.local.php /var/foodtrucks/drupal-project/web/sites/default/settings.local.php
+#sed -i 's/debug: false/debug: true/' /var/foodtrucks/drupal-project/web/sites/default/services.yml
+sed -i 's/auto_reload: null/auto_reload: true/' /var/foodtrucks/drupal-project/web/sites/default/services.yml
+sed -i 's/cache: true/cache: false/' /var/foodtrucks/drupal-project/web/sites/default/services.yml
+sed -i "s/\$settings['cache']['bins']['render']/# \$settings['cache']['bins']['render']/" /var/foodtrucks/drupal-project/web/sites/default/settings.local.php
+sed -i "s/\$settings['cache']['bins']['dynamic_page_cache']/# \$settings['cache']['bins']['dynamic_page_cache']/" /var/foodtrucks/drupal-project/web/sites/default/settings.local.php
+
 #(cd /var/foodtrucks/drupal-project/web && drush si --account-pass=admin -y)
 #(cd /var/foodtrucks/drupal-project/web && drush cedit system.site --file="/var/foodtrucks/drupal-project/deploy/system.site.yml" -y)
 #(cd /var/foodtrucks/drupal-project/web && drush cedit shortcut.set.default --file="/var/foodtrucks/drupal-project/deploy/shortcut.set.default.yml" -y)
 # Base foodtrucks setup
-mysql -e "create database food_trucks"
+mysql -e "CREATE DATABASE food_trucks"
 
 (cd /var/foodtrucks/drupal-project/web && drush sqlc < /var/foodtrucks/drupal-project/data/db.sql) # Give us some data to play with
 cp -r /var/foodtrucks/drupal-project/data/files /var/foodtrucks/drupal-project/web/sites/default/
