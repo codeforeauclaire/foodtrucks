@@ -4,6 +4,7 @@ global-styling:
       css/style.css: {}
   js:
     js/global.js: {}
+    js/jquery.waituntilexists.min.js: {}
     js/createEvent.js: {}
   dependencies:
     - core/jquery
