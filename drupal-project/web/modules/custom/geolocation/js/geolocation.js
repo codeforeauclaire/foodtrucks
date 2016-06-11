@@ -146,22 +146,13 @@
 
     map.geocoder = new google.maps.Geocoder();
     map.controls = $('<div class="geocode-controlls-wrapper" />')
-      .append($('<input type="text" class="input" placeholder="Enter a location" />'))
+      .append($('<input type="text" class="input" placeholder="Enter a location" value="' + map.lat+', '+map.lng + '" />'))
       // Create submit button
       .append($('<button class="submit" />'))
       // Create clear button
       .append($('<button class="clear" />'))
-      // Create clear button
-      .append($('<div class="geolocation-map-indicator" />'))
       // Use the DOM element.
       .get(0);
-
-    // Add the default indicator if the values aren't blank.
-    if (map.lat != '' && map.lng != '') {
-      $(map.controls).children('.geolocation-map-indicator')
-        .addClass('has-location')
-        .text(map.lat+', '+map.lng);
-    }
 
     map.controls.index = 1;
 
@@ -175,8 +166,6 @@
     google.maps.event.addDomListener($(map.controls).children('button.clear')[0], 'click', function(e) {
       // Stop all that bubbling and form submitting.
       e.preventDefault();
-      // Remove the coordinates.
-      $(map.controls).children('.geolocation-map-indicator').text('').removeClass('has-location');
       // Clear the map point.
       map.marker.setMap();
       // Clear the input text.
@@ -218,6 +207,10 @@
     if (typeof map.marker !== 'undefined') {
       map.marker.setPosition(latLng);
       map.marker.setMap(map.google_map);
+
+      // Put coordinates in input
+      var latLngTxt= latLng.lat() + ',' + latLng.lng();
+      $(map.controls).children('input.input').val(latLngTxt).select();
     } else {
 
       // Set the info popup text.
@@ -243,11 +236,5 @@
         }
       }
     }
-
-    // Add a visual indicator.
-    $(map.controls).children('.geolocation-map-indicator')
-      .text(latLng.lat()+', '+latLng.lng())
-      .addClass('has-location');
-  };
-
+  }
 })(jQuery, _, Drupal, drupalSettings);
