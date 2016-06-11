@@ -37,5 +37,15 @@
 			}
 			return true
 		})
+		// Fail submission if no location selected
+		$('.node-food-truck-event-scheduled-form').submit(function() {
+			var latLngTxtInput = $('.geocode-controlls-wrapper input.input').val()
+			var latLngTxtDefault = '44.811933190106, -91.503625586629'
+			if (latLngTxtInput === latLngTxtDefault) {
+				alert('Please select a location')
+				return false
+			}
+			return true
+		})
 	});
 }(jQuery))
