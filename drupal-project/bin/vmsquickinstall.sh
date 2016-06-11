@@ -40,7 +40,10 @@ sudo debconf-set-selections <<< 'mariadb-server-10.0 mysql-server/root_password_
 # * PHP 5.6
 # ** https://www.dev-metal.com/install-setup-php-5-6-ubuntu-14-04-lts/
 # ** PHP extensions
-sudo apt-get install -y git nginx ruby-compass mariadb-server php5.6 php5-mysql php5-curl php5-gd php5-fpm php5.6-xml
+sudo apt-get install -y git nginx ruby-compass mariadb-server php php-mysql php-curl php-gd php-fpm php-xml php-curl php-xdebug drush php-mbstring zip
+sed -i 's/zend_extension=xdebug.so/#zend_extension=xdebug.so/' /etc/php/7.0/mods-available/xdebug.ini
+
+composer global require "hirak/prestissimo:^0.3"
 
 # Setup Maria DB installation (2 of 2)
 mysql -uroot -pPASS -e "SET PASSWORD = PASSWORD('');"
@@ -71,28 +74,37 @@ ln -s /var/foodtrucks /root/foodtrucks
 (cd /var/foodtrucks && composer create-project drupal-composer/drupal-project:8.x-dev drupal-project --stability dev --no-interaction)
 (cd /var/foodtrucks && git reset --hard HEAD)
 (cd /var/foodtrucks/drupal-project && composer install --no-dev)
-mkdir -p /var/foodtrucks/drupal-project/web/sites/default/
+mkdir -p /var/foodtrucks/drupal-project/web/sites/default
 cp /var/foodtrucks/drupal-project/bin/vmsquickinstall.settings.php /var/foodtrucks/drupal-project/web/sites/default/settings.php
-(cd /var/foodtrucks/drupal-project/web && drush si --account-pass=admin -y)
-(cd /var/foodtrucks/drupal-project/web && drush cedit system.site --file="/var/foodtrucks/drupal-project/deploy/system.site.yml" -y)
-(cd /var/foodtrucks/drupal-project/web && drush cedit shortcut.set.default --file="/var/foodtrucks/drupal-project/deploy/shortcut.set.default.yml" -y)
+#(cd /var/foodtrucks/drupal-project/web && drush si --account-pass=admin -y)
+#(cd /var/foodtrucks/drupal-project/web && drush cedit system.site --file="/var/foodtrucks/drupal-project/deploy/system.site.yml" -y)
+#(cd /var/foodtrucks/drupal-project/web && drush cedit shortcut.set.default --file="/var/foodtrucks/drupal-project/deploy/shortcut.set.default.yml" -y)
 # Base foodtrucks setup
-(cd /var/foodtrucks/drupal-project/web drush sqlc < ../db.sql) # Give us some data to play with
-(cd /var/foodtrucks/drupal-project/web && drush cim -y)		# Configure the site
+mysql -e "create database food_trucks"
+
+(cd /var/foodtrucks/drupal-project/web && drush sqlc < /var/foodtrucks/drupal-project/data/db.sql) # Give us some data to play with
+cp -r /var/foodtrucks/drupal-project/data/files /var/foodtrucks/drupal-project/web/sites/default/
+#(cd /var/foodtrucks/drupal-project/web && drush cim -y)		# Configure the site
+
 (cd /etc/nginx/sites-enabled/ && rm default && ln -s /var/foodtrucks/drupal-project/bin/nginx.conf default)
 sudo service nginx restart
 
-# Give nginx & php5-fpm access to foodtrucks install
-chown www-data /var/foodtrucks -R
+# Give nginx & php5-fpm access to foodtrucks files
+chown www-data:www-data /var/foodtrucks/drupal-project/web/sites/default/files -R
 
 # Watch for CSS changes
-crontab -l > /tmp/mycron09280398234098
-echo "@reboot (cd /var/foodtrucks/drupal-project/web/themes/custom/foodtruckstheme && compass watch)" >> /tmp/mycron09280398234098
-crontab /tmp/mycron09280398234098
-rm /tmp/mycron09280398234098
+#crontab -l > /tmp/mycron09280398234098
+#echo "@reboot (cd /var/foodtrucks/drupal-project/web/themes/custom/foodtruckstheme && compass watch)" >> /tmp/mycron09280398234098
+#crontab /tmp/mycron09280398234098
+#rm /tmp/mycron09280398234098
+echo
+(cd /var/foodtrucks/drupal-project/web/sites/default && drush cr)
+(cd /var/foodtrucks/drupal-project/web/sites/default && drush st)
+(cd /var/foodtrucks/drupal-project/web/sites/default && drush uli)
 echo
 echo "Rebooting machine, give it (10-30?) seconds, then reconnect"
 echo
+
 reboot
 
 } # this ensures the entire script is downloaded and run #
