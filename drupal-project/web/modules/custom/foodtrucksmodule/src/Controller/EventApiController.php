@@ -23,15 +23,28 @@ class EventApiController {
    * @return json
    *   Return json.
    */
-  public function handleRequest($date = null) {
+  public function handleRequest($date1 = null, $date2 = null) {
     $dataArray = [];
     $data = [];
     $key = 'type';
     $value = 'food_truck_event_scheduled';
-    if ($date) {
+    if ($date1 && $date2) {
+      if ($date1 > $date2) {
+        $query = \Drupal::entityQuery('node')
+          ->condition($key, $value)
+          ->condition('field_event_date.value', $date2, '>=')
+          ->condition('field_event_date.value', $date1, '<=');
+      }else {
+        $query = \Drupal::entityQuery('node')
+          ->condition($key, $value)
+          ->condition('field_event_date.value', $date1, '>=')
+          ->condition('field_event_date.value', $date2, '<=');
+      }
+    }
+    elseif ($date1) {
       $query = \Drupal::entityQuery('node')
         ->condition($key, $value)
-        ->condition('field_event_date.value', $date);
+        ->condition('field_event_date.value', $date1);
     }else{
       $query = \Drupal::entityQuery('node')
         ->condition($key, $value);

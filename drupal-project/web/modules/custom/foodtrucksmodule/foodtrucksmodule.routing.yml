@@ -5,7 +5,13 @@ foodtrucksjson.events:
   requirements:
     _permission: 'access content'
 foodtrucksjson.events_with_date:
-  path: "/api/events/{date}"
+  path: "/api/events/{date1}"
+  defaults:
+    _controller: '\Drupal\foodtrucksmodule\Controller\EventApiController::handleRequest'
+  requirements:
+    _permission: 'access content'
+foodtrucksjson.events_with_date_range:
+  path: "/api/events/{date1}/{date2}"
   defaults:
     _controller: '\Drupal\foodtrucksmodule\Controller\EventApiController::handleRequest'
   requirements:
