@@ -39,22 +39,22 @@ Use these instructions to setup a temporary* development environment of this pro
 ```
 [
  {
+  uuid:          // unique identifier,
+  description:   // description,
   foodtruck: {    // are the Vendor Food Truck(s) associated with the Event
-    uuid:             // the unique identifier
+    uuid:             // the unique identifier,
     title:            // text, 
     description:      // text, 
-    logo:             // the full `http(s)` url to the logo
-    website_url:      // text, not full `http(s)` url
-    facebook_url:     // text, not a full `http(s)` url
-    twitter_name:     // text, should be an `@twitter-name` value
+    logo:             // the full `http(s)` url to the logo,
+    website_url:      // text, not full `http(s)` url,
+    facebook_url:     // text, not a full `http(s)` url,
+    twitter_name:     // text, should be an `@twitter-name` value,
     telephone_number: // text, should be a telephone number
   },
-  uuid:          // unique identifier
-  start_time:    // exactly as they are entered by vendors with no timezone adjustments (assumed to be local Eau Claire time already DST adjusted)
+  lat:           // latitude ,
+  lng:           // longitude,
+  start_time:    // exactly as they are entered by vendors with no timezone adjustments (assumed to be local Eau Claire time already DST adjusted),
   end_time:      // simply offset by adding the `duration` entered by vendor to the `start_time`
-  description:   // description
-  lat:           // latitude 
-  lng:           // longitude 
  },
  ...
 ]
