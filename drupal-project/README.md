@@ -34,18 +34,27 @@ Use these instructions to setup a temporary* development environment of this pro
 
 ### Events Endpoints
 
-`/api/events` && `/api/events/yyyy-mm-dd`
+`/api/events` && `/api/events/yyyy-mm-dd` && `/api/events/yyyy-mm-dd/yyyy-mm-dd`
 
 ```
 [
  {
+  foodtruck: {    // are the Vendor Food Truck(s) associated with the Event
+    uuid:             // the unique identifier
+    title:            // text, 
+    description:      // text, 
+    logo:             // the full `http(s)` url to the logo
+    website_url:      // text, not full `http(s)` url
+    facebook_url:     // text, not a full `http(s)` url
+    twitter_name:     // text, should be an `@twitter-name` value
+    telephone_number: // text, should be a telephone number
+  },
   uuid:          // unique identifier
   start_time:    // exactly as they are entered by vendors with no timezone adjustments (assumed to be local Eau Claire time already DST adjusted)
   end_time:      // simply offset by adding the `duration` entered by vendor to the `start_time`
   description:   // description
   lat:           // latitude 
   lng:           // longitude 
-  #:             // are the Vendor Food Truck(s) associated with the Event
  },
  ...
 ]
@@ -59,13 +68,13 @@ Use these instructions to setup a temporary* development environment of this pro
 [
  {
   uuid:             // the unique identifier
-  title:            //
-  description:      //
+  title:            // text, 
+  description:      // text, 
   logo:             // the full `http(s)` url to the logo
-  website_url:      // full `http(s)` url
-  facebook_url:     // a full `http(s)` url
-  twitter_name:     // should be an `@twitter-name` value
-  telephone_number: // should be a telephone number
+  website_url:      // text, not full `http(s)` url
+  facebook_url:     // text, not a full `http(s)` url
+  twitter_name:     // text, should be an `@twitter-name` value
+  telephone_number: // text, should be a telephone number
  },
  ...
 ]
