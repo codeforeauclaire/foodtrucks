@@ -15,6 +15,12 @@ function foodtrucksmodule_user_login() {
 function foodtrucksmodule_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
   if ($form_id == 'node_food_truck_event_scheduled_form' || $form_id == 'node_food_truck_event_scheduled_edit_form') {
 //    prepopulate the title field
+    if (isset($form['field_event_start_minute']['widget']['#title'])) {
+      unset($form['field_event_start_minute']['widget']['#title']);
+    }
+    if (isset($form['field_event_end_minute']['widget']['#title'])) {
+      unset($form['field_event_end_minute']['widget']['#title']);
+    }
     if (!isset($form['title']['widget'][0]['value']['#default_value'])) {
       $form['title']['widget'][0]['value']['#default_value'] = date('Y-m-d');
     }
