@@ -344,7 +344,20 @@ display:
       sorts: {  }
       title: 'Food Truck List'
       header: {  }
-      footer: {  }
+      footer:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: '<a href="/node/add/food_trucks">Add Foodtruck</a>'
+            format: basic_html
+          plugin_id: text
       empty:
         area:
           id: area
