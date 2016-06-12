@@ -1,0 +1,20 @@
+uuid: 4b3e88aa-9bf3-4a18-9648-9c002249a3dd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - user
+id: node.field_foodtruck_manager
+field_name: field_foodtruck_manager
+entity_type: node
+type: entity_reference
+settings:
+  target_type: user
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

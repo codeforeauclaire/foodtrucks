@@ -1,0 +1,28 @@
+uuid: 4404374b-ded3-40e6-bbf2-67c8844ffb6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_foodtruck_manager
+    - node.type.food_trucks
+id: node.food_trucks.field_foodtruck_manager
+field_name: field_foodtruck_manager
+entity_type: node
+bundle: food_trucks
+label: 'Foodtruck Manager(s)'
+description: 'Select users that you want to allow to edit the contents of this page (this foodtruck)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: false
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

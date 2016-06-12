@@ -486,6 +486,7 @@ display:
         arguments: false
         access: false
         empty: false
+        relationships: false
       filters:
         status:
           value: true
@@ -548,6 +549,40 @@ display:
           entity_type: node
           entity_field: uid
           plugin_id: numeric
+        field_event_manager_target_id:
+          id: field_event_manager_target_id
+          table: node__field_event_manager
+          field: field_event_manager_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          default_action: ignore
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: false
+          title: ''
+          default_argument_type: current_user
+          default_argument_options: {  }
+          default_argument_skip_url: false
+          summary_options:
+            base_path: ''
+            count: true
+            items_per_page: 25
+            override: false
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          break_phrase: false
+          not: false
+          plugin_id: numeric
       access:
         type: perm
         options:
@@ -566,6 +601,16 @@ display:
             value: 'Please <a href="/node/add/food_trucks">Add Food Truck</a>'
             format: basic_html
           plugin_id: text
+      relationships:
+        field_event_manager:
+          id: field_event_manager
+          table: node__field_event_manager
+          field: field_event_manager
+          relationship: none
+          group_type: group
+          admin_label: 'field_event_manager: User'
+          required: false
+          plugin_id: standard
     cache_metadata:
       max-age: -1
       contexts:

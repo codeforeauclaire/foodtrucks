@@ -1,0 +1,28 @@
+uuid: ba9e3832-151e-4f6e-9d7b-0ac5f6e4559c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_manager
+    - node.type.food_trucks
+id: node.food_trucks.field_event_manager
+field_name: field_event_manager
+entity_type: node
+bundle: food_trucks
+label: 'Event Manager(s)'
+description: 'Select users that you want to manage any event that uses this foodtruck, and also allow them to add new events using this foodtruck.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: false
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

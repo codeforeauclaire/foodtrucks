@@ -37,3 +37,38 @@ function foodtrucksmodule_form_alter(&$form, \Drupal\Core\Form\FormStateInterfac
     }
   }
 }
+
+/**
+ * Implements hook_entity_presave().
+ */
+/** @var \Drupal\Node\Entity\Node $entity */
+function foodtrucksmodule_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
+//  assign self to both manager fields
+  if ($entity->bundle() == 'food_trucks') {
+    $uid = $entity->getCurrentUserId()['0'];
+
+    $uids = [];
+    $values = $entity->get('field_foodtruck_manager')->getValue();
+    foreach ($values as $value) {
+      $uids[] = $value['target_id'];
+    }
+
+    if (!in_array($uid, $uids)) {
+      $uids[] = $uid;
+      sort($uids);
+      $entity->set('field_foodtruck_manager', $uids);
+    }
+
+    $uids = [];
+    $values = $entity->get('field_event_manager')->getValue();
+    foreach ($values as $value) {
+      $uids[] = $value['target_id'];
+    }
+
+    if (!in_array($uid, $uids)) {
+      $uids[] = $uid;
+      sort($uids);
+      $entity->set('field_event_manager', $uids);
+    }
+  }
+}
