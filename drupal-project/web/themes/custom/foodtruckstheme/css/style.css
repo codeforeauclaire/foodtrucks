@@ -73,7 +73,7 @@ header::after {
 }
 
 /* line 60, ../scss/30-global/_header.scss */
-.menu--main .menu-item {
+.menu--account .menu-item {
   float: right;
   padding-left: 10px;
   padding-right: 10px;
@@ -160,35 +160,6 @@ img {
   margin: 0;
   padding: 0;
   list-style-type: none;
-}
-
-/* line 8, ../scss/40-components/_menu.scss */
-.navigation.menu--account ul, .navigation.menu--event-menu ul {
-  width: 450px;
-  /*can be in percentage also.*/
-  height: auto;
-  margin: 0 auto;
-  position: relative;
-  font-size: 1.4rem;
-  padding: 30px 0;
-}
-/* line 16, ../scss/40-components/_menu.scss */
-.navigation.menu--account .menu-item, .navigation.menu--event-menu .menu-item {
-  display: inline;
-}
-/* line 19, ../scss/40-components/_menu.scss */
-.navigation.menu--account .menu-item a, .navigation.menu--event-menu .menu-item a {
-  padding: 0 30px;
-}
-/* line 21, ../scss/40-components/_menu.scss */
-.navigation.menu--account .menu-item a.is-active, .navigation.menu--event-menu .menu-item a.is-active {
-  text-decoration: none;
-}
-/* line 26, ../scss/40-components/_menu.scss */
-.navigation.menu--account::after, .navigation.menu--event-menu::after {
-  content: '';
-  display: block;
-  clear: both;
 }
 
 /* line 1, ../scss/40-components/_node-teaser.scss */
