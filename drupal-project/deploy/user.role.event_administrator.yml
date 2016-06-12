@@ -1,0 +1,9 @@
+uuid: c7db200d-d88e-424f-92aa-ee2098d54a05
+langcode: en
+status: true
+dependencies: {  }
+id: event_administrator
+label: 'Event Administrator'
+weight: 5
+is_admin: null
+permissions: {  }

@@ -1,0 +1,14 @@
+uuid: 95673e08-c492-4086-b058-3458de479f72
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.foodtruck_administrator
+  module:
+    - user
+id: user_add_role_action.foodtruck_administrator
+label: 'Add the Foodtruck Administrator role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: foodtruck_administrator

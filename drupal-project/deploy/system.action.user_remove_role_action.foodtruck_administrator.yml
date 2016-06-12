@@ -1,0 +1,14 @@
+uuid: 9016f703-5946-43c9-9722-bd067daf37f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.foodtruck_administrator
+  module:
+    - user
+id: user_remove_role_action.foodtruck_administrator
+label: 'Remove the Foodtruck Administrator role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: foodtruck_administrator

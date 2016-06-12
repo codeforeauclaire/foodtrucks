@@ -1,0 +1,9 @@
+uuid: 6d0f93ee-1a79-4fb0-a7e1-b3bcfcd12fd1
+langcode: en
+status: true
+dependencies: {  }
+id: foodtruck_administrator
+label: 'Foodtruck Administrator'
+weight: 4
+is_admin: null
+permissions: {  }

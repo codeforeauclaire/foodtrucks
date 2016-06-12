@@ -1,0 +1,14 @@
+uuid: 96f4f916-a0c5-4635-852b-b6935191bee2
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.event_administrator
+  module:
+    - user
+id: user_remove_role_action.event_administrator
+label: 'Remove the Event Administrator role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: event_administrator
