@@ -1,0 +1,20 @@
+uuid: e8aa2191-fe29-4829-b48a-837d1c65d4b2
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - foodtruckstheme
+id: mainpagecontent
+theme: foodtruckstheme
+region: user_edit
+weight: -7
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

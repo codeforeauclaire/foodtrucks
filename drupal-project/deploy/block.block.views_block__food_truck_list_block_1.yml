@@ -1,0 +1,24 @@
+uuid: f391d029-e530-4963-b82d-f7d78a446e8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.food_truck_list
+  module:
+    - views
+  theme:
+    - foodtruckstheme
+id: views_block__food_truck_list_block_1
+theme: foodtruckstheme
+region: user_account
+weight: -8
+provider: null
+plugin: 'views_block:food_truck_list-block_1'
+settings:
+  id: 'views_block:food_truck_list-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }
