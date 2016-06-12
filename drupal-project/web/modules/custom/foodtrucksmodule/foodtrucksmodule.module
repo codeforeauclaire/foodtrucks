@@ -3,36 +3,36 @@
 /**
  * Implements hook_user_login().
  */
-function foodtrucksmodule_user_login() {
-
-  $response = new \Symfony\Component\HttpFoundation\RedirectResponse("/");
-  $response->send();
-}
+//function foodtrucksmodule_user_login() {
+//  $response = new \Symfony\Component\HttpFoundation\RedirectResponse("/");
+//  $response->send();
+//}
 
 /**
  * Implements hook_form_alter().
  */
 function foodtrucksmodule_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
   if ($form_id == 'node_food_truck_event_scheduled_form' || $form_id == 'node_food_truck_event_scheduled_edit_form') {
-//    prepopulate the title field
-    if (isset($form['field_event_start_minute']['widget']['#title'])) {
-      unset($form['field_event_start_minute']['widget']['#title']);
-    }
-    if (isset($form['field_event_end_minute']['widget']['#title'])) {
-      unset($form['field_event_end_minute']['widget']['#title']);
-    }
+//    hide a few lables
+    if (isset($form['field_event_start_minute']['widget']['#title'])) { unset($form['field_event_start_minute']['widget']['#title']); }
+    if (isset($form['field_event_end_minute']['widget']['#title'])) { unset($form['field_event_end_minute']['widget']['#title']); }
+//    prepopulate and hide the title field
     if (!isset($form['title']['widget'][0]['value']['#default_value'])) {
       $form['title']['widget'][0]['value']['#default_value'] = date('Y-m-d');
+      $form['title']['#attributes']['class'][] = 'hidden';
     }
+//    popup message if options are empty
     if (is_array($form['field_food_truck']['widget']['#options']) && count($form['field_food_truck']['widget']['#options']) == 0) {
       $link = \Drupal\Core\Link::fromTextAndUrl("Add Food Truck", \Drupal\Core\Url::fromUserInput('/node/add/food_trucks'))
         ->toString();
       $rendered_message = \Drupal\Core\Render\Markup::create("$link is required");
       drupal_set_message($rendered_message, 'warning');
-//    $response = new \Symfony\Component\HttpFoundation\RedirectResponse("/node/add/food_trucks");
-//    $response->send();
+//      redirect to add foodtruck page
+//      $response = new \Symfony\Component\HttpFoundation\RedirectResponse("/node/add/food_trucks");
+//      $response->send();
     }
-    if (is_array($form['field_food_truck']['widget']['#options']) && count($form['field_food_truck']['widget']['#options']) <= 1) {
+//    hide foodtruck field if number of options are less than 2
+    if (is_array($form['field_food_truck']['widget']['#options']) && count($form['field_food_truck']['widget']['#options']) < 2) {
       $form['field_food_truck']['#attributes']['class'][] = 'hidden';
     }
   }

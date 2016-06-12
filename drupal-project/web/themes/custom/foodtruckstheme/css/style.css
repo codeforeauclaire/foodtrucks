@@ -14,11 +14,6 @@
  *
  */
 @import url("//fonts.googleapis.com/css?family=Montserrat:400,700");
-/* line 3, ../scss/00-config/_utilities.scss */
-.node-food-truck-event-scheduled-edit-form.node-form .field--name-title, .node-food-truck-event-scheduled-form.node-form .field--name-title {
-  display: none;
-}
-
 /* line 1, ../scss/30-global/_header.scss */
 header {
   color: #000;
@@ -133,41 +128,6 @@ img {
 /* line 31, ../scss/30-global/_html-elements.scss */
 [class]:last-child {
   margin-bottom: 0;
-}
-
-/* line 2, ../scss/30-global/_view.scss */
-.views-row {
-  clear: both;
-}
-
-/* line 13, ../scss/40-components/_btn.scss */
-.btn {
-  background: #0B81C9;
-  padding: 5px 10px;
-  display: inline-block;
-  color: #e8e8e8;
-  text-decoration: none;
-}
-/* line 15, ../scss/40-components/_btn.scss */
-.btn--alt {
-  background: #0B81C9;
-  padding: 5px 10px;
-  display: inline-block;
-  color: #e8e8e8;
-  text-decoration: none;
-  background: #e8e8e8;
-  color: #0B81C9;
-}
-
-/* line 21, ../scss/40-components/_btn.scss */
-input[type="submit"],
-.form-submit {
-  background: #0B81C9;
-  padding: 5px 10px;
-  display: inline-block;
-  color: #e8e8e8;
-  text-decoration: none;
-  border: 0;
 }
 
 /**
