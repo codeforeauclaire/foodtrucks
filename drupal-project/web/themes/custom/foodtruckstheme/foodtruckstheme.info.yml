@@ -10,12 +10,14 @@ libraries:
 
 # Regions
 regions:
-  header: Header
-  featured: Featured
-  content: Content
-  sidebar_first: First sidebar
-  sidebar_second: Second sidebar
-  footer: Footer
+  header: "Header"
+  featured: "Featured"
+  content: "Content"
+  user_account: "User Account Page"
+  user_edit: "User Edit Page"
+  sidebar_first: "First sidebar"
+  sidebar_second: "Second sidebar"
+  footer: "Footer"
 
 logo:
   path: 'themes/contrib/foodtruckstheme/logo.png'
