@@ -11,7 +11,6 @@ dependencies:
     - field.storage.node.field_website_url
     - image.style.thumbnail
     - node.type.food_trucks
-    - system.menu.account
   module:
     - image
     - node
@@ -643,7 +642,7 @@ display:
       display_extenders: {  }
       path: food-trucks
       menu:
-        type: normal
+        type: none
         title: 'My Food Trucks'
         description: ''
         expanded: false

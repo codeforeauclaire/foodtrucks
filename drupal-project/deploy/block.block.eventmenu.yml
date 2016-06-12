@@ -11,7 +11,7 @@ dependencies:
 id: eventmenu
 theme: foodtruckstheme
 region: content
-weight: -3
+weight: -4
 provider: null
 plugin: 'system_menu_block:event-menu'
 settings:

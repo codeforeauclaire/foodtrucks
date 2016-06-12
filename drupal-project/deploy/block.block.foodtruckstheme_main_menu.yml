@@ -1,6 +1,6 @@
 uuid: 40c626f9-618a-4be9-ae0b-0673023ec7b7
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.main
@@ -12,8 +12,8 @@ _core:
   default_config_hash: rx9IrdDv7Ldc4kpalZAxdhIPZfYIeOMh1N-qKoQZwHo
 id: foodtruckstheme_main_menu
 theme: foodtruckstheme
-region: header
-weight: -6
+region: '-1'
+weight: -2
 provider: null
 plugin: 'system_menu_block:main'
 settings:

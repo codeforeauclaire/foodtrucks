@@ -13,7 +13,7 @@ _core:
 id: foodtruckstheme_tools
 theme: foodtruckstheme
 region: '-1'
-weight: -2
+weight: -3
 provider: null
 plugin: 'system_menu_block:tools'
 settings:
