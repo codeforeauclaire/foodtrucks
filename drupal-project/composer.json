@@ -30,7 +30,8 @@
         "drupal/rules": "8.3.x-dev",
         "drupal/image_widget_crop": "8.1.x",
         "drupal/r4032login": "8.1.x-dev",
-        "drupal/require_login": "8.1.x"
+        "drupal/require_login": "8.1.x",
+        "drupal/field_group": "8.1.x"
     },
     "require-dev": {
         "behat/mink": "~1.6",

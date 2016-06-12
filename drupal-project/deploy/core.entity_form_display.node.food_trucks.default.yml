@@ -3,18 +3,37 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.food_trucks.field_event_manager
     - field.field.node.food_trucks.field_facebook_url
     - field.field.node.food_trucks.field_food_truck_description
     - field.field.node.food_trucks.field_food_truck_logo
+    - field.field.node.food_trucks.field_foodtruck_manager
     - field.field.node.food_trucks.field_telephone_number
     - field.field.node.food_trucks.field_twitter_name
     - field.field.node.food_trucks.field_website_url
     - image.style.thumbnail
     - node.type.food_trucks
   module:
+    - field_group
     - image
     - path
     - telephone
+third_party_settings:
+  field_group:
+    group_managers:
+      children:
+        - field_foodtruck_manager
+        - field_event_manager
+      parent_name: ''
+      weight: 12
+      label: Managers
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
 id: node.food_trucks.default
 targetEntityType: node
 bundle: food_trucks
@@ -25,6 +44,11 @@ content:
     weight: 2
     settings: {  }
     third_party_settings: {  }
+  field_event_manager:
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
   field_facebook_url:
     weight: 10
     settings:
@@ -46,6 +70,11 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+  field_foodtruck_manager:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
   field_telephone_number:
     weight: 8
     settings:

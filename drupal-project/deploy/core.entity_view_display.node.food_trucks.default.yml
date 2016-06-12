@@ -3,9 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.food_trucks.field_event_manager
     - field.field.node.food_trucks.field_facebook_url
     - field.field.node.food_trucks.field_food_truck_description
     - field.field.node.food_trucks.field_food_truck_logo
+    - field.field.node.food_trucks.field_foodtruck_manager
     - field.field.node.food_trucks.field_telephone_number
     - field.field.node.food_trucks.field_twitter_name
     - field.field.node.food_trucks.field_website_url
@@ -20,6 +22,13 @@ targetEntityType: node
 bundle: food_trucks
 mode: default
 content:
+  field_event_manager:
+    weight: 12
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
   field_facebook_url:
     weight: 9
     label: above
@@ -41,6 +50,13 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+  field_foodtruck_manager:
+    weight: 11
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
   field_telephone_number:
     weight: 2
     label: above

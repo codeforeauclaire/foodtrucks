@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d019e08da2be4b72b745a61dd64ed4c7",
-    "content-hash": "b3b0a2ab91f6bd0a9ecd6ef61901bfcd",
+    "hash": "de9b53ed35bb00e4ffb11361459a8aa4",
+    "content-hash": "be0c857078a2932801fed84ed22c9a0d",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1176,6 +1176,44 @@
             "time": "2016-05-26 00:06:06"
         },
         {
+            "name": "drupal/field_group",
+            "version": "8.1.0-rc4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/field_group",
+                "reference": "54354bfa0c7736ee2c9f6a289dba8aa03c059aaf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/field_group-8.x-1.0-rc4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/field": "8.*"
+            },
+            "replace": {
+                "drupal/field_group_migrate": "self.version"
+            },
+            "suggest": {
+                "drupal/core": "Required by drupal/field_group_migrate"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Provides the ability to group your fields on both form and display.",
+            "homepage": "https://www.drupal.org/project/field_group",
+            "time": "2015-12-10 12:36:16"
+        },
+        {
             "name": "drupal/image_widget_crop",
             "version": "8.1.0",
             "source": {
@@ -1308,7 +1346,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/require_login-8.x-1.6.zip",
-                "reference": null,
+                "reference": "0b7866700203b61efdcbab5ccee5220bfe543761",
                 "shasum": null
             },
             "require": {
