@@ -6,13 +6,13 @@ definitions:
     expanded: false
     enabled: false
   user__page:
-    weight: -50
+    weight: -47
     menu_name: account
     parent: ''
-    expanded: false
     enabled: true
+    expanded: false
   user__logout:
-    weight: -47
+    weight: -50
     menu_name: account
     parent: ''
     expanded: false
