@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7b38bc566f081c269783b2a4ff5d3ed2",
-    "content-hash": "09a6f1e2c0733c3f9d666bb6559d4d9e",
+    "hash": "d019e08da2be4b72b745a61dd64ed4c7",
+    "content-hash": "b3b0a2ab91f6bd0a9ecd6ef61901bfcd",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -74,12 +74,12 @@
             "version": "0.7.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Codegyre/Robo.git",
+                "url": "https://github.com/consolidation-org/Robo.git",
                 "reference": "9982edecb19f59420031dd9855b0d31e861b8b68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codegyre/Robo/zipball/9982edecb19f59420031dd9855b0d31e861b8b68",
+                "url": "https://api.github.com/repos/consolidation-org/Robo/zipball/9982edecb19f59420031dd9855b0d31e861b8b68",
                 "reference": "9982edecb19f59420031dd9855b0d31e861b8b68",
                 "shasum": ""
             },
@@ -1296,6 +1296,37 @@
             "description": "Redirect anonymous users from 403 Access Denied pages to the /user/login page.",
             "homepage": "https://www.drupal.org/project/r4032login",
             "time": "2016-03-01 13:56:38"
+        },
+        {
+            "name": "drupal/require_login",
+            "version": "8.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/require_login",
+                "reference": "0b7866700203b61efdcbab5ccee5220bfe543761"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/require_login-8.x-1.6.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Requires anonymous users to login before using the site.",
+            "homepage": "https://www.drupal.org/project/require_login",
+            "time": "2016-06-08 04:31:06"
         },
         {
             "name": "drupal/rules",
