@@ -54,14 +54,13 @@ class EventApiController {
       JsonApiProcessor::processEvent($data, $result);
       if (isset($data['foodtruck'])) {
         $data['start_time'] = $data['date'] .'T'. sprintf("%02d", $data['start_hour']) .':'. sprintf("%02d", $data['start_minute']) .':00';
-        $timestamp = date_create($data['start_time'])->getTimestamp();
-        $end_timestamp = $timestamp + ($data['duration'] * 60);
-        $data['end_time'] = date('Y-m-d\TH:i:s',$end_timestamp);
+        $data['end_time'] = $data['date'] .'T'. sprintf("%02d", $data['end_hour']) .':'. sprintf("%02d", $data['end_minute']) .':00';
         unset($data['title']);
         unset($data['date']);
-        unset($data['duration']);
         unset($data['start_hour']);
         unset($data['start_minute']);
+        unset($data['end_hour']);
+        unset($data['end_minute']);
         $dataArray[] = $data;
         $data = '';
       }
