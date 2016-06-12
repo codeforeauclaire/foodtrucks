@@ -41,34 +41,26 @@ function foodtrucksmodule_form_alter(&$form, \Drupal\Core\Form\FormStateInterfac
 /**
  * Implements hook_entity_presave().
  */
-/** @var \Drupal\Node\Entity\Node $entity */
 function foodtrucksmodule_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
 //  assign self to both manager fields
   if ($entity->bundle() == 'food_trucks') {
-    $uid = $entity->getCurrentUserId()['0'];
+    assign_self_and_author($entity, 'field_foodtruck_manager');
+    assign_self_and_author($entity, 'field_event_manager');
 
-    $uids = [];
-    $values = $entity->get('field_foodtruck_manager')->getValue();
-    foreach ($values as $value) {
-      $uids[] = $value['target_id'];
-    }
-
-    if (!in_array($uid, $uids)) {
-      $uids[] = $uid;
-      sort($uids);
-      $entity->set('field_foodtruck_manager', $uids);
-    }
-
-    $uids = [];
-    $values = $entity->get('field_event_manager')->getValue();
-    foreach ($values as $value) {
-      $uids[] = $value['target_id'];
-    }
-
-    if (!in_array($uid, $uids)) {
-      $uids[] = $uid;
-      sort($uids);
-      $entity->set('field_event_manager', $uids);
-    }
   }
+}
+
+function assign_self_and_author(&$entity, $field) {
+  /** @var \Drupal\Node\Entity\Node $entity */
+  $uid = $entity->getCurrentUserId()['0'];
+  $author = $entity->getOwnerId();
+
+  $uids = [];
+  $values = $entity->get($field)->getValue();
+  foreach ($values as $value) {$uids[] = $value['target_id'];}
+  if (!in_array($uid, $uids)) {$uids[] = $uid;}
+  if (!in_array($author, $uids)) {$uids[] = $author;}
+  sort($uids);
+  $entity->set($field, $uids);
+
 }
