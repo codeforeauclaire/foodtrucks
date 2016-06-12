@@ -1,4 +1,4 @@
-uuid: 0b80635b-c8e8-4351-a8b3-e42db12a0c98
+uuid: 82484f2f-edad-4788-8060-ffa8c3837daf
 langcode: en
 status: true
 dependencies:
@@ -8,80 +8,80 @@ dependencies:
 id: node.field_event_end_hour
 field_name: field_event_end_hour
 entity_type: node
-type: list_string
+type: list_integer
 settings:
   allowed_values:
     -
-      value: '0'
+      value: 0
       label: midnight
     -
-      value: '1'
+      value: 1
       label: 1am
     -
-      value: '2'
+      value: 2
       label: 2am
     -
-      value: '3'
+      value: 3
       label: 3am
     -
-      value: '4'
+      value: 4
       label: 4am
     -
-      value: '5'
+      value: 5
       label: 5am
     -
-      value: '6'
+      value: 6
       label: 6am
     -
-      value: '7'
+      value: 7
       label: 7am
     -
-      value: '8'
+      value: 8
       label: 8am
     -
-      value: '9'
+      value: 9
       label: 9am
     -
-      value: '10'
+      value: 10
       label: 10am
     -
-      value: '11'
+      value: 11
       label: 11am
     -
-      value: '12'
+      value: 12
       label: 12noon
     -
-      value: '13'
+      value: 13
       label: 1pm
     -
-      value: '14'
+      value: 14
       label: 2pm
     -
-      value: '15'
+      value: 15
       label: 3pm
     -
-      value: '16'
+      value: 16
       label: 4pm
     -
-      value: '17'
+      value: 17
       label: 5pm
     -
-      value: '18'
+      value: 18
       label: 6pm
     -
-      value: '19'
+      value: 19
       label: 7pm
     -
-      value: '20'
+      value: 20
       label: 8pm
     -
-      value: '21'
+      value: 21
       label: 9pm
     -
-      value: '22'
+      value: 22
       label: 10pm
     -
-      value: '23'
+      value: 23
       label: 11pm
   allowed_values_function: ''
 module: options

@@ -1,4 +1,4 @@
-uuid: bf47cfb6-782a-42ff-b621-0fbc742acbdf
+uuid: 2ff97776-d5ec-4330-bf2b-443cc6275b42
 langcode: en
 status: true
 dependencies:
@@ -8,20 +8,20 @@ dependencies:
 id: node.field_event_end_minute
 field_name: field_event_end_minute
 entity_type: node
-type: list_string
+type: list_integer
 settings:
   allowed_values:
     -
-      value: '0'
+      value: 0
       label: '00'
     -
-      value: '15'
+      value: 15
       label: '15'
     -
-      value: '30'
+      value: 30
       label: '30'
     -
-      value: '45'
+      value: 45
       label: '45'
   allowed_values_function: ''
 module: options

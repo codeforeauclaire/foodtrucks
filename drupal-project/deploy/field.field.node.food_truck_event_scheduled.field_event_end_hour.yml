@@ -1,4 +1,4 @@
-uuid: 79248579-3183-404e-a923-fb66a6aaf765
+uuid: 2655545d-80ed-479e-9e85-e612d80f8b64
 langcode: en
 status: true
 dependencies:
@@ -17,7 +17,7 @@ required: true
 translatable: false
 default_value:
   -
-    value: '12'
+    value: 12
 default_value_callback: ''
 settings: {  }
-field_type: list_string
+field_type: list_integer

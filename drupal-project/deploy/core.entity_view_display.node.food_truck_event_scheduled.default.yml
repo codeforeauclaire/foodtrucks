@@ -38,13 +38,13 @@ content:
     third_party_settings: {  }
     type: basic_string
   field_event_end_hour:
-    weight: 9
+    weight: 13
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
   field_event_end_minute:
-    weight: 10
+    weight: 12
     label: above
     settings: {  }
     third_party_settings: {  }
