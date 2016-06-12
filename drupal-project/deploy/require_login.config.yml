@@ -1,4 +1,4 @@
 deny_message: ''
-excluded_paths: ''
+excluded_paths: "/user/simple-fb-connect\r\n/user/simple-fb-connect/return"
 _core:
   default_config_hash: SqXCJeVjKMSJES-SwQZTmO-B9rExfwOER0tXC7Rn6es
