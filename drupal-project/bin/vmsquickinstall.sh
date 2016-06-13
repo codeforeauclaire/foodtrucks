@@ -41,6 +41,7 @@ sudo debconf-set-selections <<< 'mariadb-server-10.0 mysql-server/root_password_
 sudo apt-get install -y git nginx ruby-compass mariadb-server php php-mysql php-curl php-gd php-fpm php-xml php-curl php-xdebug php-mbstring zip
 sed -i 's/zend_extension=xdebug.so/#zend_extension=xdebug.so/' /etc/php/7.0/mods-available/xdebug.ini
 
+# Speeds up composer (so can run in parallel)
 composer global require "hirak/prestissimo:^0.3"
 
 # Setup Maria DB installation (2 of 2)
