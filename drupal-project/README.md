@@ -84,6 +84,9 @@ Use these instructions to setup a temporary* development environment of this pro
 ]
 ```
 
+### Permissions
+
+[Foodtruck Permissions Google Doc](https://docs.google.com/document/d/1p1EPIzXuVLiL_vKAAud_oxvHPT7vPWRmRDE5ZOlghh0/edit#heading=h.86obnzhznpbc)
 
 ## TODO
 
