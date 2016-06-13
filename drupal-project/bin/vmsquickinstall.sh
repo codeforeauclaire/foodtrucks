@@ -38,7 +38,7 @@ sudo debconf-set-selections <<< 'mariadb-server-10.0 mysql-server/root_password_
 # ** We could install Ruby - https://www.brightbox.com/docs/ruby/ubuntu/
 # ** However we can just do `ruby-compass` much quicker, simpler, and more reliably with a single command (not doing ruby dev, we don't need fluff)
 # * PHP & extensions (defaults to 7.X with ppa:ondrej/php)
-sudo apt-get install -y git nginx ruby-compass mariadb-server php php-mysql php-curl php-gd php-fpm php-xml php-curl php-xdebug drush php-mbstring zip
+sudo apt-get install -y git nginx ruby-compass mariadb-server php php-mysql php-curl php-gd php-fpm php-xml php-curl php-xdebug php-mbstring zip
 sed -i 's/zend_extension=xdebug.so/#zend_extension=xdebug.so/' /etc/php/7.0/mods-available/xdebug.ini
 
 composer global require "hirak/prestissimo:^0.3"
@@ -58,6 +58,8 @@ php -r "unlink('composer-setup.php');"
 mv composer.phar /usr/local/bin/composer
 
 # Install drush (Instructiosn from http://docs.drush.org/en/master/install/)
+# TODO: Use composer to install drush
+# TODO: * Adjust pahts as needed
 wget http://files.drush.org/drush.phar
 chmod +x drush.phar
 sudo mv drush.phar /usr/local/bin/drush
