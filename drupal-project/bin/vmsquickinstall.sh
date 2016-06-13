@@ -37,9 +37,7 @@ sudo debconf-set-selections <<< 'mariadb-server-10.0 mysql-server/root_password_
 # ** We could compile Ruby - Digitial Ocean's instructions - https://goo.gl/TpZ2wL
 # ** We could install Ruby - https://www.brightbox.com/docs/ruby/ubuntu/
 # ** However we can just do `ruby-compass` much quicker, simpler, and more reliably with a single command (not doing ruby dev, we don't need fluff)
-# * PHP 5.6
-# ** https://www.dev-metal.com/install-setup-php-5-6-ubuntu-14-04-lts/
-# ** PHP extensions
+# * PHP & extensions (defaults to 7.X with ppa:ondrej/php)
 sudo apt-get install -y git nginx ruby-compass mariadb-server php php-mysql php-curl php-gd php-fpm php-xml php-curl php-xdebug drush php-mbstring zip
 sed -i 's/zend_extension=xdebug.so/#zend_extension=xdebug.so/' /etc/php/7.0/mods-available/xdebug.ini
 
@@ -96,7 +94,7 @@ cp -r /var/foodtrucks/drupal-project/data/files /var/foodtrucks/drupal-project/w
 (cd /etc/nginx/sites-enabled/ && rm default && ln -s /var/foodtrucks/drupal-project/bin/nginx.conf default)
 sudo service nginx restart
 
-# Give nginx & php5-fpm access to foodtrucks files
+# Give nginx & php-fpm access to foodtrucks files
 chown www-data:www-data /var/foodtrucks/drupal-project/web/sites/default/files -R
 
 # Watch for CSS changes
