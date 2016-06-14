@@ -142,7 +142,7 @@ function isAfter (date1, date2) {
 
 function getPopupHtml (value, dateFormat, timeFormat, expired) {
   var content = '<a href="' + (value.foodtruck.website_url ? value.foodtruck.website_url : '#') + '">' + value.foodtruck.title + '</a><br/>'
-  if (value.foodtruck.logo) content += '<img src="' + value.foodtruck.logo + '" alt="logo"/>'
+  if (value.foodtruck.logo) content += '<img src="' + value.foodtruck.logo + '" alt="logo" width=200/>'
   content += '<p>' + value.foodtruck.description + '</p>'
 
   content += '<p class="details">Here on ' +
