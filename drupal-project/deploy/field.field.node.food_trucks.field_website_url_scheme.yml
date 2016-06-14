@@ -1,0 +1,23 @@
+uuid: 5bcf40e0-81a9-401e-bc5b-056d69ffb376
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_website_url_scheme
+    - node.type.food_trucks
+  module:
+    - options
+id: node.food_trucks.field_website_url_scheme
+field_name: field_website_url_scheme
+entity_type: node
+bundle: food_trucks
+label: 'Website URL Scheme'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

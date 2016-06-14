@@ -5,12 +5,14 @@ dependencies:
   config:
     - field.field.node.food_trucks.field_event_manager
     - field.field.node.food_trucks.field_facebook_url
+    - field.field.node.food_trucks.field_facebook_url_scheme
     - field.field.node.food_trucks.field_food_truck_description
     - field.field.node.food_trucks.field_food_truck_logo
     - field.field.node.food_trucks.field_foodtruck_manager
     - field.field.node.food_trucks.field_telephone_number
     - field.field.node.food_trucks.field_twitter_name
     - field.field.node.food_trucks.field_website_url
+    - field.field.node.food_trucks.field_website_url_scheme
     - image.style.thumbnail
     - node.type.food_trucks
   module:
@@ -25,7 +27,7 @@ third_party_settings:
         - field_foodtruck_manager
         - field_event_manager
       parent_name: ''
-      weight: 12
+      weight: 14
       label: Managers
       format_type: tab
       format_settings:
@@ -50,12 +52,17 @@ content:
     third_party_settings: {  }
     type: options_buttons
   field_facebook_url:
-    weight: 10
+    weight: 12
     settings:
       size: 60
       placeholder: 'https://facebook.com/your-facebook-account-name'
     third_party_settings: {  }
     type: string_textfield
+  field_facebook_url_scheme:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
   field_food_truck_description:
     weight: 7
     settings:
@@ -82,19 +89,24 @@ content:
     third_party_settings: {  }
     type: telephone_default
   field_twitter_name:
-    weight: 11
+    weight: 13
     settings:
       size: 60
       placeholder: '@your-twitter-name'
     third_party_settings: {  }
     type: string_textfield
   field_website_url:
-    weight: 9
+    weight: 10
     settings:
       size: 60
       placeholder: 'https://your-website.com'
     third_party_settings: {  }
     type: string_textfield
+  field_website_url_scheme:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
   path:
     type: path
     weight: 5

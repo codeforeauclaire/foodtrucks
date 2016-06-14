@@ -1,0 +1,27 @@
+uuid: 8034ae7c-63c4-4f23-8af8-b7bd7271b701
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_facebook_url_scheme
+field_name: field_facebook_url_scheme
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: 'http://'
+    -
+      value: '1'
+      label: 'https://'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

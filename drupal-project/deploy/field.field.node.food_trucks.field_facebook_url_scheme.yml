@@ -1,0 +1,23 @@
+uuid: 43617f85-246f-4096-95df-c71d2029b270
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_facebook_url_scheme
+    - node.type.food_trucks
+  module:
+    - options
+id: node.food_trucks.field_facebook_url_scheme
+field_name: field_facebook_url_scheme
+entity_type: node
+bundle: food_trucks
+label: 'Facebook URL Scheme'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '1'
+default_value_callback: ''
+settings: {  }
+field_type: list_string
