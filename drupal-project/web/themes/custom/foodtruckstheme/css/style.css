@@ -197,6 +197,11 @@ img {
   margin: 0;
 }
 
+/* line 13, ../scss/50-templates/_layout--content.scss */
+.form-item-field-website-url-scheme .form-required:after, .form-item-field-facebook-url-scheme .form-required:after {
+  content: normal;
+}
+
 /*------------------------------------*\
     $PATTERN LAB-SPECIFIC STYLES
 \*------------------------------------*/

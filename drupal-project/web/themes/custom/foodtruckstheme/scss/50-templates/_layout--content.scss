@@ -8,3 +8,9 @@
 .layout-container {
   margin: 0;
 }
+
+.form-item-field-website-url-scheme, .form-item-field-facebook-url-scheme {
+  .form-required:after {
+    content: normal;
+  }
+}
