@@ -55,7 +55,7 @@ content:
     weight: 12
     settings:
       size: 60
-      placeholder: 'https://facebook.com/your-facebook-account-name'
+      placeholder: facebook.com/your-facebook-account-name
     third_party_settings: {  }
     type: string_textfield
   field_facebook_url_scheme:
@@ -99,7 +99,7 @@ content:
     weight: 10
     settings:
       size: 60
-      placeholder: 'https://your-website.com'
+      placeholder: your-website.com
     third_party_settings: {  }
     type: string_textfield
   field_website_url_scheme:

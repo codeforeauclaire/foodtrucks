@@ -12,8 +12,21 @@
  * Implements hook_form_alter().
  */
 function foodtrucksmodule_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+//    hide and rename a few lables
+  if ($form_id == 'node_food_trucks_form' || $form_id == 'node_food_trucks_edit_form') {
+    if (isset($form['field_website_url']['widget'][0]['value']['#title']) && isset($form['field_website_url_scheme']['widget']['#title'])) {
+      $form['field_website_url_scheme']['widget']['#title'] = $form['field_website_url']['widget'][0]['value']['#title'];
+      unset($form['field_website_url']['widget'][0]['value']['#title']);
+//      unset($form['field_website_url']['widget']['#title']);
+    }
+    if (isset($form['field_facebook_url']['widget'][0]['value']['#title']) && isset($form['field_facebook_url_scheme']['widget']['#title'])) {
+      $form['field_facebook_url_scheme']['widget']['#title'] = $form['field_facebook_url']['widget'][0]['value']['#title'];
+      unset($form['field_facebook_url']['widget'][0]['value']['#title']);
+    }
+  }
+
+//    hide and rename a few lables
   if ($form_id == 'node_food_truck_event_scheduled_form' || $form_id == 'node_food_truck_event_scheduled_edit_form') {
-//    hide a few lables
     if (isset($form['field_event_start_minute']['widget']['#title'])) { unset($form['field_event_start_minute']['widget']['#title']); }
     if (isset($form['field_event_end_minute']['widget']['#title'])) { unset($form['field_event_end_minute']['widget']['#title']); }
 //    prepopulate and hide the title field
