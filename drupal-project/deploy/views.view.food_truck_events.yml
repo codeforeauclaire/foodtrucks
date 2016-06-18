@@ -802,18 +802,27 @@ display:
       header: {  }
       footer: {  }
       empty: {  }
-      relationships: {  }
-      arguments:
-        uid:
-          id: uid
-          table: node_field_data
-          field: uid
+      relationships:
+        field_food_truck:
+          id: field_food_truck
+          table: node__field_food_truck
+          field: field_food_truck
           relationship: none
+          group_type: group
+          admin_label: 'field_food_truck: Content'
+          required: false
+          plugin_id: standard
+      arguments:
+        field_event_manager_target_id:
+          id: field_event_manager_target_id
+          table: node__field_event_manager
+          field: field_event_manager_target_id
+          relationship: field_food_truck
           group_type: group
           admin_label: ''
           default_action: default
           exception:
-            value: '1'
+            value: all
             title_enable: false
             title: All
           title_enable: false
@@ -837,8 +846,6 @@ display:
           validate_options: {  }
           break_phrase: false
           not: false
-          entity_type: node
-          entity_field: uid
           plugin_id: numeric
       display_extenders: {  }
     cache_metadata:
