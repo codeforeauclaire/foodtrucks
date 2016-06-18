@@ -117,6 +117,7 @@ class JsonApiProcessor extends ControllerBase {
         case "integer":
         case "list_integer":
         case "string":
+        case "list_string":
         case "string_long":
         case "telephone":
           JsonApiProcessor::processCommon($data, $field);
