@@ -41,10 +41,6 @@ sudo debconf-set-selections <<< 'mariadb-server-10.0 mysql-server/root_password_
 sudo apt-get install -y git nginx ruby-compass mariadb-server php php-mysql php-curl php-gd php-fpm php-xml php-curl php-xdebug php-mbstring zip
 sed -i 's/zend_extension=xdebug.so/#zend_extension=xdebug.so/' /etc/php/7.0/mods-available/xdebug.ini
 
-# Speeds up composer (so can run in parallel)
-composer global require "hirak/prestissimo:^0.3"
-composer global require "drush/drush:8.x"
-
 # Setup Maria DB installation (2 of 2)
 mysql -uroot -pPASS -e "SET PASSWORD = PASSWORD('');"
 
@@ -59,12 +55,23 @@ php -r "unlink('composer-setup.php');"
 # Install composer con't (globally)
 mv composer.phar /usr/local/bin/composer
 
+# enable composer managed executables
+mkdir ~/.composer
+echo 'PATH="$HOME/.composer/vendor/bin:$PATH"' >> .profile
+
+# Speeds up composer (so can run in parallel)
+composer global require "hirak/prestissimo:^0.3"
+
+# setup and install drush
+composer global require "drush/drush:8.x"
+
+
 # Install drush (Instructiosn from http://docs.drush.org/en/master/install/)
 # TODO: Use composer to install drush
 # TODO: * Adjust pahts as needed
-wget http://files.drush.org/drush.phar
-chmod +x drush.phar
-sudo mv drush.phar /usr/local/bin/drush
+#wget http://files.drush.org/drush.phar
+#chmod +x drush.phar
+#sudo mv drush.phar /usr/local/bin/drush
 # drush init # Wanted to prompt, -y didn't seem to work
 
 # Clone repository & make easy access
