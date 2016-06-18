@@ -23,6 +23,11 @@ function foodtrucksmodule_form_alter(&$form, \Drupal\Core\Form\FormStateInterfac
       $form['field_facebook_url_scheme']['widget']['#title'] = $form['field_facebook_url']['widget'][0]['value']['#title'];
       unset($form['field_facebook_url']['widget'][0]['value']['#title']);
     }
+//    hide entire foodtruck manager form, but don't remove, some values are still automatecally populated and seved
+    if (isset($form['field_foodtruck_manager'])) {
+      $form['field_foodtruck_manager']['#attributes']['class'][] = 'hidden';
+    }
+
   }
 
 //    hide and rename a few lables
@@ -59,7 +64,6 @@ function foodtrucksmodule_entity_presave(Drupal\Core\Entity\EntityInterface $ent
   if ($entity->bundle() == 'food_trucks') {
     assign_self_and_author($entity, 'field_foodtruck_manager');
     assign_self_and_author($entity, 'field_event_manager');
-
   }
 }
 
