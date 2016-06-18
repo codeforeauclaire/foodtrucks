@@ -26,7 +26,6 @@ module:
   node: 0
   options: 0
   page_cache: 0
-  paragraphs: 0
   path: 0
   r4032login: 0
   rest: 0
