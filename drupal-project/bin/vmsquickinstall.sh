@@ -43,6 +43,7 @@ sed -i 's/zend_extension=xdebug.so/#zend_extension=xdebug.so/' /etc/php/7.0/mods
 
 # Speeds up composer (so can run in parallel)
 composer global require "hirak/prestissimo:^0.3"
+composer global require "drush/drush:8.x"
 
 # Setup Maria DB installation (2 of 2)
 mysql -uroot -pPASS -e "SET PASSWORD = PASSWORD('');"
