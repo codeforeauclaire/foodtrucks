@@ -25,7 +25,7 @@
         position: google.maps.ControlPosition.LEFT_TOP
       },
       mapTypeId: google.maps.MapTypeId.ROADMAP,
-      zoom: 16
+      zoom: 12
     };
   };
 
@@ -96,6 +96,10 @@
     // Set the map marker.
     if (map.lat != '' && map.lng != '') {
       geolocation.setMapMarker(center, map);
+    }
+    else {
+      center = new google.maps.LatLng('44.81', '-91.50');
+      map.google_map.setCenter(center);
     }
 
     if (!geolocation.hasOwnProperty('maps')) {
