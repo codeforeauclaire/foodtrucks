@@ -10,6 +10,7 @@ namespace Drupal\foodtrucksmodule\Controller;
 use Drupal\Core\Entity\Entity as CEntity;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Drupal\foodtrucksmodule\JsonApiProcessor;
+use Drupal\foodtrucksmodule\Controller\VendorApiController;
 
 /**
  * Class EventApiController.
@@ -53,6 +54,7 @@ class EventApiController {
     foreach ($results as $result) {
       JsonApiProcessor::processEvent($data, $result);
       if (isset($data['foodtruck'])) {
+        VendorApiController::processFoodtruckArray($data['foodtruck']);
         $data['start_time'] = $data['date'] .'T'. sprintf("%02d", $data['start_hour']) .':'. sprintf("%02d", $data['start_minute']) .':00';
         $data['end_time'] = $data['date'] .'T'. sprintf("%02d", $data['end_hour']) .':'. sprintf("%02d", $data['end_minute']) .':00';
         unset($data['title']);
