@@ -1,3 +1,57 @@
+<div class="layout-container">
+
+  <header role="banner">
+    {{ page.header }}
+  </header>
+
+  {{ page.primary_menu }}
+  {{ page.secondary_menu }}
+
+  {{ page.breadcrumb }}
+
+  {{ page.highlighted }}
+
+  {{ page.help }}
+
+  <main role="main">
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+    <div class="layout-content">
+      {% block content %}
+        <ul class="menu">
+          <li class="menu-item">
+            <a href="/user" >Food Truck List</a>
+          </li>
+          |
+          <li class="menu-item">
+            <a href="/user/{{ user.id }}/edit" >Account Details</a>
+          </li>
+        </ul>
+        {{ page.user_account }}
+      {% endblock %}
+    </div>{# /.layout-content #}
+
+    {% if page.sidebar_first %}
+      <aside class="layout-sidebar-first" role="complementary">
+        {{ page.sidebar_first }}
+      </aside>
+    {% endif %}
+
+    {% if page.sidebar_second %}
+      <aside class="layout-sidebar-second" role="complementary">
+        {{ page.sidebar_second }}
+      </aside>
+    {% endif %}
+
+  </main>
+
+  {% if page.footer %}
+    <footer role="contentinfo">
+      {{ page.footer }}
+    </footer>
+  {% endif %}
+
+</div>{# /.layout-container #}
 {#
 /**
  * @file
@@ -43,54 +97,3 @@
  * @see html.html.twig
  */
 #}
-<div class="layout-container">
-
-  <header role="banner">
-    {{ page.header }}
-  </header>
-
-  {{ page.primary_menu }}
-  {{ page.secondary_menu }}
-
-  {{ page.breadcrumb }}
-
-  {{ page.highlighted }}
-
-  {{ page.help }}
-
-  <main role="main">
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-    <div class="layout-content">
-      <ul class="menu">
-        <li class="menu-item">
-          <a href="/user" >Food Truck List</a>
-        </li>
-        |
-        <li class="menu-item">
-          <a href="/user/{{ user.id }}/edit" >Account Details</a>
-        </li>
-      </ul>
-      {{ page.user_account }}
-    </div>{# /.layout-content #}
-
-    {% if page.sidebar_first %}
-      <aside class="layout-sidebar-first" role="complementary">
-        {{ page.sidebar_first }}
-      </aside>
-    {% endif %}
-
-    {% if page.sidebar_second %}
-      <aside class="layout-sidebar-second" role="complementary">
-        {{ page.sidebar_second }}
-      </aside>
-    {% endif %}
-
-  </main>
-
-  {% if page.footer %}
-    <footer role="contentinfo">
-      {{ page.footer }}
-    </footer>
-  {% endif %}
-
-</div>{# /.layout-container #}
