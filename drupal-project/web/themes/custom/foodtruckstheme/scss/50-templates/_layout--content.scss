@@ -1,15 +1,18 @@
 .block-page-title-block {
   text-align: center;
 }
+
 .layout-content {
-  width: 700px;
   margin: auto;
+  width: 700px;
 }
+
 .layout-container {
   margin: 0;
 }
 
-.form-item-field-website-url-scheme, .form-item-field-facebook-url-scheme {
+.form-item-field-website-url-scheme,
+.form-item-field-facebook-url-scheme {
   .form-required:after {
     content: normal;
   }
@@ -17,21 +20,25 @@
 
 ul.tabs,
 .layout-content ul.menu {
-  margin: 30px 0;
   border-bottom: 1px solid #aaa;
+  margin: 30px 0;
+
   > * {
     display: none;
   }
+
   > li {
     border: 1px solid #aaa;
-    border-bottom: none;
+    border-bottom: 0;
     border-radius: 5px 5px 0 0;
     display: inline-block;
-    margin-right: 0.3em;
     margin-bottom: -1px;
+    margin-right: 0.3em;
     padding: 0;
+
     a {
       padding: 10px 20px;
+
       &.is-active {
         background-color: #fff;
         border-radius: 5px 5px 0 0;
@@ -43,9 +50,10 @@ ul.tabs,
 
 .layout-content ul.menu {
   float: none;
-  color: #fff;
+
   li {
     color: #444;
+
     a {
       display: inline-block;
       padding: 10px 20px;

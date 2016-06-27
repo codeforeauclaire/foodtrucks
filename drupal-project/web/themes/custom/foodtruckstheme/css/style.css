@@ -241,50 +241,51 @@ td, th {
   text-align: center;
 }
 
-/* line 4, ../scss/50-templates/_layout--content.scss */
+/* line 5, ../scss/50-templates/_layout--content.scss */
 .layout-content {
-  width: 700px;
   margin: auto;
+  width: 700px;
 }
 
-/* line 8, ../scss/50-templates/_layout--content.scss */
+/* line 10, ../scss/50-templates/_layout--content.scss */
 .layout-container {
   margin: 0;
 }
 
-/* line 13, ../scss/50-templates/_layout--content.scss */
-.form-item-field-website-url-scheme .form-required:after, .form-item-field-facebook-url-scheme .form-required:after {
+/* line 16, ../scss/50-templates/_layout--content.scss */
+.form-item-field-website-url-scheme .form-required:after,
+.form-item-field-facebook-url-scheme .form-required:after {
   content: normal;
 }
 
-/* line 18, ../scss/50-templates/_layout--content.scss */
+/* line 21, ../scss/50-templates/_layout--content.scss */
 ul.tabs,
 .layout-content ul.menu {
-  margin: 30px 0;
   border-bottom: 1px solid #aaa;
+  margin: 30px 0;
 }
-/* line 22, ../scss/50-templates/_layout--content.scss */
+/* line 26, ../scss/50-templates/_layout--content.scss */
 ul.tabs > *,
 .layout-content ul.menu > * {
   display: none;
 }
-/* line 25, ../scss/50-templates/_layout--content.scss */
+/* line 30, ../scss/50-templates/_layout--content.scss */
 ul.tabs > li,
 .layout-content ul.menu > li {
   border: 1px solid #aaa;
-  border-bottom: none;
+  border-bottom: 0;
   border-radius: 5px 5px 0 0;
   display: inline-block;
-  margin-right: 0.3em;
   margin-bottom: -1px;
+  margin-right: 0.3em;
   padding: 0;
 }
-/* line 33, ../scss/50-templates/_layout--content.scss */
+/* line 39, ../scss/50-templates/_layout--content.scss */
 ul.tabs > li a,
 .layout-content ul.menu > li a {
   padding: 10px 20px;
 }
-/* line 35, ../scss/50-templates/_layout--content.scss */
+/* line 42, ../scss/50-templates/_layout--content.scss */
 ul.tabs > li a.is-active,
 .layout-content ul.menu > li a.is-active {
   background-color: #fff;
@@ -292,78 +293,77 @@ ul.tabs > li a.is-active,
   color: #444;
 }
 
-/* line 44, ../scss/50-templates/_layout--content.scss */
+/* line 51, ../scss/50-templates/_layout--content.scss */
 .layout-content ul.menu {
   float: none;
-  color: #fff;
 }
-/* line 47, ../scss/50-templates/_layout--content.scss */
+/* line 54, ../scss/50-templates/_layout--content.scss */
 .layout-content ul.menu li {
   color: #444;
 }
-/* line 49, ../scss/50-templates/_layout--content.scss */
+/* line 57, ../scss/50-templates/_layout--content.scss */
 .layout-content ul.menu li a {
   display: inline-block;
   padding: 10px 20px;
   text-decoration: none;
 }
 
-/* line 57, ../scss/50-templates/_layout--content.scss */
+/* line 65, ../scss/50-templates/_layout--content.scss */
 .js-form-item-field-event-start-hour,
 .js-form-item-field-event-end-hour {
   float: left;
 }
-/* line 60, ../scss/50-templates/_layout--content.scss */
+/* line 68, ../scss/50-templates/_layout--content.scss */
 .js-form-item-field-event-start-hour label,
 .js-form-item-field-event-end-hour label {
   float: left;
 }
 
-/* line 65, ../scss/50-templates/_layout--content.scss */
+/* line 73, ../scss/50-templates/_layout--content.scss */
 #edit-field-event-end-hour-wrapper,
 #edit-field-scheduled-location-wrapper {
   clear: both;
 }
 
-/* line 72, ../scss/50-templates/_layout--content.scss */
+/* line 80, ../scss/50-templates/_layout--content.scss */
 .field__label {
   padding: 10px 0 5px;
 }
 
-/* line 77, ../scss/50-templates/_layout--content.scss */
+/* line 85, ../scss/50-templates/_layout--content.scss */
 .node--type-food-trucks .field__label {
   padding: 20px 0 5px;
 }
 
-/* line 82, ../scss/50-templates/_layout--content.scss */
+/* line 90, ../scss/50-templates/_layout--content.scss */
 .field--name-field-website-url-scheme,
 .field--name-field-facebook-url-scheme {
   display: none;
 }
 
-/* line 87, ../scss/50-templates/_layout--content.scss */
+/* line 95, ../scss/50-templates/_layout--content.scss */
 .view-footer {
   margin: 40px 0 0 0;
 }
 
-/* line 92, ../scss/50-templates/_layout--content.scss */
+/* line 100, ../scss/50-templates/_layout--content.scss */
 .views-row > div {
   padding: 10px 0;
 }
-/* line 95, ../scss/50-templates/_layout--content.scss */
+/* line 103, ../scss/50-templates/_layout--content.scss */
 .views-row .views-field-title {
   font-size: 1.2em;
   font-weight: 700;
 }
 
-/* line 101, ../scss/50-templates/_layout--content.scss */
+/* line 109, ../scss/50-templates/_layout--content.scss */
 .field--name-field-food-truck {
   font-size: 1.2em;
   font-weight: 700;
   padding: 10px 0;
 }
 
-/* line 109, ../scss/50-templates/_layout--content.scss */
+/* line 117, ../scss/50-templates/_layout--content.scss */
 .view-food-truck-list .view-content {
   background-color: #f3f3f3;
   border: 1px solid #ddd;
