@@ -1,11 +1,11 @@
 header {
-  color: #000;
-  position: relative;
-  box-shadow: 0 0 2px #aaa;
-  border: none;
   background-color: #00695c;
+  border: 0;
+  box-shadow: 0 0 2px #aaa;
+  color: #000;
   height: 50px;
   padding: 0;
+  position: relative;
   //@include breakpoint($bp--medium-up) {
   //  .search-form {
   //    position: absolute;
@@ -14,18 +14,18 @@ header {
   //  }
   //}
   a {
-    text-decoration: none;
     color: #fff;
-    &.is-active {
-      color: red;
-    }
+    text-decoration: none;
   }
+
   ul.menu {
     a {
-      text-decoration: none;
       color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+
       &.is-active {
-        color: red;
+        color: #80cbc4;
       }
     }
   }
@@ -35,42 +35,41 @@ header {
     float: left;
     font-family: "Montserrat",sans-serif;
     font-size: 1.5em;
-    font-weight: normal;
+    font-weight: 700;
     height: 50px;
     line-height: 2.1em;
     margin: auto auto auto 10px;
     padding: 0;
     text-align: left;
     text-shadow: none;
+
     a {
       color: #80cbc4;
     }
   }
 
   &::after {
+    clear: both;
     content: '';
     display: block;
-    clear: both;
   }
 }
 
 .block-system-branding-block {
   float: left;
 }
-.menu--account .menu-item {
-  float: right;
-  padding-left: 10px;
-  padding-right: 10px;
-}
+
 main {
   &::before {
+    clear: both;
     content: '';
     display: block;
-    clear: both;
   }
 }
-.path-user, .path-food-trucks {
+
+.path-user,
+.path-food-trucks {
   header ul.menu li:last-child a {
-    color: #ff0000;
+    color: white;
   }
 }

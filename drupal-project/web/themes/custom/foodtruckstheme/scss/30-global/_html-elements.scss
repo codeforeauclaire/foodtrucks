@@ -4,6 +4,7 @@
 
 body {
   @include body-copy();
+  color: #444;
 }
 
 h1 {
@@ -21,14 +22,60 @@ img {
   max-width: 100%;
   height: auto;
 }
-
-// All last children
-:last-child {
-  margin-bottom: 0;
+ 
+a,
+a:link, 
+a:visited,
+a:hover, 
+a:active {
+  color: #00695c;
+  text-decoration: none;
+}
+label {
+  padding: 5px 0 8px;
+  display: block;
 }
 
-// all last children with a class
-[class]:last-child { 
-  margin-bottom: 0;
-} 
- 
+.form-composite > .fieldset-wrapper > .description, .form-item .description {
+    color: #aaa;
+    font-size: 0.8em;
+}
+
+input, textarea {
+  border: 1px solid #999;
+  border-radius: 4px;
+  line-height: normal;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#edit-actions.form-actions {
+  text-align: center;
+  margin: 40px 0 20px;
+}
+
+.button.form-submit {
+  font-weight: 700;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 10px 20px;
+  background-color: lightblue;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  &.button--danger {
+    background: transparent none repeat scroll 0 0;
+    border: medium none;
+    color: red;
+    float: left;
+    font-size: 0.9em;
+    font-weight: normal;
+  }
+}
+
+.views-element-container {
+  padding: 10px 0;
+}
+
+td, th {
+    padding: 10px;
+}

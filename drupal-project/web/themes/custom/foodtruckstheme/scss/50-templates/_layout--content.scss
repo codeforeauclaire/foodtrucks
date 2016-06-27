@@ -14,3 +14,102 @@
     content: normal;
   }
 }
+
+ul.tabs,
+.layout-content ul.menu {
+  margin: 30px 0;
+  border-bottom: 1px solid #aaa;
+  > * {
+    display: none;
+  }
+  > li {
+    border: 1px solid #aaa;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    display: inline-block;
+    margin-right: 0.3em;
+    margin-bottom: -1px;
+    padding: 0;
+    a {
+      padding: 10px 20px;
+      &.is-active {
+        background-color: #fff;
+        border-radius: 5px 5px 0 0;
+        color: #444;
+      }
+    }
+  }
+}
+
+.layout-content ul.menu {
+  float: none;
+  color: #fff;
+  li {
+    color: #444;
+    a {
+      display: inline-block;
+      padding: 10px 20px;
+      text-decoration: none;
+    }
+  }
+}
+
+.js-form-item-field-event-start-hour,
+.js-form-item-field-event-end-hour {
+  float: left;
+  label {
+    float: left;
+  }
+}
+
+#edit-field-event-end-hour-wrapper,
+#edit-field-scheduled-location-wrapper {
+  clear: both;
+}
+
+
+
+.field__label {
+  padding: 10px 0 5px;
+}
+
+.node--type-food-trucks {
+  .field__label {
+    padding: 20px 0 5px;
+  }
+}
+
+.field--name-field-website-url-scheme,
+.field--name-field-facebook-url-scheme {
+  display: none;
+}
+
+.view-footer {
+  margin: 40px 0 0 0;
+}
+
+.views-row {
+  > div {
+    padding: 10px 0;
+  }
+  .views-field-title {
+    font-size: 1.2em;
+    font-weight: 700;
+  }
+}
+
+.field--name-field-food-truck  {
+  font-size: 1.2em;
+  font-weight: 700;
+  padding: 10px 0;
+}
+
+
+.view-food-truck-list {
+  .view-content {
+    background-color: #f3f3f3;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px 20px;
+  }
+}
