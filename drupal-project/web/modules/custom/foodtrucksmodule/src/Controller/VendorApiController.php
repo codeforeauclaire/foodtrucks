@@ -42,7 +42,7 @@ class VendorApiController {
     return new JsonResponse($dataArray);
   }
 
-  public function processFoodtruckArray(&$data) {
+  public static function processFoodtruckArray(&$data) {
     if (isset($data['website_url']) && isset($data['website_url_scheme'])) {
       ($data['website_url_scheme']) ? $scheme = 'https://' : $scheme = 'http://';
       $data['website_url'] = $scheme . $data['website_url'];
