@@ -51,9 +51,8 @@ class VendorApiController {
         unset($data['website_url']);
       }
     }
-    unset($data['website_url_scheme']);
     if (isset($data['facebook_url'])) {
-      $data['facebook_url'] = str_replace($data['facebook_url'], 'http:', 'https:');
+      $data['facebook_url'] = str_replace('http:', 'https:', $data['facebook_url']);
       if (VendorApiController::str_contains($data['facebook_url'], 'https:') != 1) {
         $data['facebook_url'] = 'https://' . $data['facebook_url'];
       }
@@ -61,7 +60,6 @@ class VendorApiController {
         unset($data['facebook_url']);
       }
     }
-    unset($data['facebook_url_scheme']);
     if (isset($data['twitter_name']) && !strstr($data['twitter_name'], '@' )) {
       $data['twitter_name'] = '@' . $data['twitter_name'];
     }
