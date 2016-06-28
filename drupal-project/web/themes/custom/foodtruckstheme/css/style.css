@@ -16,31 +16,28 @@
 @import url("//fonts.googleapis.com/css?family=Montserrat:400,700");
 /* line 1, ../scss/30-global/_header.scss */
 header {
-  color: #000;
-  position: relative;
-  box-shadow: 0 0 2px #aaa;
-  border: none;
   background-color: #00695c;
+  border: 0;
+  box-shadow: 0 0 2px #aaa;
+  color: #000;
   height: 50px;
   padding: 0;
+  position: relative;
 }
 /* line 16, ../scss/30-global/_header.scss */
 header a {
-  text-decoration: none;
   color: #fff;
+  text-decoration: none;
 }
-/* line 19, ../scss/30-global/_header.scss */
-header a.is-active {
-  color: red;
-}
-/* line 24, ../scss/30-global/_header.scss */
+/* line 22, ../scss/30-global/_header.scss */
 header ul.menu a {
-  text-decoration: none;
   color: #fff;
+  font-weight: 700;
+  text-decoration: none;
 }
 /* line 27, ../scss/30-global/_header.scss */
 header ul.menu a.is-active {
-  color: red;
+  color: #80cbc4;
 }
 /* line 33, ../scss/30-global/_header.scss */
 header .site-name {
@@ -48,7 +45,7 @@ header .site-name {
   float: left;
   font-family: "Montserrat",sans-serif;
   font-size: 1.5em;
-  font-weight: normal;
+  font-weight: 700;
   height: 50px;
   line-height: 2.1em;
   margin: auto auto auto 10px;
@@ -56,39 +53,33 @@ header .site-name {
   text-align: left;
   text-shadow: none;
 }
-/* line 45, ../scss/30-global/_header.scss */
+/* line 46, ../scss/30-global/_header.scss */
 header .site-name a {
   color: #80cbc4;
 }
-/* line 50, ../scss/30-global/_header.scss */
+/* line 51, ../scss/30-global/_header.scss */
 header::after {
+  clear: both;
   content: '';
   display: block;
-  clear: both;
 }
 
-/* line 57, ../scss/30-global/_header.scss */
+/* line 58, ../scss/30-global/_header.scss */
 .block-system-branding-block {
   float: left;
 }
 
-/* line 60, ../scss/30-global/_header.scss */
-.menu--account .menu-item {
-  float: right;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-/* line 66, ../scss/30-global/_header.scss */
+/* line 63, ../scss/30-global/_header.scss */
 main::before {
+  clear: both;
   content: '';
   display: block;
-  clear: both;
 }
 
-/* line 73, ../scss/30-global/_header.scss */
-.path-user header ul.menu li:last-child a, .path-food-trucks header ul.menu li:last-child a {
-  color: #ff0000;
+/* line 72, ../scss/30-global/_header.scss */
+.path-user header ul.menu li:last-child a,
+.path-food-trucks header ul.menu li:last-child a {
+  color: white;
 }
 
 /* line 1, ../scss/30-global/_html-elements.scss */
@@ -99,14 +90,15 @@ main::before {
 /* line 5, ../scss/30-global/_html-elements.scss */
 body {
   font-family: "Montserrat", sans-serif;
+  color: #444;
 }
 
-/* line 9, ../scss/30-global/_html-elements.scss */
+/* line 10, ../scss/30-global/_html-elements.scss */
 h1 {
   font-family: "Montserrat", sans-serif;
 }
 
-/* line 13, ../scss/30-global/_html-elements.scss */
+/* line 14, ../scss/30-global/_html-elements.scss */
 blockquote {
   font-style: italic;
   border-left: solid 3px #68696d;
@@ -114,20 +106,77 @@ blockquote {
   padding-left: 20px;
 }
 
-/* line 20, ../scss/30-global/_html-elements.scss */
+/* line 21, ../scss/30-global/_html-elements.scss */
 img {
   max-width: 100%;
   height: auto;
 }
 
 /* line 26, ../scss/30-global/_html-elements.scss */
-:last-child {
-  margin-bottom: 0;
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #00695c;
+  text-decoration: none;
 }
 
-/* line 31, ../scss/30-global/_html-elements.scss */
-[class]:last-child {
-  margin-bottom: 0;
+/* line 34, ../scss/30-global/_html-elements.scss */
+label {
+  padding: 5px 0 8px;
+  display: block;
+}
+
+/* line 39, ../scss/30-global/_html-elements.scss */
+.form-composite > .fieldset-wrapper > .description, .form-item .description {
+  color: #aaa;
+  font-size: 0.8em;
+}
+
+/* line 44, ../scss/30-global/_html-elements.scss */
+input, textarea {
+  border: 1px solid #999;
+  border-radius: 4px;
+  line-height: normal;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 52, ../scss/30-global/_html-elements.scss */
+#edit-actions.form-actions {
+  text-align: center;
+  margin: 40px 0 20px;
+}
+
+/* line 57, ../scss/30-global/_html-elements.scss */
+.button.form-submit {
+  font-weight: 700;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 10px 20px;
+  background-color: lightblue;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+}
+/* line 65, ../scss/30-global/_html-elements.scss */
+.button.form-submit.button--danger {
+  background: transparent none repeat scroll 0 0;
+  border: medium none;
+  color: red;
+  float: left;
+  font-size: 0.9em;
+  font-weight: normal;
+}
+
+/* line 75, ../scss/30-global/_html-elements.scss */
+.views-element-container {
+  padding: 10px 0;
+}
+
+/* line 79, ../scss/30-global/_html-elements.scss */
+td, th {
+  padding: 10px;
 }
 
 /**
@@ -157,9 +206,15 @@ img {
 
 /* line 1, ../scss/40-components/_menu.scss */
 .menu {
-  margin: 0;
+  float: right;
+  list-style: outside none none;
+  margin: 16px 15px 0 0;
   padding: 0;
-  list-style-type: none;
+}
+/* line 6, ../scss/40-components/_menu.scss */
+.menu li {
+  display: inline;
+  padding: 0 15px;
 }
 
 /* line 1, ../scss/40-components/_node-teaser.scss */
@@ -186,20 +241,134 @@ img {
   text-align: center;
 }
 
-/* line 4, ../scss/50-templates/_layout--content.scss */
+/* line 5, ../scss/50-templates/_layout--content.scss */
 .layout-content {
-  width: 700px;
   margin: auto;
+  width: 700px;
 }
 
-/* line 8, ../scss/50-templates/_layout--content.scss */
+/* line 10, ../scss/50-templates/_layout--content.scss */
 .layout-container {
   margin: 0;
 }
 
-/* line 13, ../scss/50-templates/_layout--content.scss */
-.form-item-field-website-url-scheme .form-required:after, .form-item-field-facebook-url-scheme .form-required:after {
+/* line 16, ../scss/50-templates/_layout--content.scss */
+.form-item-field-website-url-scheme .form-required:after,
+.form-item-field-facebook-url-scheme .form-required:after {
   content: normal;
+}
+
+/* line 21, ../scss/50-templates/_layout--content.scss */
+ul.tabs,
+.layout-content ul.menu {
+  border-bottom: 1px solid #aaa;
+  margin: 30px 0;
+}
+/* line 26, ../scss/50-templates/_layout--content.scss */
+ul.tabs > *,
+.layout-content ul.menu > * {
+  display: none;
+}
+/* line 30, ../scss/50-templates/_layout--content.scss */
+ul.tabs > li,
+.layout-content ul.menu > li {
+  border: 1px solid #aaa;
+  border-bottom: 0;
+  border-radius: 5px 5px 0 0;
+  display: inline-block;
+  margin-bottom: -1px;
+  margin-right: 0.3em;
+  padding: 0;
+}
+/* line 39, ../scss/50-templates/_layout--content.scss */
+ul.tabs > li a,
+.layout-content ul.menu > li a {
+  padding: 10px 20px;
+}
+/* line 42, ../scss/50-templates/_layout--content.scss */
+ul.tabs > li a.is-active,
+.layout-content ul.menu > li a.is-active {
+  background-color: #fff;
+  border-radius: 5px 5px 0 0;
+  color: #444;
+}
+
+/* line 51, ../scss/50-templates/_layout--content.scss */
+.layout-content ul.menu {
+  float: none;
+}
+/* line 54, ../scss/50-templates/_layout--content.scss */
+.layout-content ul.menu li {
+  color: #444;
+}
+/* line 57, ../scss/50-templates/_layout--content.scss */
+.layout-content ul.menu li a {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* line 65, ../scss/50-templates/_layout--content.scss */
+.js-form-item-field-event-start-hour,
+.js-form-item-field-event-end-hour {
+  float: left;
+}
+/* line 68, ../scss/50-templates/_layout--content.scss */
+.js-form-item-field-event-start-hour label,
+.js-form-item-field-event-end-hour label {
+  float: left;
+}
+
+/* line 73, ../scss/50-templates/_layout--content.scss */
+#edit-field-event-end-hour-wrapper,
+#edit-field-scheduled-location-wrapper {
+  clear: both;
+}
+
+/* line 80, ../scss/50-templates/_layout--content.scss */
+.field__label {
+  padding: 10px 0 5px;
+}
+
+/* line 85, ../scss/50-templates/_layout--content.scss */
+.node--type-food-trucks .field__label {
+  padding: 20px 0 5px;
+}
+
+/* line 90, ../scss/50-templates/_layout--content.scss */
+.field--name-field-website-url-scheme,
+.field--name-field-facebook-url-scheme {
+  display: none;
+}
+
+/* line 95, ../scss/50-templates/_layout--content.scss */
+.view-footer {
+  margin: 40px 0 0 0;
+}
+
+/* line 100, ../scss/50-templates/_layout--content.scss */
+.views-row > div {
+  padding: 10px 0;
+}
+/* line 103, ../scss/50-templates/_layout--content.scss */
+.views-row .views-field-title {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+/* line 109, ../scss/50-templates/_layout--content.scss */
+.field--name-field-food-truck {
+  font-size: 1.2em;
+  font-weight: 700;
+  padding: 10px 0;
+}
+
+/* line 117, ../scss/50-templates/_layout--content.scss */
+.view-food-truck-list .view-content {
+  background-color: #f3f3f3;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px 20px;
 }
 
 /*------------------------------------*\

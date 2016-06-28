@@ -107,7 +107,8 @@ class JsonApiProcessor extends ControllerBase {
     return $field->getFieldDefinition()->getName();
   }
 
-  /** @var \Drupal\Core\Field\EntityReferenceFieldItemList $field */
+  /** @var \Drupal\Core\Field\EntityReferenceFieldItemList $field **/
+  /** @var \Drupal\Core\Field\FieldItemList $field **/
   public static function processField(&$data, $field) {
     $type = $field->getFieldDefinition()->getType();
 

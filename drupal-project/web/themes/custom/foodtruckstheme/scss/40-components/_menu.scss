@@ -1,7 +1,12 @@
 .menu {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+    float: right;
+    list-style: outside none none;
+    margin: 16px 15px 0 0;
+    padding: 0;
+    li {
+      display: inline;
+      padding: 0 15px;
+    }
 }
 //.navigation {
 //  &.menu--account, &.menu--event-menu {
