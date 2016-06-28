@@ -52,7 +52,7 @@ class EventApiController {
     }
     $results = $query->execute();
     foreach ($results as $result) {
-//      JsonApiProcessor::processEvent($data, $result);
+      JsonApiProcessor::processEvent($data, $result);
       if (isset($data['foodtruck'])) {
         VendorApiController::processFoodtruckArray($data['foodtruck']);
         $data['start_time'] = $data['date'] .'T'. sprintf("%02d", $data['start_hour']) .':'. sprintf("%02d", $data['start_minute']) .':00';
