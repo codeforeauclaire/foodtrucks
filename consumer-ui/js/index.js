@@ -5,9 +5,9 @@ var API_VENDORS = 'https://vendors.foodtrucks.codeforeauclaire.org/api/vendors'
 // API_VENDORS = "js/test/vendor.json"; // uncomment to use local test data
 
 var NODATA_SNARKS = [
-  'Rubber Bisquit! There are no food truck service events scheduled for the selected date.',
-  'Ricochet Bisquit, if it don\'t bounce back you go hungry! No food trucks in service today.',
-  'Umm, umm, umm... the other day I had a cool water sandwich and a Sunday-go-to-meetin\' bun.</br> Today I went hungry because there are no food trucks in service.'
+  'No food trucks in the area.',
+  'No food trucks out or about.',
+  'No food trucks scheduled.'
 ]
 
 $(document).on('pageshow', function () {
