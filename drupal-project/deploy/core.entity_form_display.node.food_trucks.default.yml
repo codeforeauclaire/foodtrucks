@@ -5,14 +5,12 @@ dependencies:
   config:
     - field.field.node.food_trucks.field_event_manager
     - field.field.node.food_trucks.field_facebook_url
-    - field.field.node.food_trucks.field_facebook_url_scheme
     - field.field.node.food_trucks.field_food_truck_description
     - field.field.node.food_trucks.field_food_truck_logo
     - field.field.node.food_trucks.field_foodtruck_manager
     - field.field.node.food_trucks.field_telephone_number
     - field.field.node.food_trucks.field_twitter_name
     - field.field.node.food_trucks.field_website_url
-    - field.field.node.food_trucks.field_website_url_scheme
     - image.style.thumbnail
     - node.type.food_trucks
   module:
@@ -58,11 +56,6 @@ content:
       placeholder: facebook.com/your-facebook-account-name
     third_party_settings: {  }
     type: string_textfield
-  field_facebook_url_scheme:
-    weight: 11
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
   field_food_truck_description:
     weight: 7
     settings:
@@ -102,11 +95,6 @@ content:
       placeholder: your-website.com
     third_party_settings: {  }
     type: string_textfield
-  field_website_url_scheme:
-    weight: 9
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
   path:
     type: path
     weight: 5

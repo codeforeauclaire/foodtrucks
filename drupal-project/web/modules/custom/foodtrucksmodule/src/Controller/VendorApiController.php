@@ -42,18 +42,21 @@ class VendorApiController {
     return new JsonResponse($dataArray);
   }
 
-  public static function processFoodtruckArray(&$data) {
-    if (isset($data['website_url']) && isset($data['website_url_scheme'])) {
-      ($data['website_url_scheme']) ? $scheme = 'https://' : $scheme = 'http://';
-      $data['website_url'] = $scheme . $data['website_url'];
+  static public function processFoodtruckArray(&$data) {
+    if (isset($data['website_url'])) {
+      if (VendorApiController::str_contains($data['website_url'], 'http') != 1) {
+        $data['website_url'] = 'http://' . $data['website_url'];
+      }
       if (!UrlHelper::isValid($data['website_url'], TRUE )) {
         unset($data['website_url']);
       }
     }
     unset($data['website_url_scheme']);
-    if (isset($data['facebook_url']) && isset($data['facebook_url_scheme'])) {
-      ($data['facebook_url_scheme']) ? $scheme = 'https://' : $scheme = 'http://';
-      $data['facebook_url'] = $scheme . $data['facebook_url'];
+    if (isset($data['facebook_url'])) {
+      $data['facebook_url'] = str_replace($data['facebook_url'], 'http:', 'https:');
+      if (VendorApiController::str_contains($data['facebook_url'], 'https:') != 1) {
+        $data['facebook_url'] = 'https://' . $data['facebook_url'];
+      }
       if (!UrlHelper::isValid($data['facebook_url'], TRUE )) {
         unset($data['facebook_url']);
       }
@@ -62,9 +65,18 @@ class VendorApiController {
     if (isset($data['twitter_name']) && !strstr($data['twitter_name'], '@' )) {
       $data['twitter_name'] = '@' . $data['twitter_name'];
     }
-    if (isset($data['foodtruck'])) {
+    if (isset($data['foodtruck']) || $data['foodtruck'] == null) {
       unset($data['foodtruck']);
     }
+  }
+
+  static public function str_contains($haystack, $needle, $ignoreCase = true) {
+    if ($ignoreCase) {
+      $haystack = strtolower($haystack);
+      $needle   = strtolower($needle);
+    }
+    $needlePos = strpos($haystack, $needle);
+    return ($needlePos === false ? false : ($needlePos+1));
   }
 }
 
