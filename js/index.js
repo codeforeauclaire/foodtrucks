@@ -4,6 +4,12 @@ var API_EVENTS = 'https://vendors.foodtrucks.codeforeauclaire.org/api/events'
 var API_VENDORS = 'https://vendors.foodtrucks.codeforeauclaire.org/api/vendors'
 // API_VENDORS = "js/test/vendor.json"; // uncomment to use local test data
 
+var NODATA_SNARKS = [
+  'No food trucks in the area.',
+  'No food trucks out or about.',
+  'No food trucks scheduled.'
+]
+
 $(document).on('pageshow', function () {
   var map = new L.Map('map', {
     center: new L.LatLng(44.799, -91.464),
@@ -40,6 +46,8 @@ $(document).on('pageshow', function () {
     })
   })
   .fail(function (err) {
+    $('#message-content').html('Call to API: ' + API_VENDORS + ' failed.')
+    $('#message').popup('open')
     console.log(err)
   })
 
@@ -66,6 +74,7 @@ $(document).on('pageshow', function () {
       $('#dateFilter').val('All')
       markerCluster.addLayers(markers)
       if (markerCluster._topClusterLevel.getChildCount() === 0) {
+        $('#message-content').html(NODATA_SNARKS[Math.floor(Math.random()*NODATA_SNARKS.length)])
         $('#message').popup('open')
       } else {
         map.fitBounds(markerCluster.getBounds())
@@ -75,6 +84,8 @@ $(document).on('pageshow', function () {
     }
   })
   .fail(function (err) {
+    $('#message-content').html('Call to API: ' + API_EVENTS + ' failed.')
+    $('#message').popup('open')
     console.log(err)
   })
 
@@ -105,8 +116,8 @@ $(document).on('pageshow', function () {
         markerCluster.addLayer(markers[i])
       }
     }
-
     if (markerCluster._topClusterLevel.getChildCount() === 0) {
+      $('#message-content').html(NODATA_SNARKS[Math.floor(Math.random()*NODATA_SNARKS.length)])
       $('#message').popup('open')
     } else {
       map.fitBounds(markerCluster.getBounds())
@@ -130,9 +141,9 @@ function isAfter (date1, date2) {
 }
 
 function getPopupHtml (value, dateFormat, timeFormat, expired) {
-  var content = '<a href="' + (value[0].website_url ? value[0].website_url : '#') + '">' + value[0].title + '</a><br/>'
-  if (value[0].logo) content += '<img src="' + value[0].logo + '" alt="logo"/>'
-  content += '<p>' + value[0].description + '</p>'
+  var content = '<a href="' + (value.foodtruck.website_url ? value.foodtruck.website_url : '#') + '">' + value.foodtruck.title + '</a><br/>'
+  if (value.foodtruck.logo) content += '<img src="' + value.foodtruck.logo + '" alt="logo" width=200/>'
+  content += '<p>' + value.foodtruck.description + '</p>'
 
   content += '<p class="details">Here on ' +
     moment(value.start_time).format(dateFormat) + ' <br><strong>' +
