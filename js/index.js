@@ -1,7 +1,7 @@
 /* globals L, moment */
-var API_EVENTS = 'http://vendors.foodtrucks.codeforeauclaire.org/api/events'
+var API_EVENTS = 'https://vendors.foodtrucks.codeforeauclaire.org/api/events'
 // API_EVENTS = "js/test/event.json"; // uncomment to use local test data
-var API_VENDORS = 'http://vendors.foodtrucks.codeforeauclaire.org/api/vendors'
+var API_VENDORS = 'https://vendors.foodtrucks.codeforeauclaire.org/api/vendors'
 // API_VENDORS = "js/test/vendor.json"; // uncomment to use local test data
 
 $(document).on('pageshow', function () {
