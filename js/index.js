@@ -77,7 +77,11 @@ $(document).on('pageshow', function () {
         $('#message-content').html(NODATA_SNARKS[Math.floor(Math.random()*NODATA_SNARKS.length)])
         $('#message').popup('open')
       } else {
+        $('#message').popup('close')
         map.fitBounds(markerCluster.getBounds())
+        if (markerCluster._topClusterLevel.getChildCount() === 1) {
+          map.zoomOut(2)
+        }
       }
     } else {
       $('#dateFilter').trigger('change')
@@ -120,7 +124,11 @@ $(document).on('pageshow', function () {
       $('#message-content').html(NODATA_SNARKS[Math.floor(Math.random()*NODATA_SNARKS.length)])
       $('#message').popup('open')
     } else {
+      $('#message').popup('close')
       map.fitBounds(markerCluster.getBounds())
+      if (markerCluster._topClusterLevel.getChildCount() === 1) {
+        map.zoomOut(2)
+      }
     }
   })
 })
@@ -151,6 +159,9 @@ function getPopupHtml (value, dateFormat, timeFormat, expired) {
     moment(value.end_time).format(timeFormat) + ' ' +
         (moment().isDST() ? '' : '') +
         '</strong></p>'
+
+  content += '<p>' +  value.special_comments + '</p>'
+
   if (expired) content += '<strong class="ended">(Ended)</strong>'
   return content
 }
