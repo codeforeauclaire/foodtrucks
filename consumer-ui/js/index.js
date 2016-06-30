@@ -159,6 +159,9 @@ function getPopupHtml (value, dateFormat, timeFormat, expired) {
     moment(value.end_time).format(timeFormat) + ' ' +
         (moment().isDST() ? '' : '') +
         '</strong></p>'
+
+  content += '<p>' +  value.special_comments + '</p>'
+
   if (expired) content += '<strong class="ended">(Ended)</strong>'
   return content
 }
