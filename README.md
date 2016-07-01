@@ -23,7 +23,8 @@ Use these instructions to setup a temporary* development environment of this pro
 
 ### Misc
 
-* Don't work directly on the gh-pages branch, the script /consumer-ui/bin/deploy-to-gh-pages sends code there
+* Don't work directly on the gh-pages branch
+    - `git subtree push --prefix=consumer-ui https://github.com/codeforeauclaire/foodtrucks.git gh-pages`
 * Mapping via Leaflet http://leafletjs.com/
     * http://leafletjs.com/examples/mobile.html
     * Data: Static json data that will run
