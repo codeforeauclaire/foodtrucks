@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>Eau Claire Food Trucks</title>
+
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="deps/jquery-mobile/jquery.mobile.css" />
+	<link rel="stylesheet" type="text/css" href="deps/leaflet/leaflet.css" />
+	<link rel="stylesheet" type="text/css" href="deps/leaflet/MarkerCluster.css" />
+	<link rel="stylesheet" type="text/css" href="deps/leaflet/MarkerCluster.Default.css" />
+	<link rel="stylesheet" type="text/css" href="deps/jquery-mobile/datepicker/jquery.mobile.datepicker.css" />
+	<link rel="stylesheet" type="text/css" href="deps/jquery-mobile/datepicker/jquery.mobile.datepicker.theme.css" />
+
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/hacks.css">
+
+	<script type="text/javascript" src="deps/jquery-1.12.2.min.js"></script>
+	<script type="text/javascript" src="deps/jquery-mobile/jquery.mobile.js"></script>
+	<script type="text/javascript" src="deps/leaflet/leaflet.js"></script>
+	<script type="text/javascript" src="deps/leaflet/leaflet.markercluster.js"></script>
+	<script type="text/javascript" src="deps/tile.stamen.js"></script>
+	<script type="text/javascript" src="deps/jquery-ui/datepicker.js"></script>
+	<script type="text/javascript" src="deps/jquery-mobile/datepicker/jquery.mobile.datepicker.js"></script>
+	<script type="text/javascript" src="deps/moment.min.js"></script>
+
+	<script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+	<div id="map"></div>
+	<div data-role="popup" id="message" data-transition="fade"  data-overlay-theme="b">
+		<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+		<p id="message-content"></p>
+	</div>
+	<div data-role="popup" id="trucks" data-position-to="window" data-transition="fade" data-overlay-theme="b">
+		<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+		<div id="truck-list"></div>
+		<div class="signup"><p>Are you a Food Truck vendor in the Eau Claire area and want your events to show up on the map?!</p>
+			<a href="http://vendors.foodtrucks.codeforeauclaire.org/">Create an account / Sign in</a>
+		</div>
+	</div>
+	<div data-role="popup" id="about" data-position-to="window" data-transition="fade" data-overlay-theme="b">
+		<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+		<p>We have awesome food trucks and an <a href="https://github.com/codeforeauclaire/foodtrucks/blob/master/drupal-project/README.md#api">API!</a></p>
+
+		<div class="signup"><p>Are you a Food Truck vendor in the Eau Claire area and want your events to show up on the map?!</p>
+			<a href="http://vendors.foodtrucks.codeforeauclaire.org/">Create an account / Sign in</a>
+		</div>
+	</div>
+
+	<div data-role="header" id="header">
+		<h1><a href="/">Eau Claire <span>Food Trucks</span></a></h1>
+		<ul>
+			<li>Map</li>
+			<li><a href="#trucks" data-rel="popup">Trucks</a></li>
+			<li><a href="#about" data-rel="popup">About</a></li>
+		</ul>
+	</div><!-- /header -->
+
+	<div id="datepicker"><a href="#"><img src="images/arrow.png" class="left-arrow" /></a><input type="text" data-role="date" value="Today" id="dateFilter" readonly><a href="#"><img src="images/arrow.png" class="right-arrow" /></a></div>
+</body>
+</html>
