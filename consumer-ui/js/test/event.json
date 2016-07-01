@@ -1,0 +1,32 @@
+[
+   {
+      "foodtruck":{
+         "uuid":"5ec386b2-a9f8-4a79-9b46-f9e9aff1fd08",
+         "title":"Lodies Shaved Ice",
+         "description":"Trailer that serves flavored shaved ice, historically most often in Harbour Freight parking lot.",
+         "logo":"http://vendors.foodtrucks.codeforeauclaire.org/sites/default/files/foodTruckLogos/download.png"
+      },
+      "uuid":"06c5143d-c506-407c-86ba-93e2c3969679",
+      "description":"Event deescription",
+      "duration_minutes":"0",
+      "lat":"44.81193319010641",
+      "lng":"-91.50362558662891",
+      "start_time":"2016-06-01T14:00:00",
+      "end_time":"2016-06-01T22:00:00"
+   },
+   {
+      "foodtruck":{
+         "uuid":"5ec386b2-a9f8-4a79-9b46-f9e9aff1fd08",
+         "description":"The mission of Biggie and Bull BBQ is to consistently produce and proudly serve the highest quality of BBQ in the Chippewa Valley and Beyond. We also strive to proudly represent the Chippewa Valley in regional and national BBQ competitions",
+         "title":"Biggie and Bull BBQ",
+         "website_url":"http://www.biggieandbullbbq.com/"
+      },
+      "uuid":"06c5143d-c506-407c-86ba-93e2c3969679",
+      "description":"Event deescription",
+      "duration_minutes":"0",
+      "lat":"44.811349",
+      "lng":"-91.49849410000002",
+      "start_time":"2016-05-03T23:30:00",
+      "end_time":"2016-05-04T01:30:00"
+   }
+]
