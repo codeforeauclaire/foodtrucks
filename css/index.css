@@ -185,30 +185,6 @@ html body .ui-datepicker .ui-state-hover {
 }
 
 
-@media only screen and (max-width: 600px) {
-  #header {
-    height: 90px;
-    text-align: center;
-  }
-  #header h1 {
-  	margin: 0;
-  	width: 100%;
-  	text-align: center;
-  }
-  #header ul {
-    clear: both;
-    float: none;
-    margin: 58px 15px 0 0;
-    padding: 0;
-    text-align: center;
-	}
-	#map {
-    top: 90px;
-	}
-	#datepicker {
-	    top: 90px;
-	}
-}
 #message {
   background-color: white;
   border-radius: 4px;
@@ -225,4 +201,37 @@ html body .ui-datepicker .ui-state-hover {
 }
 .visible {
 	display: block;
+}
+#dateFilter {
+  margin: 0 auto;
+  width: 60%;
+}
+
+
+@media only screen and (max-width: 600px) {
+  #header {
+    height: 90px;
+    text-align: center;
+  }
+  #header h1 {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+  #header ul {
+    clear: both;
+    float: none;
+    margin: 58px 15px 0 0;
+    padding: 0;
+    text-align: center;
+  }
+  #message {
+    top: 158px;
+  }
+  #map {
+    top: 90px;
+  }
+  #datepicker {
+      top: 90px;
+  }
 }
