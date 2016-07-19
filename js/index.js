@@ -76,10 +76,12 @@ $(document).on('pageshow', function () {
       $('#dateFilter').val('All')
       markerCluster.addLayers(markers)
       if (markerCluster._topClusterLevel.getChildCount() === 0) {
-        $('#message-content').html(NODATA_SNARKS[Math.floor(Math.random() * NODATA_SNARKS.length)])
-        $('#message').popup('open')
+        $('#message').addClass('visible')
+        $('#message').removeClass('hidden')
       } else {
-        $('#message').popup('close')
+        // $('#message-content').html(NODATA_SNARKS[Math.floor(Math.random()*NODATA_SNARKS.length)])
+        $('#message').addClass('hidden')
+        $('#message').removeClass('visible')
         map.fitBounds(markerCluster.getBounds())
         if (markerCluster._topClusterLevel.getChildCount() === 1) {
           map.zoomOut(2)
@@ -123,10 +125,12 @@ $(document).on('pageshow', function () {
       }
     }
     if (markerCluster._topClusterLevel.getChildCount() === 0) {
-      $('#message-content').html(NODATA_SNARKS[Math.floor(Math.random() * NODATA_SNARKS.length)])
-      $('#message').popup('open')
+      $('#message').addClass('visible')
+      $('#message').removeClass('hidden')
     } else {
-      $('#message').popup('close')
+      // $('#message-content').html(NODATA_SNARKS[Math.floor(Math.random()*NODATA_SNARKS.length)])
+      $('#message').addClass('hidden')
+      $('#message').removeClass('visible')
       map.fitBounds(markerCluster.getBounds())
       if (markerCluster._topClusterLevel.getChildCount() === 1) {
         map.zoomOut(2)
